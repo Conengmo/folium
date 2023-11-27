@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ImageOverlay &#8212; Folium 0.1.dev1+g84459ba documentation</title>
+    <title>ImageOverlay &#8212; Folium 0.1.dev1+gd250952 documentation</title>
   
   
   
@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -33,11 +33,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=924e9346" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script src="../../_static/documentation_options.js?v=920fc389"></script>
+    <script src="../../_static/documentation_options.js?v=e219f0cf"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -45,7 +45,7 @@
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/raster_layers/image_overlay';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.14.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.14.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://python-visualization.github.io/folium/latest/_static/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
@@ -117,6 +117,7 @@
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -168,7 +169,8 @@ document.write(`
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
+        <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -221,6 +223,7 @@ document.write(`
       
         <div class="navbar-item navbar-persistent--container">
           
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -234,6 +237,7 @@ document.write(`
       
       
         <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -266,6 +270,7 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -299,7 +304,8 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
+          <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -352,6 +358,7 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -383,7 +390,8 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
@@ -594,7 +602,7 @@ Could not find data/Mercator_projection_SW.png
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_b0e42224ea03606302568c9963879a55 {
+                #map_9a2e94205cbed6ada8834692f13e970d {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -608,14 +616,14 @@ Could not find data/Mercator_projection_SW.png
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_b0e42224ea03606302568c9963879a55&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_9a2e94205cbed6ada8834692f13e970d&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_b0e42224ea03606302568c9963879a55 = L.map(
-                &quot;map_b0e42224ea03606302568c9963879a55&quot;,
+            var map_9a2e94205cbed6ada8834692f13e970d = L.map(
+                &quot;map_9a2e94205cbed6ada8834692f13e970d&quot;,
                 {
                     center: [37.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -629,13 +637,14 @@ Could not find data/Mercator_projection_SW.png
 
 
 
-            var tile_layer_c35bc404d0661a3bda16909edf6c41b9 = L.tileLayer(
+            var tile_layer_b140a95a36f742749cb20095f5008ce4 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_c35bc404d0661a3bda16909edf6c41b9.addTo(map_b0e42224ea03606302568c9963879a55);
+            tile_layer_b140a95a36f742749cb20095f5008ce4.addTo(map_9a2e94205cbed6ada8834692f13e970d);
+
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
 </div>
@@ -702,7 +711,7 @@ Could not find data/Mercator_projection_SW.png
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_fcb93853e1543815395e8b7939e09f75 {
+                #map_1523bcc080d2729ff58b16a2f3757654 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -729,14 +738,14 @@ Could not find data/Mercator_projection_SW.png
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_fcb93853e1543815395e8b7939e09f75&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_1523bcc080d2729ff58b16a2f3757654&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_fcb93853e1543815395e8b7939e09f75 = L.map(
-                &quot;map_fcb93853e1543815395e8b7939e09f75&quot;,
+            var map_1523bcc080d2729ff58b16a2f3757654 = L.map(
+                &quot;map_1523bcc080d2729ff58b16a2f3757654&quot;,
                 {
                     center: [37.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -750,36 +759,38 @@ Could not find data/Mercator_projection_SW.png
 
 
 
-            var tile_layer_a2abb1e4046d67b301366d7a14499fe9 = L.tileLayer(
+            var tile_layer_fd100927ea6fb3e9e9f82c8ef10765f2 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_a2abb1e4046d67b301366d7a14499fe9.addTo(map_fcb93853e1543815395e8b7939e09f75);
+            tile_layer_fd100927ea6fb3e9e9f82c8ef10765f2.addTo(map_1523bcc080d2729ff58b16a2f3757654);
 
-            var image_overlay_f885695c8d7444f7c1fa6459c1e4c48f = L.imageOverlay(
+
+            var image_overlay_132e343c9bd80b1fe4eb9c2da69aff21 = L.imageOverlay(
                 &quot;https://upload.wikimedia.org/wikipedia/commons/f/f4/Mercator_projection_SW.jpg&quot;,
                 [[-82, -180], [82, 180]],
                 {&quot;alt&quot;: &quot;Wikipedia File:Mercator projection SW.jpg&quot;, &quot;crossOrigin&quot;: false, &quot;interactive&quot;: false, &quot;opacity&quot;: 1, &quot;zindex&quot;: 1}
             );
 
 
-                image_overlay_f885695c8d7444f7c1fa6459c1e4c48f.addTo(map_fcb93853e1543815395e8b7939e09f75);
+            image_overlay_132e343c9bd80b1fe4eb9c2da69aff21.addTo(map_1523bcc080d2729ff58b16a2f3757654);
 
-            var layer_control_454f5a28160232b971af2cad4d065578_layers = {
+
+            var layer_control_367069b711cbe5d5a0ff5d57a5a2ea72_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_a2abb1e4046d67b301366d7a14499fe9,
+                    &quot;openstreetmap&quot; : tile_layer_fd100927ea6fb3e9e9f82c8ef10765f2,
                 },
                 overlays :  {
-                    &quot;I am a jpeg&quot; : image_overlay_f885695c8d7444f7c1fa6459c1e4c48f,
+                    &quot;I am a jpeg&quot; : image_overlay_132e343c9bd80b1fe4eb9c2da69aff21,
                 },
             };
-            let layer_control_454f5a28160232b971af2cad4d065578 = L.control.layers(
-                layer_control_454f5a28160232b971af2cad4d065578_layers.base_layers,
-                layer_control_454f5a28160232b971af2cad4d065578_layers.overlays,
+            let layer_control_367069b711cbe5d5a0ff5d57a5a2ea72 = L.control.layers(
+                layer_control_367069b711cbe5d5a0ff5d57a5a2ea72_layers.base_layers,
+                layer_control_367069b711cbe5d5a0ff5d57a5a2ea72_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: true, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_fcb93853e1543815395e8b7939e09f75);
+            ).addTo(map_1523bcc080d2729ff58b16a2f3757654);
 
 
 &lt;/script&gt;
@@ -854,7 +865,7 @@ Could not find data/Mercator_projection_SW.png
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_ab82b2a346b78d56cdd8908b1c62201b {
+                #map_0de645caccf30a2f21935eab79fbda85 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -881,14 +892,14 @@ Could not find data/Mercator_projection_SW.png
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_ab82b2a346b78d56cdd8908b1c62201b&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_0de645caccf30a2f21935eab79fbda85&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_ab82b2a346b78d56cdd8908b1c62201b = L.map(
-                &quot;map_ab82b2a346b78d56cdd8908b1c62201b&quot;,
+            var map_0de645caccf30a2f21935eab79fbda85 = L.map(
+                &quot;map_0de645caccf30a2f21935eab79fbda85&quot;,
                 {
                     center: [37.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -902,22 +913,24 @@ Could not find data/Mercator_projection_SW.png
 
 
 
-            var tile_layer_7ba7a16e0bf8eff248a80a53c28b405c = L.tileLayer(
+            var tile_layer_e13a4c061646bfbcdc48b7501daf06ed = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_7ba7a16e0bf8eff248a80a53c28b405c.addTo(map_ab82b2a346b78d56cdd8908b1c62201b);
+            tile_layer_e13a4c061646bfbcdc48b7501daf06ed.addTo(map_0de645caccf30a2f21935eab79fbda85);
 
-            var image_overlay_5d72d5084f03a60c2fb00c1f89fbfc98 = L.imageOverlay(
+
+            var image_overlay_f3c5abbcf9f15a7119b4a5e68d442f61 = L.imageOverlay(
                 &quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD0AAAA9CAYAAAAeYmHpAAAAW0lEQVR42u3PoQ0AAAzDsP7/9EaG90ANIoU6k0xbuUlR0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0C+6qgWzYWppA9g/7AAAAABJRU5ErkJggg==&quot;,
                 [[0, -60], [60, 60]],
                 {}
             );
 
 
-                image_overlay_5d72d5084f03a60c2fb00c1f89fbfc98.addTo(map_ab82b2a346b78d56cdd8908b1c62201b);
+            image_overlay_f3c5abbcf9f15a7119b4a5e68d442f61.addTo(map_0de645caccf30a2f21935eab79fbda85);
+
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
 </div>
@@ -981,7 +994,7 @@ Could not find data/Mercator_projection_SW.png
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_f15100d8fc0cad76afe48b52d6200c16 {
+                #map_f6471844124ea95c7cefd8eed1ce1abf {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1008,14 +1021,14 @@ Could not find data/Mercator_projection_SW.png
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_f15100d8fc0cad76afe48b52d6200c16&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_f6471844124ea95c7cefd8eed1ce1abf&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_f15100d8fc0cad76afe48b52d6200c16 = L.map(
-                &quot;map_f15100d8fc0cad76afe48b52d6200c16&quot;,
+            var map_f6471844124ea95c7cefd8eed1ce1abf = L.map(
+                &quot;map_f6471844124ea95c7cefd8eed1ce1abf&quot;,
                 {
                     center: [37.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -1029,27 +1042,29 @@ Could not find data/Mercator_projection_SW.png
 
 
 
-            var tile_layer_7049379ce9503aa3e77eb20cd295efbc = L.tileLayer(
+            var tile_layer_c132975b08a4be54d8f4a192f53e58a8 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_7049379ce9503aa3e77eb20cd295efbc.addTo(map_f15100d8fc0cad76afe48b52d6200c16);
+            tile_layer_c132975b08a4be54d8f4a192f53e58a8.addTo(map_f6471844124ea95c7cefd8eed1ce1abf);
 
-            var image_overlay_eb5c708f830bb9a9eeaf4036a31f6ce6 = L.imageOverlay(
+
+            var image_overlay_2f125bee4b8ba8cfdf5b66f8766b1299 = L.imageOverlay(
                 &quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA9CAYAAABsrQNfAAAAFklEQVR42mP4zwAEVCP+M1DXvMFHAABxyD3DNwdSfAAAAABJRU5ErkJggg==&quot;,
                 [[0, -60], [60, 60]],
                 {}
             );
 
 
-                image_overlay_eb5c708f830bb9a9eeaf4036a31f6ce6.addTo(map_f15100d8fc0cad76afe48b52d6200c16);
+            image_overlay_2f125bee4b8ba8cfdf5b66f8766b1299.addTo(map_f6471844124ea95c7cefd8eed1ce1abf);
 
-            var poly_line_5ad5cca6bdd95e3cf110d7941cf9efa9 = L.polyline(
+
+            var poly_line_7616ac83728e47b411e6f2b62bfc6d73 = L.polyline(
                 [[45.0, -60.0], [45.0, 60.0]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#3388ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;#3388ff&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_f15100d8fc0cad76afe48b52d6200c16);
+            ).addTo(map_f6471844124ea95c7cefd8eed1ce1abf);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -1108,7 +1123,7 @@ Could not find data/Mercator_projection_SW.png
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_ccb6d15f8674d2bcb46f62a82d925b31 {
+                #map_97416a5203c824cdef237a19a992f1a9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1135,14 +1150,14 @@ Could not find data/Mercator_projection_SW.png
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_ccb6d15f8674d2bcb46f62a82d925b31&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_97416a5203c824cdef237a19a992f1a9&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_ccb6d15f8674d2bcb46f62a82d925b31 = L.map(
-                &quot;map_ccb6d15f8674d2bcb46f62a82d925b31&quot;,
+            var map_97416a5203c824cdef237a19a992f1a9 = L.map(
+                &quot;map_97416a5203c824cdef237a19a992f1a9&quot;,
                 {
                     center: [37.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -1156,28 +1171,30 @@ Could not find data/Mercator_projection_SW.png
 
 
 
-            var tile_layer_2f598af028423edc0f6083f97e543933 = L.tileLayer(
+            var tile_layer_7a090175b6b31a91f95069d8ed8b5e6c = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_2f598af028423edc0f6083f97e543933.addTo(map_ccb6d15f8674d2bcb46f62a82d925b31);
+            tile_layer_7a090175b6b31a91f95069d8ed8b5e6c.addTo(map_97416a5203c824cdef237a19a992f1a9);
 
-            var poly_line_d9695fe526d0a92e650a0e9eaa28bacf = L.polyline(
+
+            var poly_line_27f051391d2636a11679d38dacfdf5a7 = L.polyline(
                 [[45.0, -60.0], [45.0, 60.0]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#3388ff&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;#3388ff&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_ccb6d15f8674d2bcb46f62a82d925b31);
+            ).addTo(map_97416a5203c824cdef237a19a992f1a9);
 
 
-            var image_overlay_e95f26cbc7f64f7d337f56a24c325290 = L.imageOverlay(
+            var image_overlay_29e673fd3747635fe6ffaa96b804ad31 = L.imageOverlay(
                 &quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA9CAYAAABsrQNfAAAAG0lEQVR42mP4zwAENCU0QMR/EMHPQHvbaE0AAISNPfostPrWAAAAAElFTkSuQmCC&quot;,
                 [[0, -60], [60, 60]],
                 {}
             );
 
 
-                image_overlay_e95f26cbc7f64f7d337f56a24c325290.addTo(map_ccb6d15f8674d2bcb46f62a82d925b31);
+            image_overlay_29e673fd3747635fe6ffaa96b804ad31.addTo(map_97416a5203c824cdef237a19a992f1a9);
+
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
 </div>
@@ -1193,7 +1210,7 @@ Could not find data/Mercator_projection_SW.png
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="tiles.html"
@@ -1223,6 +1240,7 @@ Could not find data/Mercator_projection_SW.png
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
+
   <div class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
@@ -1234,6 +1252,7 @@ Could not find data/Mercator_projection_SW.png
   </nav></div>
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../../_sources/user_guide/raster_layers/image_overlay.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -1254,8 +1273,8 @@ Could not find data/Mercator_projection_SW.png
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1263,9 +1282,10 @@ Could not find data/Mercator_projection_SW.png
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g84459ba</div>
+Folium version 0.1.dev1.dev+gd250952</div>
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2013, Rob Story.
@@ -1275,14 +1295,16 @@ Folium version 0.1.dev1.dev+g84459ba</div>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>
@@ -1291,8 +1313,9 @@ Folium version 0.1.dev1.dev+g84459ba</div>
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>

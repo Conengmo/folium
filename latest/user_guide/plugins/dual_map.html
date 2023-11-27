@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>DualMap plugin &#8212; Folium 0.1.dev1+g84459ba documentation</title>
+    <title>DualMap plugin &#8212; Folium 0.1.dev1+gd250952 documentation</title>
   
   
   
@@ -18,12 +18,12 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
   <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
@@ -33,11 +33,11 @@
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=924e9346" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script src="../../_static/documentation_options.js?v=920fc389"></script>
+    <script src="../../_static/documentation_options.js?v=e219f0cf"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -45,7 +45,7 @@
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/plugins/dual_map';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.14.3';
+        DOCUMENTATION_OPTIONS.theme_version = '0.14.4';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://python-visualization.github.io/folium/latest/_static/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
@@ -117,6 +117,7 @@
   <div class="col-lg-3 navbar-header-items__start">
     
       <div class="navbar-item">
+
   
 
 <a class="navbar-brand logo" href="../../index.html">
@@ -168,7 +169,8 @@ document.write(`
     
     <div class="me-auto navbar-header-items__center">
       
-        <div class="navbar-item"><nav class="navbar-nav">
+        <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -221,6 +223,7 @@ document.write(`
       
         <div class="navbar-item navbar-persistent--container">
           
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -234,6 +237,7 @@ document.write(`
       
       
         <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -266,6 +270,7 @@ document.write(`
   
   
     <div class="navbar-persistent--mobile">
+
  <script>
  document.write(`
    <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -299,7 +304,8 @@ document.write(`
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><nav class="navbar-nav">
+          <div class="navbar-item">
+<nav class="navbar-nav">
   <p class="sidebar-header-items__title"
      role="heading"
      aria-level="1"
@@ -352,6 +358,7 @@ document.write(`
       <div class="sidebar-header-items__end">
         
           <div class="navbar-item">
+
 <script>
 document.write(`
   <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
@@ -383,7 +390,8 @@ document.write(`
   </div>
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
-        <div class="sidebar-primary-item"><nav class="bd-docs-nav bd-links"
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
   <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
@@ -561,7 +569,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_d83cde409e416894bcc5aa6cc32584df {
+                #map_e840eb863f743f1ccd52aba913e885c5 {
                     position: absolute;
                     width: 50.0%;
                     height: 100.0%;
@@ -575,7 +583,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_c4a833fe7538a85002c550d592628d99 {
+                #map_2a964d10fd96d3b9052e6295f32d93eb {
                     position: absolute;
                     width: 50.0%;
                     height: 100.0%;
@@ -590,17 +598,17 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_d83cde409e416894bcc5aa6cc32584df&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_e840eb863f743f1ccd52aba913e885c5&quot; &gt;&lt;/div&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_c4a833fe7538a85002c550d592628d99&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_2a964d10fd96d3b9052e6295f32d93eb&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_d83cde409e416894bcc5aa6cc32584df = L.map(
-                &quot;map_d83cde409e416894bcc5aa6cc32584df&quot;,
+            var map_e840eb863f743f1ccd52aba913e885c5 = L.map(
+                &quot;map_e840eb863f743f1ccd52aba913e885c5&quot;,
                 {
                     center: [52.1, 5.1],
                     crs: L.CRS.EPSG3857,
@@ -614,16 +622,17 @@ document.write(`
 
 
 
-            var tile_layer_a4c55d5bddf4bfb359a50e45bb1a097e = L.tileLayer(
+            var tile_layer_825b61433f2655a693170c6e600a61da = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_a4c55d5bddf4bfb359a50e45bb1a097e.addTo(map_d83cde409e416894bcc5aa6cc32584df);
+            tile_layer_825b61433f2655a693170c6e600a61da.addTo(map_e840eb863f743f1ccd52aba913e885c5);
 
-            var map_c4a833fe7538a85002c550d592628d99 = L.map(
-                &quot;map_c4a833fe7538a85002c550d592628d99&quot;,
+
+            var map_2a964d10fd96d3b9052e6295f32d93eb = L.map(
+                &quot;map_2a964d10fd96d3b9052e6295f32d93eb&quot;,
                 {
                     center: [52.1, 5.1],
                     crs: L.CRS.EPSG3857,
@@ -637,16 +646,17 @@ document.write(`
 
 
 
-            var tile_layer_200bfcefec3df00d57de58e3077487ad = L.tileLayer(
+            var tile_layer_9bdc79cdec549d4d8eb2305684030937 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_200bfcefec3df00d57de58e3077487ad.addTo(map_c4a833fe7538a85002c550d592628d99);
+            tile_layer_9bdc79cdec549d4d8eb2305684030937.addTo(map_2a964d10fd96d3b9052e6295f32d93eb);
 
-            map_d83cde409e416894bcc5aa6cc32584df.sync(map_c4a833fe7538a85002c550d592628d99);
-            map_c4a833fe7538a85002c550d592628d99.sync(map_d83cde409e416894bcc5aa6cc32584df);
+
+            map_e840eb863f743f1ccd52aba913e885c5.sync(map_2a964d10fd96d3b9052e6295f32d93eb);
+            map_2a964d10fd96d3b9052e6295f32d93eb.sync(map_e840eb863f743f1ccd52aba913e885c5);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -699,7 +709,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_60a8894abe3588dabf7862d0cc7e29c4 {
+                #map_f49309ebe617cd3ebe03f6838a8bc941 {
                     position: absolute;
                     width: 50.0%;
                     height: 100.0%;
@@ -713,7 +723,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_4aa2128eba41eee77a70d822b03a714e {
+                #map_c2a4e475539aac88766734b2a6707aa5 {
                     position: absolute;
                     width: 50.0%;
                     height: 100.0%;
@@ -728,17 +738,17 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_60a8894abe3588dabf7862d0cc7e29c4&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_f49309ebe617cd3ebe03f6838a8bc941&quot; &gt;&lt;/div&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_4aa2128eba41eee77a70d822b03a714e&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_c2a4e475539aac88766734b2a6707aa5&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_60a8894abe3588dabf7862d0cc7e29c4 = L.map(
-                &quot;map_60a8894abe3588dabf7862d0cc7e29c4&quot;,
+            var map_f49309ebe617cd3ebe03f6838a8bc941 = L.map(
+                &quot;map_f49309ebe617cd3ebe03f6838a8bc941&quot;,
                 {
                     center: [52.1, 5.1],
                     crs: L.CRS.EPSG3857,
@@ -752,31 +762,32 @@ document.write(`
 
 
 
-            var tile_layer_b9029057b4f3498738daa7ccae55cc4d = L.tileLayer(
+            var tile_layer_adce13e59f3c6214b9d7e8beed39c646 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_b9029057b4f3498738daa7ccae55cc4d.addTo(map_60a8894abe3588dabf7862d0cc7e29c4);
+            tile_layer_adce13e59f3c6214b9d7e8beed39c646.addTo(map_f49309ebe617cd3ebe03f6838a8bc941);
 
-            var layer_control_9828486e9f4769a3fbebe618cb8be587_layers = {
+
+            var layer_control_4c185bc163d6f07a13e8cb8ffb226ff0_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_b9029057b4f3498738daa7ccae55cc4d,
+                    &quot;openstreetmap&quot; : tile_layer_adce13e59f3c6214b9d7e8beed39c646,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_9828486e9f4769a3fbebe618cb8be587 = L.control.layers(
-                layer_control_9828486e9f4769a3fbebe618cb8be587_layers.base_layers,
-                layer_control_9828486e9f4769a3fbebe618cb8be587_layers.overlays,
+            let layer_control_4c185bc163d6f07a13e8cb8ffb226ff0 = L.control.layers(
+                layer_control_4c185bc163d6f07a13e8cb8ffb226ff0_layers.base_layers,
+                layer_control_4c185bc163d6f07a13e8cb8ffb226ff0_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: false, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_60a8894abe3588dabf7862d0cc7e29c4);
+            ).addTo(map_f49309ebe617cd3ebe03f6838a8bc941);
 
 
 
-            var map_4aa2128eba41eee77a70d822b03a714e = L.map(
-                &quot;map_4aa2128eba41eee77a70d822b03a714e&quot;,
+            var map_c2a4e475539aac88766734b2a6707aa5 = L.map(
+                &quot;map_c2a4e475539aac88766734b2a6707aa5&quot;,
                 {
                     center: [52.1, 5.1],
                     crs: L.CRS.EPSG3857,
@@ -790,30 +801,31 @@ document.write(`
 
 
 
-            var tile_layer_7e5598fa6145b589f11815017ae6971a = L.tileLayer(
+            var tile_layer_c699b5e9d827304e0cc7e974c99a05fc = L.tileLayer(
                 &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 20, &quot;maxZoom&quot;: 20, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abcd&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_7e5598fa6145b589f11815017ae6971a.addTo(map_4aa2128eba41eee77a70d822b03a714e);
-
-            map_60a8894abe3588dabf7862d0cc7e29c4.sync(map_4aa2128eba41eee77a70d822b03a714e);
-            map_4aa2128eba41eee77a70d822b03a714e.sync(map_60a8894abe3588dabf7862d0cc7e29c4);
+            tile_layer_c699b5e9d827304e0cc7e974c99a05fc.addTo(map_c2a4e475539aac88766734b2a6707aa5);
 
 
-            var layer_control_3b2a3e2a0adb42ccaf3f81badd5c5d80_layers = {
+            map_f49309ebe617cd3ebe03f6838a8bc941.sync(map_c2a4e475539aac88766734b2a6707aa5);
+            map_c2a4e475539aac88766734b2a6707aa5.sync(map_f49309ebe617cd3ebe03f6838a8bc941);
+
+
+            var layer_control_0aaf05ea3e33401cb6871f1fe5863869_layers = {
                 base_layers : {
-                    &quot;cartodbpositron&quot; : tile_layer_7e5598fa6145b589f11815017ae6971a,
+                    &quot;cartodbpositron&quot; : tile_layer_c699b5e9d827304e0cc7e974c99a05fc,
                 },
                 overlays :  {
                 },
             };
-            let layer_control_3b2a3e2a0adb42ccaf3f81badd5c5d80 = L.control.layers(
-                layer_control_3b2a3e2a0adb42ccaf3f81badd5c5d80_layers.base_layers,
-                layer_control_3b2a3e2a0adb42ccaf3f81badd5c5d80_layers.overlays,
+            let layer_control_0aaf05ea3e33401cb6871f1fe5863869 = L.control.layers(
+                layer_control_0aaf05ea3e33401cb6871f1fe5863869_layers.base_layers,
+                layer_control_0aaf05ea3e33401cb6871f1fe5863869_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: false, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_4aa2128eba41eee77a70d822b03a714e);
+            ).addTo(map_c2a4e475539aac88766734b2a6707aa5);
 
 
 &lt;/script&gt;
@@ -872,7 +884,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_8ec2bb7dc122c5ed7a1d35016ade852a {
+                #map_a100838821d7e79f2838e5487009fc60 {
                     position: absolute;
                     width: 50.0%;
                     height: 100.0%;
@@ -886,7 +898,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_3b3e1d6ec455c2622c0fcf73e79eae52 {
+                #map_7b73629444d436428746f259abaa27dc {
                     position: absolute;
                     width: 50.0%;
                     height: 100.0%;
@@ -901,17 +913,17 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_8ec2bb7dc122c5ed7a1d35016ade852a&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_a100838821d7e79f2838e5487009fc60&quot; &gt;&lt;/div&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_3b3e1d6ec455c2622c0fcf73e79eae52&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_7b73629444d436428746f259abaa27dc&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_8ec2bb7dc122c5ed7a1d35016ade852a = L.map(
-                &quot;map_8ec2bb7dc122c5ed7a1d35016ade852a&quot;,
+            var map_a100838821d7e79f2838e5487009fc60 = L.map(
+                &quot;map_a100838821d7e79f2838e5487009fc60&quot;,
                 {
                     center: [52.1, 5.1],
                     crs: L.CRS.EPSG3857,
@@ -925,32 +937,33 @@ document.write(`
 
 
 
-            var tile_layer_00adcad752410f8f84cb05a25a3c82a9 = L.tileLayer(
+            var tile_layer_d7003a0c2ee7bb2f4cfa67fa4fe5fb32 = L.tileLayer(
                 &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 20, &quot;maxZoom&quot;: 20, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abcd&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_00adcad752410f8f84cb05a25a3c82a9.addTo(map_8ec2bb7dc122c5ed7a1d35016ade852a);
+            tile_layer_d7003a0c2ee7bb2f4cfa67fa4fe5fb32.addTo(map_a100838821d7e79f2838e5487009fc60);
 
-            var feature_group_a94a23cd6ce6a65cb4e04b4fccddd193 = L.featureGroup(
+
+            var feature_group_52cdebdbf9393ed8ddef5398c1d07c6c = L.featureGroup(
                 {}
             );
 
 
-            var marker_ca208b3703988bc51f30a4a3999a98cf = L.marker(
+            var marker_12f25b5e817a039afb7c13ba7572db9a = L.marker(
                 [52.0, 5.0],
                 {}
-            ).addTo(feature_group_a94a23cd6ce6a65cb4e04b4fccddd193);
+            ).addTo(feature_group_52cdebdbf9393ed8ddef5398c1d07c6c);
 
 
-            var icon_96146d422593dcbf0de51ca05358d186 = L.AwesomeMarkers.icon(
+            var icon_693e7cc5a913092c9a248ed8be87af13 = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
             );
-            marker_ca208b3703988bc51f30a4a3999a98cf.setIcon(icon_96146d422593dcbf0de51ca05358d186);
+            marker_12f25b5e817a039afb7c13ba7572db9a.setIcon(icon_693e7cc5a913092c9a248ed8be87af13);
 
 
-            marker_ca208b3703988bc51f30a4a3999a98cf.bindTooltip(
+            marker_12f25b5e817a039afb7c13ba7572db9a.bindTooltip(
                 `&lt;div&gt;
                      both
                  &lt;/div&gt;`,
@@ -958,20 +971,21 @@ document.write(`
             );
 
 
-                feature_group_a94a23cd6ce6a65cb4e04b4fccddd193.addTo(map_8ec2bb7dc122c5ed7a1d35016ade852a);
+            feature_group_52cdebdbf9393ed8ddef5398c1d07c6c.addTo(map_a100838821d7e79f2838e5487009fc60);
 
-            var feature_group_fdabb01bb99607aa5cafadc81dc2e045 = L.featureGroup(
+
+            var feature_group_96b15e50f00acdc65b896fdb8cfc6b82 = L.featureGroup(
                 {}
             );
 
 
-            var marker_c4c3924a5ac3b9c91598dc4d6428e2ed = L.marker(
+            var marker_7d53ba24710c5de48d0a60d1a0a84835 = L.marker(
                 [52.4, 5.0],
                 {}
-            ).addTo(feature_group_fdabb01bb99607aa5cafadc81dc2e045);
+            ).addTo(feature_group_96b15e50f00acdc65b896fdb8cfc6b82);
 
 
-            marker_c4c3924a5ac3b9c91598dc4d6428e2ed.bindTooltip(
+            marker_7d53ba24710c5de48d0a60d1a0a84835.bindTooltip(
                 `&lt;div&gt;
                      1
                  &lt;/div&gt;`,
@@ -979,27 +993,28 @@ document.write(`
             );
 
 
-                feature_group_fdabb01bb99607aa5cafadc81dc2e045.addTo(map_8ec2bb7dc122c5ed7a1d35016ade852a);
+            feature_group_96b15e50f00acdc65b896fdb8cfc6b82.addTo(map_a100838821d7e79f2838e5487009fc60);
 
-            var layer_control_3d26611b54b5dc54a578107032c208bf_layers = {
+
+            var layer_control_343b1050925f2b22b957d97bdc7a8f0b_layers = {
                 base_layers : {
-                    &quot;cartodbpositron&quot; : tile_layer_00adcad752410f8f84cb05a25a3c82a9,
+                    &quot;cartodbpositron&quot; : tile_layer_d7003a0c2ee7bb2f4cfa67fa4fe5fb32,
                 },
                 overlays :  {
-                    &quot;markers_both&quot; : feature_group_a94a23cd6ce6a65cb4e04b4fccddd193,
-                    &quot;markers_1&quot; : feature_group_fdabb01bb99607aa5cafadc81dc2e045,
+                    &quot;markers_both&quot; : feature_group_52cdebdbf9393ed8ddef5398c1d07c6c,
+                    &quot;markers_1&quot; : feature_group_96b15e50f00acdc65b896fdb8cfc6b82,
                 },
             };
-            let layer_control_3d26611b54b5dc54a578107032c208bf = L.control.layers(
-                layer_control_3d26611b54b5dc54a578107032c208bf_layers.base_layers,
-                layer_control_3d26611b54b5dc54a578107032c208bf_layers.overlays,
+            let layer_control_343b1050925f2b22b957d97bdc7a8f0b = L.control.layers(
+                layer_control_343b1050925f2b22b957d97bdc7a8f0b_layers.base_layers,
+                layer_control_343b1050925f2b22b957d97bdc7a8f0b_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: false, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_8ec2bb7dc122c5ed7a1d35016ade852a);
+            ).addTo(map_a100838821d7e79f2838e5487009fc60);
 
 
 
-            var map_3b3e1d6ec455c2622c0fcf73e79eae52 = L.map(
-                &quot;map_3b3e1d6ec455c2622c0fcf73e79eae52&quot;,
+            var map_7b73629444d436428746f259abaa27dc = L.map(
+                &quot;map_7b73629444d436428746f259abaa27dc&quot;,
                 {
                     center: [52.1, 5.1],
                     crs: L.CRS.EPSG3857,
@@ -1013,26 +1028,27 @@ document.write(`
 
 
 
-            var tile_layer_145a82c6c19557bda494a9fa83ff786c = L.tileLayer(
+            var tile_layer_df64c2442a6f7447671d9fee170d96c9 = L.tileLayer(
                 &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 20, &quot;maxZoom&quot;: 20, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abcd&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_145a82c6c19557bda494a9fa83ff786c.addTo(map_3b3e1d6ec455c2622c0fcf73e79eae52);
+            tile_layer_df64c2442a6f7447671d9fee170d96c9.addTo(map_7b73629444d436428746f259abaa27dc);
 
-            var feature_group_919be71e4708e069a3530616636cb1cf = L.featureGroup(
+
+            var feature_group_a9c65cab89d6f7a9a8cf43316c61d0ce = L.featureGroup(
                 {}
             );
 
 
-            var marker_b5e2e7b7efe5145a76124668216feeed = L.marker(
+            var marker_293f97de24655c1ed0faa0c9243dbc27 = L.marker(
                 [52.0, 5.4],
                 {}
-            ).addTo(feature_group_919be71e4708e069a3530616636cb1cf);
+            ).addTo(feature_group_a9c65cab89d6f7a9a8cf43316c61d0ce);
 
 
-            marker_b5e2e7b7efe5145a76124668216feeed.bindTooltip(
+            marker_293f97de24655c1ed0faa0c9243dbc27.bindTooltip(
                 `&lt;div&gt;
                      2
                  &lt;/div&gt;`,
@@ -1040,30 +1056,31 @@ document.write(`
             );
 
 
-                feature_group_919be71e4708e069a3530616636cb1cf.addTo(map_3b3e1d6ec455c2622c0fcf73e79eae52);
-
-            map_8ec2bb7dc122c5ed7a1d35016ade852a.sync(map_3b3e1d6ec455c2622c0fcf73e79eae52);
-            map_3b3e1d6ec455c2622c0fcf73e79eae52.sync(map_8ec2bb7dc122c5ed7a1d35016ade852a);
+            feature_group_a9c65cab89d6f7a9a8cf43316c61d0ce.addTo(map_7b73629444d436428746f259abaa27dc);
 
 
-            var feature_group_c131a396a05a4020b790658dfbc13393 = L.featureGroup(
+            map_a100838821d7e79f2838e5487009fc60.sync(map_7b73629444d436428746f259abaa27dc);
+            map_7b73629444d436428746f259abaa27dc.sync(map_a100838821d7e79f2838e5487009fc60);
+
+
+            var feature_group_3a43f13a06144066a89b0419fa06eef2 = L.featureGroup(
                 {}
             );
 
 
-            var marker_efed31ac8628487bb1ac58e58e00afc5 = L.marker(
+            var marker_5be9e53671414deebafa32ac042af9c5 = L.marker(
                 [52.0, 5.0],
                 {}
-            ).addTo(feature_group_c131a396a05a4020b790658dfbc13393);
+            ).addTo(feature_group_3a43f13a06144066a89b0419fa06eef2);
 
 
-            var icon_a4d69a5a543d47d0bba0463d672ba169 = L.AwesomeMarkers.icon(
+            var icon_6354ab2fe8ae469da9d1dea20fd64cfa = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;red&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
             );
-            marker_efed31ac8628487bb1ac58e58e00afc5.setIcon(icon_a4d69a5a543d47d0bba0463d672ba169);
+            marker_5be9e53671414deebafa32ac042af9c5.setIcon(icon_6354ab2fe8ae469da9d1dea20fd64cfa);
 
 
-            marker_efed31ac8628487bb1ac58e58e00afc5.bindTooltip(
+            marker_5be9e53671414deebafa32ac042af9c5.bindTooltip(
                 `&lt;div&gt;
                      both
                  &lt;/div&gt;`,
@@ -1071,22 +1088,26 @@ document.write(`
             );
 
 
-                feature_group_c131a396a05a4020b790658dfbc13393.addTo(map_3b3e1d6ec455c2622c0fcf73e79eae52);
+            feature_group_52cdebdbf9393ed8ddef5398c1d07c6c.addTo(map_a100838821d7e79f2838e5487009fc60);
 
-            var layer_control_d12500b7423141ba98cdbf2756f86227_layers = {
+
+            feature_group_3a43f13a06144066a89b0419fa06eef2.addTo(map_7b73629444d436428746f259abaa27dc);
+
+
+            var layer_control_46ce3e8dd991434591f795abe973d176_layers = {
                 base_layers : {
-                    &quot;cartodbpositron&quot; : tile_layer_145a82c6c19557bda494a9fa83ff786c,
+                    &quot;cartodbpositron&quot; : tile_layer_df64c2442a6f7447671d9fee170d96c9,
                 },
                 overlays :  {
-                    &quot;markers_both&quot; : feature_group_c131a396a05a4020b790658dfbc13393,
-                    &quot;markers_2&quot; : feature_group_919be71e4708e069a3530616636cb1cf,
+                    &quot;markers_both&quot; : feature_group_3a43f13a06144066a89b0419fa06eef2,
+                    &quot;markers_2&quot; : feature_group_a9c65cab89d6f7a9a8cf43316c61d0ce,
                 },
             };
-            let layer_control_d12500b7423141ba98cdbf2756f86227 = L.control.layers(
-                layer_control_d12500b7423141ba98cdbf2756f86227_layers.base_layers,
-                layer_control_d12500b7423141ba98cdbf2756f86227_layers.overlays,
+            let layer_control_46ce3e8dd991434591f795abe973d176 = L.control.layers(
+                layer_control_46ce3e8dd991434591f795abe973d176_layers.base_layers,
+                layer_control_46ce3e8dd991434591f795abe973d176_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: false, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_3b3e1d6ec455c2622c0fcf73e79eae52);
+            ).addTo(map_7b73629444d436428746f259abaa27dc);
 
 
 &lt;/script&gt;
@@ -1134,7 +1155,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_57cbd9066c8eef53ee53c1214f202f68 {
+                #map_64d0ec301a29211fabcb9bc8d656cbaa {
                     position: absolute;
                     width: 100.0%;
                     height: 50.0%;
@@ -1148,7 +1169,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_990d37425885940fa7d6c2fbc1ad3516 {
+                #map_5d7be2eeb73bb7c22699eb814ae5c92c {
                     position: absolute;
                     width: 100.0%;
                     height: 50.0%;
@@ -1163,17 +1184,17 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_57cbd9066c8eef53ee53c1214f202f68&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_64d0ec301a29211fabcb9bc8d656cbaa&quot; &gt;&lt;/div&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_990d37425885940fa7d6c2fbc1ad3516&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_5d7be2eeb73bb7c22699eb814ae5c92c&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_57cbd9066c8eef53ee53c1214f202f68 = L.map(
-                &quot;map_57cbd9066c8eef53ee53c1214f202f68&quot;,
+            var map_64d0ec301a29211fabcb9bc8d656cbaa = L.map(
+                &quot;map_64d0ec301a29211fabcb9bc8d656cbaa&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -1187,16 +1208,17 @@ document.write(`
 
 
 
-            var tile_layer_fdce1997a387b4a6a3da4be7ada37e9b = L.tileLayer(
+            var tile_layer_255a5234ebbbdae92b9066bac096cc19 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_fdce1997a387b4a6a3da4be7ada37e9b.addTo(map_57cbd9066c8eef53ee53c1214f202f68);
+            tile_layer_255a5234ebbbdae92b9066bac096cc19.addTo(map_64d0ec301a29211fabcb9bc8d656cbaa);
 
-            var map_990d37425885940fa7d6c2fbc1ad3516 = L.map(
-                &quot;map_990d37425885940fa7d6c2fbc1ad3516&quot;,
+
+            var map_5d7be2eeb73bb7c22699eb814ae5c92c = L.map(
+                &quot;map_5d7be2eeb73bb7c22699eb814ae5c92c&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -1210,16 +1232,17 @@ document.write(`
 
 
 
-            var tile_layer_c71f2133510af99b6a09d5bdea98473b = L.tileLayer(
+            var tile_layer_ae2340ea13c78f091ebf2e29ba0db06c = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-                tile_layer_c71f2133510af99b6a09d5bdea98473b.addTo(map_990d37425885940fa7d6c2fbc1ad3516);
+            tile_layer_ae2340ea13c78f091ebf2e29ba0db06c.addTo(map_5d7be2eeb73bb7c22699eb814ae5c92c);
 
-            map_57cbd9066c8eef53ee53c1214f202f68.sync(map_990d37425885940fa7d6c2fbc1ad3516);
-            map_990d37425885940fa7d6c2fbc1ad3516.sync(map_57cbd9066c8eef53ee53c1214f202f68);
+
+            map_64d0ec301a29211fabcb9bc8d656cbaa.sync(map_5d7be2eeb73bb7c22699eb814ae5c92c);
+            map_5d7be2eeb73bb7c22699eb814ae5c92c.sync(map_64d0ec301a29211fabcb9bc8d656cbaa);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -1234,7 +1257,7 @@ document.write(`
               
               
                 <footer class="prev-next-footer">
-                  <!-- Previous / next buttons -->
+                  
 <div class="prev-next-area">
     <a class="left-prev"
        href="draw.html"
@@ -1264,6 +1287,7 @@ document.write(`
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
   <div class="sidebar-secondary-item">
+
   <div class="tocsection sourcelink">
     <a href="../../_sources/user_guide/plugins/dual_map.md.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
@@ -1284,8 +1308,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -1293,9 +1317,10 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g84459ba</div>
+Folium version 0.1.dev1.dev+gd250952</div>
       
         <div class="footer-item">
+
   <p class="copyright">
     
       © Copyright 2013, Rob Story.
@@ -1305,14 +1330,16 @@ Folium version 0.1.dev1.dev+g84459ba</div>
 </div>
       
         <div class="footer-item">
+
   <p class="sphinx-version">
     Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
     <br/>
   </p>
 </div>
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>
@@ -1321,8 +1348,9 @@ Folium version 0.1.dev1.dev+g84459ba</div>
   
     <div class="footer-items__end">
       
-        <div class="footer-item"><p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.3.
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
 </p></div>
       
     </div>
