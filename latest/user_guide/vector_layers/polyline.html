@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PolyLine &#8212; Folium 0.1.dev1+gb4982e4 documentation</title>
+    <title>PolyLine &#8212; Folium 0.1.dev1+g4e6ebfe documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
   <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
 
-    <script src="../../_static/documentation_options.js?v=45f0082d"></script>
+    <script src="../../_static/documentation_options.js?v=9570a5fe"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -451,6 +451,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../plugins/pattern.html">Pattern plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/polyline_offset.html">PolylineOffset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/polyline_textpath_and_antpath.html">PolylineTextPath and AntPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/realtime.html">Realtime plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/scroll_zoom_toggler.html">ScrollZoomToggler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/search.html">Search</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/semi_circle.html">SemiCircle</a></li>
@@ -594,7 +595,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_3aa90954773261aab0e434b1f02e4a56 {
+                #map_63f16fc4bd7d62fa5b05e43ac6100846 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -608,14 +609,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_3aa90954773261aab0e434b1f02e4a56&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_63f16fc4bd7d62fa5b05e43ac6100846&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_3aa90954773261aab0e434b1f02e4a56 = L.map(
-                &quot;map_3aa90954773261aab0e434b1f02e4a56&quot;,
+            var map_63f16fc4bd7d62fa5b05e43ac6100846 = L.map(
+                &quot;map_63f16fc4bd7d62fa5b05e43ac6100846&quot;,
                 {
                     center: [41.9, -97.3],
                     crs: L.CRS.EPSG3857,
@@ -629,22 +630,22 @@ document.write(`
 
 
 
-            var tile_layer_d07e2007eb72b4666421c3d211fb0005 = L.tileLayer(
+            var tile_layer_c75138c0ed1dbe55ed41213a4140f135 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_d07e2007eb72b4666421c3d211fb0005.addTo(map_3aa90954773261aab0e434b1f02e4a56);
+            tile_layer_c75138c0ed1dbe55ed41213a4140f135.addTo(map_63f16fc4bd7d62fa5b05e43ac6100846);
 
 
-            var poly_line_233e65e4c0faf98b00af5b1fac21baa2 = L.polyline(
+            var poly_line_841b9fbd7b4023b45310c02f442947ae = L.polyline(
                 [[42.3581, -71.0636], [42.82995815, -74.78991444], [43.17929819, -78.56603306], [43.40320216, -82.37774519], [43.49975489, -86.20965845], [43.46811941, -90.04569087], [43.30857071, -93.86961818], [43.02248456, -97.66563267], [42.61228259, -101.41886832], [42.08133868, -105.11585198], [41.4338549, -108.74485069], [40.67471747, -112.29609954], [39.8093434, -115.76190821], [38.84352776, -119.13665678], [37.7833, -122.4167]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;#FF0000&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;#FF0000&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 5}
-            ).addTo(map_3aa90954773261aab0e434b1f02e4a56);
+            ).addTo(map_63f16fc4bd7d62fa5b05e43ac6100846);
 
 
-            poly_line_233e65e4c0faf98b00af5b1fac21baa2.bindTooltip(
+            poly_line_841b9fbd7b4023b45310c02f442947ae.bindTooltip(
                 `&lt;div&gt;
                      From Boston to San Francisco
                  &lt;/div&gt;`,
@@ -707,7 +708,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_087d4df09a522a6856fe96ddc8f4e0c3 {
+                #map_07ee9c3700aed3afd056ce656e333b22 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -721,14 +722,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_087d4df09a522a6856fe96ddc8f4e0c3&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_07ee9c3700aed3afd056ce656e333b22&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_087d4df09a522a6856fe96ddc8f4e0c3 = L.map(
-                &quot;map_087d4df09a522a6856fe96ddc8f4e0c3&quot;,
+            var map_07ee9c3700aed3afd056ce656e333b22 = L.map(
+                &quot;map_07ee9c3700aed3afd056ce656e333b22&quot;,
                 {
                     center: [41.9, -97.3],
                     crs: L.CRS.EPSG3857,
@@ -742,22 +743,22 @@ document.write(`
 
 
 
-            var tile_layer_06ed09f3c57f3f79d24894a57fedf36a = L.tileLayer(
+            var tile_layer_b878052eded401aff40de29a71542928 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_06ed09f3c57f3f79d24894a57fedf36a.addTo(map_087d4df09a522a6856fe96ddc8f4e0c3);
+            tile_layer_b878052eded401aff40de29a71542928.addTo(map_07ee9c3700aed3afd056ce656e333b22);
 
 
-            var poly_line_af25d313f937e3fec5c8c3270fdb848e = L.polyline(
+            var poly_line_189ad7ea955cc62229118f7e22e41d1c = L.polyline(
                 [[42.3581, -71.0636], [42.82995815, -74.78991444], [43.17929819, -78.56603306], [43.40320216, -82.37774519], [43.49975489, -86.20965845], [43.46811941, -90.04569087], [43.30857071, -93.86961818], [43.02248456, -97.66563267], [42.61228259, -101.41886832], [42.08133868, -105.11585198], [41.4338549, -108.74485069], [40.67471747, -112.29609954], [39.8093434, -115.76190821], [38.84352776, -119.13665678], [37.7833, -122.4167]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;grey&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;grey&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 50, &quot;stroke&quot;: true, &quot;weight&quot;: 5}
-            ).addTo(map_087d4df09a522a6856fe96ddc8f4e0c3);
+            ).addTo(map_07ee9c3700aed3afd056ce656e333b22);
 
 
-            poly_line_af25d313f937e3fec5c8c3270fdb848e.bindTooltip(
+            poly_line_189ad7ea955cc62229118f7e22e41d1c.bindTooltip(
                 `&lt;div&gt;
                      Too much smoothing?
                  &lt;/div&gt;`,
@@ -848,7 +849,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_0fd0fad308b8541d8f594d3bbaa6cf1b {
+                #map_94d282c1e976b7a5d3cbe6567fdfde0e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -862,14 +863,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_0fd0fad308b8541d8f594d3bbaa6cf1b&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_94d282c1e976b7a5d3cbe6567fdfde0e&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_0fd0fad308b8541d8f594d3bbaa6cf1b = L.map(
-                &quot;map_0fd0fad308b8541d8f594d3bbaa6cf1b&quot;,
+            var map_94d282c1e976b7a5d3cbe6567fdfde0e = L.map(
+                &quot;map_94d282c1e976b7a5d3cbe6567fdfde0e&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -883,22 +884,22 @@ document.write(`
 
 
 
-            var tile_layer_81780815befcadbeeb5365228e835c88 = L.tileLayer(
+            var tile_layer_dd2bb6ee1fb8d9e308454564bea345ea = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_81780815befcadbeeb5365228e835c88.addTo(map_0fd0fad308b8541d8f594d3bbaa6cf1b);
+            tile_layer_dd2bb6ee1fb8d9e308454564bea345ea.addTo(map_94d282c1e976b7a5d3cbe6567fdfde0e);
 
 
-            var poly_line_fed0f17ef130c8154b9fe4fb910d377d = L.polyline(
+            var poly_line_bfa24e5fe635d564ea4c4ba3b41b9bec = L.polyline(
                 [[2.0, 179.0], [2.0, -179.0]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 6}
-            ).addTo(map_0fd0fad308b8541d8f594d3bbaa6cf1b);
+            ).addTo(map_94d282c1e976b7a5d3cbe6567fdfde0e);
 
 
-            poly_line_fed0f17ef130c8154b9fe4fb910d377d.bindTooltip(
+            poly_line_bfa24e5fe635d564ea4c4ba3b41b9bec.bindTooltip(
                 `&lt;div&gt;
                      Wrong
                  &lt;/div&gt;`,
@@ -906,13 +907,13 @@ document.write(`
             );
 
 
-            var poly_line_3fd3128d8a3ac7e28c14d49197eec6bb = L.polyline(
+            var poly_line_52f0c57566203bc131a3409a09b8d582 = L.polyline(
                 [[-2.0, 179.0], [-2.0, 181.0]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;blue&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;blue&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;butt&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 6}
-            ).addTo(map_0fd0fad308b8541d8f594d3bbaa6cf1b);
+            ).addTo(map_94d282c1e976b7a5d3cbe6567fdfde0e);
 
 
-            poly_line_3fd3128d8a3ac7e28c14d49197eec6bb.bindTooltip(
+            poly_line_52f0c57566203bc131a3409a09b8d582.bindTooltip(
                 `&lt;div&gt;
                      Correct
                  &lt;/div&gt;`,
@@ -920,13 +921,13 @@ document.write(`
             );
 
 
-            var poly_line_17a4a418f11a49f2d2f31480b8d3d727 = L.polyline(
+            var poly_line_7312a1543d39fa56a8725b8c0c430272 = L.polyline(
                 [[-6.0, -179.0], [-6.0, 179.0]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;green&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;square&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 6}
-            ).addTo(map_0fd0fad308b8541d8f594d3bbaa6cf1b);
+            ).addTo(map_94d282c1e976b7a5d3cbe6567fdfde0e);
 
 
-            poly_line_17a4a418f11a49f2d2f31480b8d3d727.bindTooltip(
+            poly_line_7312a1543d39fa56a8725b8c0c430272.bindTooltip(
                 `&lt;div&gt;
                      Correct
                  &lt;/div&gt;`,
@@ -934,13 +935,13 @@ document.write(`
             );
 
 
-            var poly_line_095fcc49eaafe6ae7475ead82b34d5db = L.polyline(
+            var poly_line_dd9996f18c2a0a32287cb6d38d8e2280 = L.polyline(
                 [[12.0, -179.0], [12.0, 190.0]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;orange&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;orange&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1.0, &quot;smoothFactor&quot;: 1.0, &quot;stroke&quot;: true, &quot;weight&quot;: 6}
-            ).addTo(map_0fd0fad308b8541d8f594d3bbaa6cf1b);
+            ).addTo(map_94d282c1e976b7a5d3cbe6567fdfde0e);
 
 
-            poly_line_095fcc49eaafe6ae7475ead82b34d5db.bindTooltip(
+            poly_line_dd9996f18c2a0a32287cb6d38d8e2280.bindTooltip(
                 `&lt;div&gt;
                      Artifact?
                  &lt;/div&gt;`,
@@ -1053,7 +1054,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_09b83afdfd75ccffef9f2f4e21341f62 {
+                #map_19bf1720ebb1c31983f2efc894a60adc {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1067,14 +1068,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_09b83afdfd75ccffef9f2f4e21341f62&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_19bf1720ebb1c31983f2efc894a60adc&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_09b83afdfd75ccffef9f2f4e21341f62 = L.map(
-                &quot;map_09b83afdfd75ccffef9f2f4e21341f62&quot;,
+            var map_19bf1720ebb1c31983f2efc894a60adc = L.map(
+                &quot;map_19bf1720ebb1c31983f2efc894a60adc&quot;,
                 {
                     center: [38.89399, -77.03659],
                     crs: L.CRS.EPSG3857,
@@ -1088,31 +1089,31 @@ document.write(`
 
 
 
-            var tile_layer_929aaf44166aa8cb6f140f2037df66d9 = L.tileLayer(
+            var tile_layer_7b903808a02df8027d1fc59c5c0d9475 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_929aaf44166aa8cb6f140f2037df66d9.addTo(map_09b83afdfd75ccffef9f2f4e21341f62);
+            tile_layer_7b903808a02df8027d1fc59c5c0d9475.addTo(map_19bf1720ebb1c31983f2efc894a60adc);
 
 
-            var circle_marker_736891bba6ccb7cbe5d91ac0fdf35d96 = L.circleMarker(
+            var circle_marker_2b6bf1a1a8ab453c2cff5c47d9a63046 = L.circleMarker(
                 [38.89415, -77.03738],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 20, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_09b83afdfd75ccffef9f2f4e21341f62);
+            ).addTo(map_19bf1720ebb1c31983f2efc894a60adc);
 
 
-            var circle_marker_ed8604692a91466f8de2e1ae9502bec7 = L.circleMarker(
+            var circle_marker_16cda03365865ca14a5568b05028dbe7 = L.circleMarker(
                 [38.89415, -77.03578],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1.0, &quot;radius&quot;: 20, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_09b83afdfd75ccffef9f2f4e21341f62);
+            ).addTo(map_19bf1720ebb1c31983f2efc894a60adc);
 
 
-            var poly_line_844251f4ac712792fd0a6d72fe97712d = L.polyline(
+            var poly_line_4da97db094028a4142d94776de488735 = L.polyline(
                 [[[38.893596444352134, -77.0381498336792], [38.89337933372204, -77.03792452812195]], [[38.89337933372204, -77.03792452812195], [38.89316222242831, -77.03761339187622]], [[38.89316222242831, -77.03761339187622], [38.893028615148424, -77.03731298446655]], [[38.893028615148424, -77.03731298446655], [38.892920059048464, -77.03691601753235]], [[38.892920059048464, -77.03691601753235], [38.892903358095296, -77.03637957572937]], [[38.892903358095296, -77.03637957572937], [38.89301191422077, -77.03592896461487]], [[38.89301191422077, -77.03592896461487], [38.89316222242831, -77.03549981117249]], [[38.89316222242831, -77.03549981117249], [38.89340438498248, -77.03514575958252]], [[38.89340438498248, -77.03514575958252], [38.893596444352134, -77.0349633693695]]],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;orange&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;orange&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;noClip&quot;: false, &quot;opacity&quot;: 1, &quot;smoothFactor&quot;: 0, &quot;stroke&quot;: true, &quot;weight&quot;: 8}
-            ).addTo(map_09b83afdfd75ccffef9f2f4e21341f62);
+            ).addTo(map_19bf1720ebb1c31983f2efc894a60adc);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -1201,7 +1202,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+gb4982e4</div>
+Folium version 0.1.dev1.dev+g4e6ebfe</div>
       
         <div class="footer-item">
 
