@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Scrolling beyond the world edge &#8212; Folium 0.1.dev1+g4e6ebfe documentation</title>
+    <title>Scrolling beyond the world edge &#8212; Folium 0.1.dev1+g024b9dd documentation</title>
   
   
   
@@ -18,26 +18,26 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../_static/nbsphinx-code-cells.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=924e9346" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../_static/documentation_options.js?v=9570a5fe"></script>
+    <script src="../_static/documentation_options.js?v=dd7a6be1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -45,7 +45,7 @@
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'advanced_guide/world_copy';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.14.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://python-visualization.github.io/folium/latest/_static/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
@@ -63,10 +63,9 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -107,7 +106,7 @@
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
     <span class="fa-solid fa-bars"></span>
@@ -171,12 +170,6 @@ document.write(`
       
         <div class="navbar-item">
 <nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
@@ -290,10 +283,13 @@ document.write(`
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -306,12 +302,6 @@ document.write(`
         
           <div class="navbar-item">
 <nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
@@ -460,7 +450,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="Scrolling-beyond-the-world-edge">
 <h1>Scrolling beyond the world edge<a class="headerlink" href="#Scrolling-beyond-the-world-edge" title="Link to this heading">#</a></h1>
@@ -515,7 +505,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_b7c31bbd9031a5b339e24ee4e03d9414 {
+                #map_c2c3725182062d8b86ba909396017e3e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -529,14 +519,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_b7c31bbd9031a5b339e24ee4e03d9414&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_c2c3725182062d8b86ba909396017e3e&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_b7c31bbd9031a5b339e24ee4e03d9414 = L.map(
-                &quot;map_b7c31bbd9031a5b339e24ee4e03d9414&quot;,
+            var map_c2c3725182062d8b86ba909396017e3e = L.map(
+                &quot;map_c2c3725182062d8b86ba909396017e3e&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -551,31 +541,31 @@ document.write(`
 
 
 
-            var tile_layer_1722178fdf3361d618da1a94e6cc9eed = L.tileLayer(
+            var tile_layer_5e4041e69827e2bc104d6e34cff71966 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_1722178fdf3361d618da1a94e6cc9eed.addTo(map_b7c31bbd9031a5b339e24ee4e03d9414);
+            tile_layer_5e4041e69827e2bc104d6e34cff71966.addTo(map_c2c3725182062d8b86ba909396017e3e);
 
 
-            var marker_1100b01e81e94947f032d1d5d7ce6784 = L.marker(
+            var marker_7a7a3d4bd2392f88b943c2ea8709d023 = L.marker(
                 [0.0, 0.0],
                 {}
-            ).addTo(map_b7c31bbd9031a5b339e24ee4e03d9414);
+            ).addTo(map_c2c3725182062d8b86ba909396017e3e);
 
 
-        var popup_0f0103de76e998bcc0837e867b143645 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-
-
-                var html_871c1eb59d0ee8dbf505f3cb98177c15 = $(`&lt;div id=&quot;html_871c1eb59d0ee8dbf505f3cb98177c15&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;I will disappear when moved outside the  map domain.&lt;/div&gt;`)[0];
-                popup_0f0103de76e998bcc0837e867b143645.setContent(html_871c1eb59d0ee8dbf505f3cb98177c15);
+        var popup_b9bb3894078961e989d993bbf5a943cb = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
 
-        marker_1100b01e81e94947f032d1d5d7ce6784.bindPopup(popup_0f0103de76e998bcc0837e867b143645)
+                var html_6a2b8accb6df9f496b89de85b2f43d27 = $(`&lt;div id=&quot;html_6a2b8accb6df9f496b89de85b2f43d27&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;I will disappear when moved outside the  map domain.&lt;/div&gt;`)[0];
+                popup_b9bb3894078961e989d993bbf5a943cb.setContent(html_6a2b8accb6df9f496b89de85b2f43d27);
+
+
+
+        marker_7a7a3d4bd2392f88b943c2ea8709d023.bindPopup(popup_b9bb3894078961e989d993bbf5a943cb)
         ;
 
 
@@ -633,7 +623,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_f9af775426bcf4030a1c33dbc21c97bb {
+                #map_181c675b0608c0dd978e2a8b7dacbbe9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -647,14 +637,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_f9af775426bcf4030a1c33dbc21c97bb&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_181c675b0608c0dd978e2a8b7dacbbe9&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_f9af775426bcf4030a1c33dbc21c97bb = L.map(
-                &quot;map_f9af775426bcf4030a1c33dbc21c97bb&quot;,
+            var map_181c675b0608c0dd978e2a8b7dacbbe9 = L.map(
+                &quot;map_181c675b0608c0dd978e2a8b7dacbbe9&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -669,31 +659,31 @@ document.write(`
 
 
 
-            var tile_layer_9b98432c99fc88ff08fa765c368f663d = L.tileLayer(
+            var tile_layer_562ed4cd3d0a64f3b646109241315f92 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_9b98432c99fc88ff08fa765c368f663d.addTo(map_f9af775426bcf4030a1c33dbc21c97bb);
+            tile_layer_562ed4cd3d0a64f3b646109241315f92.addTo(map_181c675b0608c0dd978e2a8b7dacbbe9);
 
 
-            var marker_5ef76130d014b94a60787a85db4501be = L.marker(
+            var marker_871781a511b56f634d27bc8dcb863570 = L.marker(
                 [0.0, 0.0],
                 {}
-            ).addTo(map_f9af775426bcf4030a1c33dbc21c97bb);
+            ).addTo(map_181c675b0608c0dd978e2a8b7dacbbe9);
 
 
-        var popup_9a6c0ed856e3daf159a950bc4db69b13 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-
-
-                var html_b6b5110ef4f7260dfed5a7ab727af3de = $(`&lt;div id=&quot;html_b6b5110ef4f7260dfed5a7ab727af3de&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;I will magically reappear when moved outside the map domain.&lt;/div&gt;`)[0];
-                popup_9a6c0ed856e3daf159a950bc4db69b13.setContent(html_b6b5110ef4f7260dfed5a7ab727af3de);
+        var popup_41ee3730ce6e3ea11d7ce5d16a94c8a9 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
 
-        marker_5ef76130d014b94a60787a85db4501be.bindPopup(popup_9a6c0ed856e3daf159a950bc4db69b13)
+                var html_5fcd6d484e54051109eefad0c21b63d0 = $(`&lt;div id=&quot;html_5fcd6d484e54051109eefad0c21b63d0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;I will magically reappear when moved outside the map domain.&lt;/div&gt;`)[0];
+                popup_41ee3730ce6e3ea11d7ce5d16a94c8a9.setContent(html_5fcd6d484e54051109eefad0c21b63d0);
+
+
+
+        marker_871781a511b56f634d27bc8dcb863570.bindPopup(popup_41ee3730ce6e3ea11d7ce5d16a94c8a9)
         ;
 
 
@@ -750,7 +740,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_a9cad22f4fc9c46abceadc5274526252 {
+                #map_86bba118e28570af7f89248eccee751b {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -764,14 +754,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_a9cad22f4fc9c46abceadc5274526252&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_86bba118e28570af7f89248eccee751b&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_a9cad22f4fc9c46abceadc5274526252 = L.map(
-                &quot;map_a9cad22f4fc9c46abceadc5274526252&quot;,
+            var map_86bba118e28570af7f89248eccee751b = L.map(
+                &quot;map_86bba118e28570af7f89248eccee751b&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -785,31 +775,31 @@ document.write(`
 
 
 
-            var tile_layer_e35e13211cec6f499a097bf653a93579 = L.tileLayer(
+            var tile_layer_701bc482de1f7da75df0a8c81919d8e6 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: true, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_e35e13211cec6f499a097bf653a93579.addTo(map_a9cad22f4fc9c46abceadc5274526252);
+            tile_layer_701bc482de1f7da75df0a8c81919d8e6.addTo(map_86bba118e28570af7f89248eccee751b);
 
 
-            var marker_c22daa6224e398c255ea7623a5e1ad5b = L.marker(
+            var marker_04da401d034b5eabc8e68da5ae1fd32e = L.marker(
                 [0.0, 0.0],
                 {}
-            ).addTo(map_a9cad22f4fc9c46abceadc5274526252);
+            ).addTo(map_86bba118e28570af7f89248eccee751b);
 
 
-        var popup_7ba22e92ab731d8b0e7b5881519c9016 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-
-
-                var html_823e2aaaa2b00994896c2699b57a45b5 = $(`&lt;div id=&quot;html_823e2aaaa2b00994896c2699b57a45b5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;The map domain here is not wrapped.&lt;/div&gt;`)[0];
-                popup_7ba22e92ab731d8b0e7b5881519c9016.setContent(html_823e2aaaa2b00994896c2699b57a45b5);
+        var popup_e3b345bb71204d6be381207b13d96ccf = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
 
-        marker_c22daa6224e398c255ea7623a5e1ad5b.bindPopup(popup_7ba22e92ab731d8b0e7b5881519c9016)
+                var html_58cf2ffaac5cf70abf6e4e50be013bf0 = $(`&lt;div id=&quot;html_58cf2ffaac5cf70abf6e4e50be013bf0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;The map domain here is not wrapped.&lt;/div&gt;`)[0];
+                popup_e3b345bb71204d6be381207b13d96ccf.setContent(html_58cf2ffaac5cf70abf6e4e50be013bf0);
+
+
+
+        marker_04da401d034b5eabc8e68da5ae1fd32e.bindPopup(popup_e3b345bb71204d6be381207b13d96ccf)
         ;
 
 
@@ -857,12 +847,14 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-  <div class="sidebar-secondary-item">
 
-  <div class="page-toc tocsection onthispage">
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
     <i class="fa-solid fa-list"></i> On this page
   </div>
-  <nav class="bd-toc-nav page-toc">
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Defaults">Defaults</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#World-copy-jump">World copy jump</a></li>
@@ -892,8 +884,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -901,7 +893,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g4e6ebfe</div>
+Folium version 0.1.dev1.dev+g024b9dd</div>
       
         <div class="footer-item">
 
@@ -923,7 +915,7 @@ Folium version 0.1.dev1.dev+g4e6ebfe</div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
 </p></div>
       
     </div>
@@ -934,7 +926,7 @@ Folium version 0.1.dev1.dev+g4e6ebfe</div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
 </p></div>
       
     </div>

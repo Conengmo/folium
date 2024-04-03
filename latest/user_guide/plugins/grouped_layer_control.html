@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>GroupedLayerControl &#8212; Folium 0.1.dev1+g4e6ebfe documentation</title>
+    <title>GroupedLayerControl &#8212; Folium 0.1.dev1+g024b9dd documentation</title>
   
   
   
@@ -18,26 +18,26 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=924e9346" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../_static/documentation_options.js?v=9570a5fe"></script>
+    <script src="../../_static/documentation_options.js?v=dd7a6be1"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -45,7 +45,7 @@
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/plugins/grouped_layer_control';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.14.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://python-visualization.github.io/folium/latest/_static/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'latest';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
@@ -63,10 +63,9 @@
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
     <i class="fa-solid fa-arrow-up"></i>
@@ -107,7 +106,7 @@
 </form></div>
   </div>
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
 <div class="bd-header__inner bd-page-width">
   <label class="sidebar-toggle primary-toggle" for="__primary">
     <span class="fa-solid fa-bars"></span>
@@ -171,12 +170,6 @@ document.write(`
       
         <div class="navbar-item">
 <nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
@@ -290,10 +283,13 @@ document.write(`
   
 </div>
 
-    </nav>
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -306,12 +302,6 @@ document.write(`
         
           <div class="navbar-item">
 <nav class="navbar-nav">
-  <p class="sidebar-header-items__title"
-     role="heading"
-     aria-level="1"
-     aria-label="Site Navigation">
-    Site Navigation
-  </p>
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
@@ -432,6 +422,7 @@ document.write(`
 </ul>
 </li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../plugins.html">Plugins</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-6"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="antpath.html">Antpath</a></li>
 <li class="toctree-l2"><a class="reference internal" href="boat_marker.html">BoatMarker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="beautify_icon.html">BeautifyIcon</a></li>
 <li class="toctree-l2"><a class="reference internal" href="draw.html">Draw</a></li>
@@ -450,7 +441,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="mouse_position.html">MousePosition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pattern.html">Pattern plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="polyline_offset.html">PolylineOffset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="polyline_textpath_and_antpath.html">PolylineTextPath and AntPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polyline_textpath.html">PolyLineTextPath</a></li>
 <li class="toctree-l2"><a class="reference internal" href="realtime.html">Realtime plugin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="scroll_zoom_toggler.html">ScrollZoomToggler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="search.html">Search</a></li>
@@ -522,7 +513,7 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="GroupedLayerControl">
 <h1>GroupedLayerControl<a class="headerlink" href="#GroupedLayerControl" title="Link to this heading">#</a></h1>
@@ -591,7 +582,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_058587623f453678ed34fd9e1291656c {
+                #map_cee428174da2f22ba8a3c52a8d9bb6d9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -607,14 +598,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_058587623f453678ed34fd9e1291656c&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_cee428174da2f22ba8a3c52a8d9bb6d9&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_058587623f453678ed34fd9e1291656c = L.map(
-                &quot;map_058587623f453678ed34fd9e1291656c&quot;,
+            var map_cee428174da2f22ba8a3c52a8d9bb6d9 = L.map(
+                &quot;map_cee428174da2f22ba8a3c52a8d9bb6d9&quot;,
                 {
                     center: [40.0, 70.0],
                     crs: L.CRS.EPSG3857,
@@ -628,70 +619,70 @@ document.write(`
 
 
 
-            var tile_layer_32c4874ccad0f179f12d594acb90302a = L.tileLayer(
+            var tile_layer_cf6d491af6063d374041155d924aac5f = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_32c4874ccad0f179f12d594acb90302a.addTo(map_058587623f453678ed34fd9e1291656c);
+            tile_layer_cf6d491af6063d374041155d924aac5f.addTo(map_cee428174da2f22ba8a3c52a8d9bb6d9);
 
 
-            var feature_group_f9cf0294bff397dc1e7b2baeec4f0333 = L.featureGroup(
+            var feature_group_2c2a17115a5d78d6c774b829b8920331 = L.featureGroup(
                 {}
             );
 
 
-            var marker_d1e0b24343e5470372e3723c8f2ddd03 = L.marker(
+            var marker_a40446a211918e1617708c1accb1bbe3 = L.marker(
                 [40.0, 74.0],
                 {}
-            ).addTo(feature_group_f9cf0294bff397dc1e7b2baeec4f0333);
+            ).addTo(feature_group_2c2a17115a5d78d6c774b829b8920331);
 
 
-            feature_group_f9cf0294bff397dc1e7b2baeec4f0333.addTo(map_058587623f453678ed34fd9e1291656c);
+            feature_group_2c2a17115a5d78d6c774b829b8920331.addTo(map_cee428174da2f22ba8a3c52a8d9bb6d9);
 
 
-            var feature_group_9b8248ae14d26bae557e506df97c92dc = L.featureGroup(
+            var feature_group_0e70f06d170d4db5be1314a2cadd407d = L.featureGroup(
                 {}
             );
 
 
-            var marker_005ea382a15670b449dc222d1dc1ce67 = L.marker(
+            var marker_afa2bef042eff112feade63039e2dd96 = L.marker(
                 [38.0, 72.0],
                 {}
-            ).addTo(feature_group_9b8248ae14d26bae557e506df97c92dc);
+            ).addTo(feature_group_0e70f06d170d4db5be1314a2cadd407d);
 
 
-            feature_group_9b8248ae14d26bae557e506df97c92dc.addTo(map_058587623f453678ed34fd9e1291656c);
+            feature_group_0e70f06d170d4db5be1314a2cadd407d.addTo(map_cee428174da2f22ba8a3c52a8d9bb6d9);
 
 
-            var feature_group_3b5bf152f65be77d22f9af8ff6a7e887 = L.featureGroup(
+            var feature_group_524a8ac5b999173d83f0e7af303cea19 = L.featureGroup(
                 {}
             );
 
 
-            var marker_40d1065a35b6f75385f73f2fafef4d61 = L.marker(
+            var marker_a39aa4acd8d7c5ee96e89796d81c7c82 = L.marker(
                 [40.0, 72.0],
                 {}
-            ).addTo(feature_group_3b5bf152f65be77d22f9af8ff6a7e887);
+            ).addTo(feature_group_524a8ac5b999173d83f0e7af303cea19);
 
 
-            feature_group_3b5bf152f65be77d22f9af8ff6a7e887.addTo(map_058587623f453678ed34fd9e1291656c);
+            feature_group_524a8ac5b999173d83f0e7af303cea19.addTo(map_cee428174da2f22ba8a3c52a8d9bb6d9);
 
 
-            var layer_control_584bf9bde0612aed2249f5b67261a07b_layers = {
+            var layer_control_7970e922d4b2472e4a8ae58f6eab4aaa_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_32c4874ccad0f179f12d594acb90302a,
+                    &quot;openstreetmap&quot; : tile_layer_cf6d491af6063d374041155d924aac5f,
                 },
                 overlays :  {
-                    &quot;g3&quot; : feature_group_3b5bf152f65be77d22f9af8ff6a7e887,
+                    &quot;g3&quot; : feature_group_524a8ac5b999173d83f0e7af303cea19,
                 },
             };
-            let layer_control_584bf9bde0612aed2249f5b67261a07b = L.control.layers(
-                layer_control_584bf9bde0612aed2249f5b67261a07b_layers.base_layers,
-                layer_control_584bf9bde0612aed2249f5b67261a07b_layers.overlays,
+            let layer_control_7970e922d4b2472e4a8ae58f6eab4aaa = L.control.layers(
+                layer_control_7970e922d4b2472e4a8ae58f6eab4aaa_layers.base_layers,
+                layer_control_7970e922d4b2472e4a8ae58f6eab4aaa_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: false, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_058587623f453678ed34fd9e1291656c);
+            ).addTo(map_cee428174da2f22ba8a3c52a8d9bb6d9);
 
 
 
@@ -700,13 +691,13 @@ document.write(`
                 null,
                 {
                     &quot;groups1&quot; : {
-                        &quot;g1&quot; : feature_group_f9cf0294bff397dc1e7b2baeec4f0333,
-                        &quot;g2&quot; : feature_group_9b8248ae14d26bae557e506df97c92dc,
+                        &quot;g1&quot; : feature_group_2c2a17115a5d78d6c774b829b8920331,
+                        &quot;g2&quot; : feature_group_0e70f06d170d4db5be1314a2cadd407d,
                     },
                 },
                 {&quot;collapsed&quot;: false, &quot;exclusiveGroups&quot;: [&quot;groups1&quot;]},
-            ).addTo(map_058587623f453678ed34fd9e1291656c);
-            feature_group_9b8248ae14d26bae557e506df97c92dc.remove();
+            ).addTo(map_cee428174da2f22ba8a3c52a8d9bb6d9);
+            feature_group_0e70f06d170d4db5be1314a2cadd407d.remove();
 
 
 &lt;/script&gt;
@@ -774,7 +765,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_d645fa045d4f5c4f91130cf35ece18ce {
+                #map_ac3574a3ebbfbf26aae516eacf730328 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -790,14 +781,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_d645fa045d4f5c4f91130cf35ece18ce&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_ac3574a3ebbfbf26aae516eacf730328&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_d645fa045d4f5c4f91130cf35ece18ce = L.map(
-                &quot;map_d645fa045d4f5c4f91130cf35ece18ce&quot;,
+            var map_ac3574a3ebbfbf26aae516eacf730328 = L.map(
+                &quot;map_ac3574a3ebbfbf26aae516eacf730328&quot;,
                 {
                     center: [40.0, 70.0],
                     crs: L.CRS.EPSG3857,
@@ -811,64 +802,64 @@ document.write(`
 
 
 
-            var tile_layer_aa0389651b2fb1d6a17c53b556ceb78c = L.tileLayer(
+            var tile_layer_bc8ddc0c1009243a86ea67bca08c424c = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_aa0389651b2fb1d6a17c53b556ceb78c.addTo(map_d645fa045d4f5c4f91130cf35ece18ce);
+            tile_layer_bc8ddc0c1009243a86ea67bca08c424c.addTo(map_ac3574a3ebbfbf26aae516eacf730328);
 
 
-            var feature_group_a881f2cea961f16d6593175ff1bd70ae = L.featureGroup(
+            var feature_group_52fb78dab2320631064c639321bc9bc9 = L.featureGroup(
                 {}
             );
 
 
-            var marker_c736e859d30d3560aa478107432b9667 = L.marker(
+            var marker_28c172dbbea333bce472947f80835c01 = L.marker(
                 [40.0, 74.0],
                 {}
-            ).addTo(feature_group_a881f2cea961f16d6593175ff1bd70ae);
+            ).addTo(feature_group_52fb78dab2320631064c639321bc9bc9);
 
 
-            var feature_group_4863ed0e58dcc2bb4ca9d62b9e115dc0 = L.featureGroup(
+            var feature_group_a83b971cf26b636461e9813c567af834 = L.featureGroup(
                 {}
             );
 
 
-            var marker_c40c4f9a201f424a03c7e35e91a85ef4 = L.marker(
+            var marker_1098da2f43671623d4dd31c139585a74 = L.marker(
                 [38.0, 72.0],
                 {}
-            ).addTo(feature_group_4863ed0e58dcc2bb4ca9d62b9e115dc0);
+            ).addTo(feature_group_a83b971cf26b636461e9813c567af834);
 
 
-            var feature_group_ac62cbe2719df3bacce1cec4b41b645e = L.featureGroup(
+            var feature_group_767ceec0cb996d7d87137ebb24bbbe98 = L.featureGroup(
                 {}
             );
 
 
-            var marker_10099e60db079b292c68499dcb951b8b = L.marker(
+            var marker_bbac6db4910d68c3c212ab8f2fd94dbe = L.marker(
                 [40.0, 72.0],
                 {}
-            ).addTo(feature_group_ac62cbe2719df3bacce1cec4b41b645e);
+            ).addTo(feature_group_767ceec0cb996d7d87137ebb24bbbe98);
 
 
-            feature_group_ac62cbe2719df3bacce1cec4b41b645e.addTo(map_d645fa045d4f5c4f91130cf35ece18ce);
+            feature_group_767ceec0cb996d7d87137ebb24bbbe98.addTo(map_ac3574a3ebbfbf26aae516eacf730328);
 
 
-            var layer_control_205bf5e8767526ed89a0dc7c9e028f18_layers = {
+            var layer_control_8f3364e0ff1f486791051e90fa95a53d_layers = {
                 base_layers : {
-                    &quot;openstreetmap&quot; : tile_layer_aa0389651b2fb1d6a17c53b556ceb78c,
+                    &quot;openstreetmap&quot; : tile_layer_bc8ddc0c1009243a86ea67bca08c424c,
                 },
                 overlays :  {
-                    &quot;g3&quot; : feature_group_ac62cbe2719df3bacce1cec4b41b645e,
+                    &quot;g3&quot; : feature_group_767ceec0cb996d7d87137ebb24bbbe98,
                 },
             };
-            let layer_control_205bf5e8767526ed89a0dc7c9e028f18 = L.control.layers(
-                layer_control_205bf5e8767526ed89a0dc7c9e028f18_layers.base_layers,
-                layer_control_205bf5e8767526ed89a0dc7c9e028f18_layers.overlays,
+            let layer_control_8f3364e0ff1f486791051e90fa95a53d = L.control.layers(
+                layer_control_8f3364e0ff1f486791051e90fa95a53d_layers.base_layers,
+                layer_control_8f3364e0ff1f486791051e90fa95a53d_layers.overlays,
                 {&quot;autoZIndex&quot;: true, &quot;collapsed&quot;: false, &quot;position&quot;: &quot;topright&quot;}
-            ).addTo(map_d645fa045d4f5c4f91130cf35ece18ce);
+            ).addTo(map_ac3574a3ebbfbf26aae516eacf730328);
 
 
 
@@ -877,14 +868,14 @@ document.write(`
                 null,
                 {
                     &quot;groups1&quot; : {
-                        &quot;g1&quot; : feature_group_a881f2cea961f16d6593175ff1bd70ae,
-                        &quot;g2&quot; : feature_group_4863ed0e58dcc2bb4ca9d62b9e115dc0,
+                        &quot;g1&quot; : feature_group_52fb78dab2320631064c639321bc9bc9,
+                        &quot;g2&quot; : feature_group_a83b971cf26b636461e9813c567af834,
                     },
                 },
                 {&quot;collapsed&quot;: false},
-            ).addTo(map_d645fa045d4f5c4f91130cf35ece18ce);
-            feature_group_4863ed0e58dcc2bb4ca9d62b9e115dc0.remove();
-            feature_group_a881f2cea961f16d6593175ff1bd70ae.remove();
+            ).addTo(map_ac3574a3ebbfbf26aae516eacf730328);
+            feature_group_a83b971cf26b636461e9813c567af834.remove();
+            feature_group_52fb78dab2320631064c639321bc9bc9.remove();
 
 
 &lt;/script&gt;
@@ -929,6 +920,7 @@ document.write(`
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
+
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
@@ -951,8 +943,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -960,7 +952,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g4e6ebfe</div>
+Folium version 0.1.dev1.dev+g024b9dd</div>
       
         <div class="footer-item">
 
@@ -982,7 +974,7 @@ Folium version 0.1.dev1.dev+g4e6ebfe</div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
 </p></div>
       
     </div>
@@ -993,7 +985,7 @@ Folium version 0.1.dev1.dev+g4e6ebfe</div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.14.4.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.2.
 </p></div>
       
     </div>
