@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Circle and CircleMarker &#8212; Folium 0.1.dev1+g024b9dd documentation</title>
+    <title>Circle and CircleMarker &#8212; Folium 0.1.dev1+ga3034f9 documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../_static/documentation_options.js?v=dd7a6be1"></script>
+    <script src="../../_static/documentation_options.js?v=ec1abc5d"></script>
     <script src="../../_static/doctools.js?v=888ff710"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -433,7 +433,7 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../plugins/geocoder.html">Geocoder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/grouped_layer_control.html">GroupedLayerControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/heatmap.html">Heatmap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugins/heatmap_with_time.html">HeatMapWithTime Plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/heatmap_with_time.html">HeatMapWithTime</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/locate_control.html">LocateControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/marker_cluster.html">MarkerCluster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/mini_map.html">MiniMap</a></li>
@@ -600,7 +600,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_e8f17b47715354796857fb64efef4b2e {
+                #map_4361251543431091c59025c23c13cc74 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -614,14 +614,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_e8f17b47715354796857fb64efef4b2e&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_4361251543431091c59025c23c13cc74&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_e8f17b47715354796857fb64efef4b2e = L.map(
-                &quot;map_e8f17b47715354796857fb64efef4b2e&quot;,
+            var map_4361251543431091c59025c23c13cc74 = L.map(
+                &quot;map_4361251543431091c59025c23c13cc74&quot;,
                 {
                     center: [-27.5717, -48.6256],
                     crs: L.CRS.EPSG3857,
@@ -635,37 +635,37 @@ document.write(`
 
 
 
-            var tile_layer_868f05dda7799c3432405bfe27da6343 = L.tileLayer(
+            var tile_layer_84d85015d9cce0d6eb09171823296644 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_868f05dda7799c3432405bfe27da6343.addTo(map_e8f17b47715354796857fb64efef4b2e);
+            tile_layer_84d85015d9cce0d6eb09171823296644.addTo(map_4361251543431091c59025c23c13cc74);
 
 
-            var circle_marker_575c2f9d992119bcf653dbb8114c0680 = L.circleMarker(
+            var circle_marker_db387b3b9076bb6ee803cfebb8f96105 = L.circleMarker(
                 [-27.55, -48.8],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;cornflowerblue&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;cornflowerblue&quot;, &quot;fillOpacity&quot;: 0.6, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1, &quot;radius&quot;: 50, &quot;stroke&quot;: false, &quot;weight&quot;: 3}
-            ).addTo(map_e8f17b47715354796857fb64efef4b2e);
+            ).addTo(map_4361251543431091c59025c23c13cc74);
 
 
-        var popup_4e9fcc2d232b35fa0ece347fbed18d8e = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-
-
-                var html_54d44e00ceeddfe6f5f3adf62f65c14e = $(`&lt;div id=&quot;html_54d44e00ceeddfe6f5f3adf62f65c14e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;50 pixels&lt;/div&gt;`)[0];
-                popup_4e9fcc2d232b35fa0ece347fbed18d8e.setContent(html_54d44e00ceeddfe6f5f3adf62f65c14e);
+        var popup_3f6ac4dc5e960af69234e1280005e90d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
 
-        circle_marker_575c2f9d992119bcf653dbb8114c0680.bindPopup(popup_4e9fcc2d232b35fa0ece347fbed18d8e)
+                var html_0b1668737bd43cac8004f0004356c2da = $(`&lt;div id=&quot;html_0b1668737bd43cac8004f0004356c2da&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;50 pixels&lt;/div&gt;`)[0];
+                popup_3f6ac4dc5e960af69234e1280005e90d.setContent(html_0b1668737bd43cac8004f0004356c2da);
+
+
+
+        circle_marker_db387b3b9076bb6ee803cfebb8f96105.bindPopup(popup_3f6ac4dc5e960af69234e1280005e90d)
         ;
 
 
 
 
-            circle_marker_575c2f9d992119bcf653dbb8114c0680.bindTooltip(
+            circle_marker_db387b3b9076bb6ee803cfebb8f96105.bindTooltip(
                 `&lt;div&gt;
                      I am in pixels
                  &lt;/div&gt;`,
@@ -673,34 +673,34 @@ document.write(`
             );
 
 
-            var circle_marker_262e0fba798001a098e378f9f3fd050a = L.circleMarker(
+            var circle_marker_72ed4e3cc68d0eac7c9647ffec848a11 = L.circleMarker(
                 [-27.35, -48.8],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;black&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: false, &quot;fillColor&quot;: &quot;black&quot;, &quot;fillOpacity&quot;: 0.6, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1, &quot;radius&quot;: 25, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
-            ).addTo(map_e8f17b47715354796857fb64efef4b2e);
+            ).addTo(map_4361251543431091c59025c23c13cc74);
 
 
-            var circle_6eddbc2ae57128a04077aa27dccd8aaf = L.circle(
+            var circle_1902e37af6d0ec1f820706e81301eeed = L.circle(
                 [-27.551667, -48.478889],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;black&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.6, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 1, &quot;radius&quot;: 10000, &quot;stroke&quot;: true, &quot;weight&quot;: 1}
-            ).addTo(map_e8f17b47715354796857fb64efef4b2e);
+            ).addTo(map_4361251543431091c59025c23c13cc74);
 
 
-        var popup_de3599759dcf257fa45b15f29bf7aca5 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-
-
-                var html_1c08c99c79847e95906acf0bdd16c8fa = $(`&lt;div id=&quot;html_1c08c99c79847e95906acf0bdd16c8fa&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;10000 meters&lt;/div&gt;`)[0];
-                popup_de3599759dcf257fa45b15f29bf7aca5.setContent(html_1c08c99c79847e95906acf0bdd16c8fa);
+        var popup_275ba674784991ef5ec62d700259e87f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
 
-        circle_6eddbc2ae57128a04077aa27dccd8aaf.bindPopup(popup_de3599759dcf257fa45b15f29bf7aca5)
+                var html_ed7a514475c57834f743d8340327ef8e = $(`&lt;div id=&quot;html_ed7a514475c57834f743d8340327ef8e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;10000 meters&lt;/div&gt;`)[0];
+                popup_275ba674784991ef5ec62d700259e87f.setContent(html_ed7a514475c57834f743d8340327ef8e);
+
+
+
+        circle_1902e37af6d0ec1f820706e81301eeed.bindPopup(popup_275ba674784991ef5ec62d700259e87f)
         ;
 
 
 
 
-            circle_6eddbc2ae57128a04077aa27dccd8aaf.bindTooltip(
+            circle_1902e37af6d0ec1f820706e81301eeed.bindTooltip(
                 `&lt;div&gt;
                      I am in meters
                  &lt;/div&gt;`,
@@ -781,7 +781,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g024b9dd</div>
+Folium version 0.1.dev1.dev+ga3034f9</div>
       
         <div class="footer-item">
 
