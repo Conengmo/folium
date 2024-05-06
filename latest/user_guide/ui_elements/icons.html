@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Icons &#8212; Folium 0.1.dev1+g290252f documentation</title>
+    <title>Icons &#8212; Folium 0.5.1.dev875+g570f293 documentation</title>
   
   
   
@@ -37,8 +37,8 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../_static/documentation_options.js?v=eb5ad6ef"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/documentation_options.js?v=860e384e"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -449,8 +449,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="../plugins/side_by_side_layers.html">SideBySideLayers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/tag_filter_button.html">TagFilterButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/terminator.html">Terminator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/timeline.html">Timeline and TimelineSlider</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/timeslider_choropleth.html">TimeSliderChoropleth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/timestamped_geojson.html">TimestampedGeoJson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/treelayercontrol.html">TreeLayerControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/vector_tiles.html">Vector tiles using VectorGridProtobuf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/WmsTimeDimension.html">TimestampedWmsTileLayers</a></li>
 </ul>
@@ -575,7 +577,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_253db90eb3617d5edb59730e8c26ba92 {
+                #map_875f89dae6a37e785ed0698e23d64afc {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -589,14 +591,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_253db90eb3617d5edb59730e8c26ba92&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_875f89dae6a37e785ed0698e23d64afc&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_253db90eb3617d5edb59730e8c26ba92 = L.map(
-                &quot;map_253db90eb3617d5edb59730e8c26ba92&quot;,
+            var map_875f89dae6a37e785ed0698e23d64afc = L.map(
+                &quot;map_875f89dae6a37e785ed0698e23d64afc&quot;,
                 {
                     center: [41.0, -71.0],
                     crs: L.CRS.EPSG3857,
@@ -610,28 +612,28 @@ document.write(`
 
 
 
-            var tile_layer_a0114a3b1b885c2fa303e1592fff9203 = L.tileLayer(
+            var tile_layer_5d5efc26563b3ec7efbbeb715a6e3d60 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_a0114a3b1b885c2fa303e1592fff9203.addTo(map_253db90eb3617d5edb59730e8c26ba92);
+            tile_layer_5d5efc26563b3ec7efbbeb715a6e3d60.addTo(map_875f89dae6a37e785ed0698e23d64afc);
 
 
-            var marker_be0846454ede096b19b4fed87aaf4cfc = L.marker(
+            var marker_33f5c0ba9b0a3fd7402c279edd807272 = L.marker(
                 [41.0, -72.0],
                 {}
-            ).addTo(map_253db90eb3617d5edb59730e8c26ba92);
+            ).addTo(map_875f89dae6a37e785ed0698e23d64afc);
 
 
-            var icon_c11a77eb834f46ba4ab4ec6a2474fab5 = L.AwesomeMarkers.icon(
+            var icon_62fb8a06ff3f3563b709375fbbf77e8d = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-180&quot;, &quot;icon&quot;: &quot;arrow-up&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;green&quot;, &quot;prefix&quot;: &quot;fa&quot;}
             );
-            marker_be0846454ede096b19b4fed87aaf4cfc.setIcon(icon_c11a77eb834f46ba4ab4ec6a2474fab5);
+            marker_33f5c0ba9b0a3fd7402c279edd807272.setIcon(icon_62fb8a06ff3f3563b709375fbbf77e8d);
 
 
-            marker_be0846454ede096b19b4fed87aaf4cfc.bindTooltip(
+            marker_33f5c0ba9b0a3fd7402c279edd807272.bindTooltip(
                 `&lt;div&gt;
                      180
                  &lt;/div&gt;`,
@@ -639,19 +641,19 @@ document.write(`
             );
 
 
-            var marker_2b17e3f7c7ac53624939b8b2f73a2743 = L.marker(
+            var marker_a25a9a44d33e8b76374a960f8ac15d56 = L.marker(
                 [41.0, -75.0],
                 {}
-            ).addTo(map_253db90eb3617d5edb59730e8c26ba92);
+            ).addTo(map_875f89dae6a37e785ed0698e23d64afc);
 
 
-            var icon_fdb8eaf97a2d1a0d9ab7b863d384c040 = L.AwesomeMarkers.icon(
+            var icon_5e5f9d8c2a7de6219de9688a0e40f75e = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-45&quot;, &quot;icon&quot;: &quot;arrow-up&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;green&quot;, &quot;prefix&quot;: &quot;fa&quot;}
             );
-            marker_2b17e3f7c7ac53624939b8b2f73a2743.setIcon(icon_fdb8eaf97a2d1a0d9ab7b863d384c040);
+            marker_a25a9a44d33e8b76374a960f8ac15d56.setIcon(icon_5e5f9d8c2a7de6219de9688a0e40f75e);
 
 
-            marker_2b17e3f7c7ac53624939b8b2f73a2743.bindTooltip(
+            marker_a25a9a44d33e8b76374a960f8ac15d56.bindTooltip(
                 `&lt;div&gt;
                      45
                  &lt;/div&gt;`,
@@ -659,19 +661,19 @@ document.write(`
             );
 
 
-            var marker_990080481fc74e30be66b9a6a524690b = L.marker(
+            var marker_2ff5b4c0605f8dc42b55fcf440eae125 = L.marker(
                 [41.0, -78.0],
                 {}
-            ).addTo(map_253db90eb3617d5edb59730e8c26ba92);
+            ).addTo(map_875f89dae6a37e785ed0698e23d64afc);
 
 
-            var icon_b3c924e7414c36c8ebd4527886b56337 = L.AwesomeMarkers.icon(
+            var icon_05e66822c5ec503def5e3c9c8f83e473 = L.AwesomeMarkers.icon(
                 {&quot;extraClasses&quot;: &quot;fa-rotate-90&quot;, &quot;icon&quot;: &quot;arrow-up&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;green&quot;, &quot;prefix&quot;: &quot;fa&quot;}
             );
-            marker_990080481fc74e30be66b9a6a524690b.setIcon(icon_b3c924e7414c36c8ebd4527886b56337);
+            marker_2ff5b4c0605f8dc42b55fcf440eae125.setIcon(icon_05e66822c5ec503def5e3c9c8f83e473);
 
 
-            marker_990080481fc74e30be66b9a6a524690b.bindTooltip(
+            marker_2ff5b4c0605f8dc42b55fcf440eae125.bindTooltip(
                 `&lt;div&gt;
                      90
                  &lt;/div&gt;`,
@@ -744,7 +746,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_1da8f003ac61d78ae876c359ac8009e4 {
+                #map_51987a87abd9555f139eb615c0e40510 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -758,14 +760,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_1da8f003ac61d78ae876c359ac8009e4&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_51987a87abd9555f139eb615c0e40510&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_1da8f003ac61d78ae876c359ac8009e4 = L.map(
-                &quot;map_1da8f003ac61d78ae876c359ac8009e4&quot;,
+            var map_51987a87abd9555f139eb615c0e40510 = L.map(
+                &quot;map_51987a87abd9555f139eb615c0e40510&quot;,
                 {
                     center: [45.3288, -121.6625],
                     crs: L.CRS.EPSG3857,
@@ -779,35 +781,35 @@ document.write(`
 
 
 
-            var tile_layer_7addac0218a3605316730f17e4bfe983 = L.tileLayer(
+            var tile_layer_ff2712be7759021a22dfc592cd05354d = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_7addac0218a3605316730f17e4bfe983.addTo(map_1da8f003ac61d78ae876c359ac8009e4);
+            tile_layer_ff2712be7759021a22dfc592cd05354d.addTo(map_51987a87abd9555f139eb615c0e40510);
 
 
-            var marker_9d6ce3f633b7fa47d4e483ae6f302e6b = L.marker(
+            var marker_4ca79a3e47827306bea7425d2d20759b = L.marker(
                 [45.3288, -121.6625],
                 {}
-            ).addTo(map_1da8f003ac61d78ae876c359ac8009e4);
+            ).addTo(map_51987a87abd9555f139eb615c0e40510);
 
 
-        var custom_icon_3f3a43e351de96778c549ae33ed2e8b8 = L.icon({&quot;iconAnchor&quot;: [22, 94], &quot;iconSize&quot;: [38, 95], &quot;iconUrl&quot;: &quot;https://leafletjs.com/examples/custom-icons/leaf-red.png&quot;, &quot;popupAnchor&quot;: [-3, -76], &quot;shadowAnchor&quot;: [4, 62], &quot;shadowSize&quot;: [50, 64], &quot;shadowUrl&quot;: &quot;https://leafletjs.com/examples/custom-icons/leaf-shadow.png&quot;});
-        marker_9d6ce3f633b7fa47d4e483ae6f302e6b.setIcon(custom_icon_3f3a43e351de96778c549ae33ed2e8b8);
+        var custom_icon_5a9c5191542ab13b14bdca2465a51d20 = L.icon({&quot;iconAnchor&quot;: [22, 94], &quot;iconSize&quot;: [38, 95], &quot;iconUrl&quot;: &quot;https://leafletjs.com/examples/custom-icons/leaf-red.png&quot;, &quot;popupAnchor&quot;: [-3, -76], &quot;shadowAnchor&quot;: [4, 62], &quot;shadowSize&quot;: [50, 64], &quot;shadowUrl&quot;: &quot;https://leafletjs.com/examples/custom-icons/leaf-shadow.png&quot;});
+        marker_4ca79a3e47827306bea7425d2d20759b.setIcon(custom_icon_5a9c5191542ab13b14bdca2465a51d20);
 
 
-        var popup_b1a73c87297c397a854f09f61c33c232 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-
-
-                var html_3b0202ccbd36d45ad92aab1a93c9aabb = $(`&lt;div id=&quot;html_3b0202ccbd36d45ad92aab1a93c9aabb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Mt. Hood Meadows&lt;/div&gt;`)[0];
-                popup_b1a73c87297c397a854f09f61c33c232.setContent(html_3b0202ccbd36d45ad92aab1a93c9aabb);
+        var popup_bbcb5498f00feeaf9e7444efc8e45719 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
 
-        marker_9d6ce3f633b7fa47d4e483ae6f302e6b.bindPopup(popup_b1a73c87297c397a854f09f61c33c232)
+                var html_ad554e3450021f42429567895a9feaf9 = $(`&lt;div id=&quot;html_ad554e3450021f42429567895a9feaf9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Mt. Hood Meadows&lt;/div&gt;`)[0];
+                popup_bbcb5498f00feeaf9e7444efc8e45719.setContent(html_ad554e3450021f42429567895a9feaf9);
+
+
+
+        marker_4ca79a3e47827306bea7425d2d20759b.bindPopup(popup_bbcb5498f00feeaf9e7444efc8e45719)
         ;
 
 
@@ -900,13 +902,13 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g290252f</div>
+Folium version 0.5.1.dev875+g570f293</div>
       
         <div class="footer-item">
 
   <p class="copyright">
     
-      © Copyright 2013, Rob Story.
+      © Copyright 2013-2024, Rob Story.
       <br/>
     
   </p>
@@ -915,7 +917,7 @@ Folium version 0.1.dev1.dev+g290252f</div>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>

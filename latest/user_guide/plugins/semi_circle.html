@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SemiCircle &#8212; Folium 0.1.dev1+g290252f documentation</title>
+    <title>SemiCircle &#8212; Folium 0.5.1.dev875+g570f293 documentation</title>
   
   
   
@@ -37,8 +37,8 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../_static/documentation_options.js?v=eb5ad6ef"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/documentation_options.js?v=860e384e"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -449,8 +449,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="side_by_side_layers.html">SideBySideLayers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tag_filter_button.html">TagFilterButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="terminator.html">Terminator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">Timeline and TimelineSlider</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timeslider_choropleth.html">TimeSliderChoropleth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timestamped_geojson.html">TimestampedGeoJson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="treelayercontrol.html">TreeLayerControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vector_tiles.html">Vector tiles using VectorGridProtobuf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WmsTimeDimension.html">TimestampedWmsTileLayers</a></li>
 </ul>
@@ -583,7 +585,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_04dc1b100ae0b72b74b4b1e595c374e2 {
+                #map_bfe749590e022d2182cbdf1e191c5b6a {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -598,14 +600,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_04dc1b100ae0b72b74b4b1e595c374e2&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_bfe749590e022d2182cbdf1e191c5b6a&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_04dc1b100ae0b72b74b4b1e595c374e2 = L.map(
-                &quot;map_04dc1b100ae0b72b74b4b1e595c374e2&quot;,
+            var map_bfe749590e022d2182cbdf1e191c5b6a = L.map(
+                &quot;map_bfe749590e022d2182cbdf1e191c5b6a&quot;,
                 {
                     center: [45.0, 3.0],
                     crs: L.CRS.EPSG3857,
@@ -619,55 +621,55 @@ document.write(`
 
 
 
-            var tile_layer_a0ccbb060f21f58837b3daa9590a2510 = L.tileLayer(
+            var tile_layer_a80bd43dc4d2680f7100f45b53b09e13 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_a0ccbb060f21f58837b3daa9590a2510.addTo(map_04dc1b100ae0b72b74b4b1e595c374e2);
+            tile_layer_a80bd43dc4d2680f7100f45b53b09e13.addTo(map_bfe749590e022d2182cbdf1e191c5b6a);
 
 
-            var semi_circle_6ec2a0ac380a0a201c28827609737ced = L.semiCircle(
+            var semi_circle_782a88d82cc2fdd046672c5bf6a997b9 = L.semiCircle(
                 [45.0, 3.0],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;green&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;green&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 0, &quot;radius&quot;: 400000, &quot;startAngle&quot;: 50, &quot;stopAngle&quot;: 200, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
                 )
-                .addTo(map_04dc1b100ae0b72b74b4b1e595c374e2);
+                .addTo(map_bfe749590e022d2182cbdf1e191c5b6a);
 
 
-        var popup_2d4820b44b726f5af8cf6de7e2ab4b7c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-
-
-                var html_1371123c7eab906116a9a5fb0f061ac7 = $(`&lt;div id=&quot;html_1371123c7eab906116a9a5fb0f061ac7&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;start angle - 50 degrees, stop angle - 200 degrees&lt;/div&gt;`)[0];
-                popup_2d4820b44b726f5af8cf6de7e2ab4b7c.setContent(html_1371123c7eab906116a9a5fb0f061ac7);
+        var popup_47ab5e5b9c44d1add46706a693638e46 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
 
-        semi_circle_6ec2a0ac380a0a201c28827609737ced.bindPopup(popup_2d4820b44b726f5af8cf6de7e2ab4b7c)
+                var html_280015c83572507aca8ea1c7380b33cb = $(`&lt;div id=&quot;html_280015c83572507aca8ea1c7380b33cb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;start angle - 50 degrees, stop angle - 200 degrees&lt;/div&gt;`)[0];
+                popup_47ab5e5b9c44d1add46706a693638e46.setContent(html_280015c83572507aca8ea1c7380b33cb);
+
+
+
+        semi_circle_782a88d82cc2fdd046672c5bf6a997b9.bindPopup(popup_47ab5e5b9c44d1add46706a693638e46)
         ;
 
 
 
 
-            var semi_circle_41f06b387f17b7a04f6f98d3201a3aeb = L.semiCircle(
+            var semi_circle_bcc1a357f6f23c65cfb2d86d1418d2a4 = L.semiCircle(
                 [46.5, 9.5],
                 {&quot;bubblingMouseEvents&quot;: true, &quot;color&quot;: &quot;red&quot;, &quot;dashArray&quot;: null, &quot;dashOffset&quot;: null, &quot;fill&quot;: true, &quot;fillColor&quot;: &quot;red&quot;, &quot;fillOpacity&quot;: 0.2, &quot;fillRule&quot;: &quot;evenodd&quot;, &quot;lineCap&quot;: &quot;round&quot;, &quot;lineJoin&quot;: &quot;round&quot;, &quot;opacity&quot;: 0, &quot;radius&quot;: 200000, &quot;stroke&quot;: true, &quot;weight&quot;: 3}
                 )
                     .setDirection(360, 90)
-                .addTo(map_04dc1b100ae0b72b74b4b1e595c374e2);
+                .addTo(map_bfe749590e022d2182cbdf1e191c5b6a);
 
 
-        var popup_c29702b66668380213de32ef3729c5d3 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
-
-
-
-                var html_861492002cf9801c596efc6d081ccfea = $(`&lt;div id=&quot;html_861492002cf9801c596efc6d081ccfea&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Direction - 0 degrees, arc 90 degrees&lt;/div&gt;`)[0];
-                popup_c29702b66668380213de32ef3729c5d3.setContent(html_861492002cf9801c596efc6d081ccfea);
+        var popup_c69dbf86849c66dedc98e89dfa3ab6fc = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
 
 
 
-        semi_circle_41f06b387f17b7a04f6f98d3201a3aeb.bindPopup(popup_c29702b66668380213de32ef3729c5d3)
+                var html_6918b5a19e2f74576792efd02c8b08ed = $(`&lt;div id=&quot;html_6918b5a19e2f74576792efd02c8b08ed&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Direction - 0 degrees, arc 90 degrees&lt;/div&gt;`)[0];
+                popup_c69dbf86849c66dedc98e89dfa3ab6fc.setContent(html_6918b5a19e2f74576792efd02c8b08ed);
+
+
+
+        semi_circle_bcc1a357f6f23c65cfb2d86d1418d2a4.bindPopup(popup_c69dbf86849c66dedc98e89dfa3ab6fc)
         ;
 
 
@@ -746,13 +748,13 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g290252f</div>
+Folium version 0.5.1.dev875+g570f293</div>
       
         <div class="footer-item">
 
   <p class="copyright">
     
-      © Copyright 2013, Rob Story.
+      © Copyright 2013-2024, Rob Story.
       <br/>
     
   </p>
@@ -761,7 +763,7 @@ Folium version 0.1.dev1.dev+g290252f</div>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>

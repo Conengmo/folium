@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Plugins &#8212; Folium 0.1.dev1+g290252f documentation</title>
+    <title>Plugins &#8212; Folium 0.5.1.dev875+g570f293 documentation</title>
   
   
   
@@ -36,10 +36,12 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../_static/documentation_options.js?v=eb5ad6ef"></script>
-    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/documentation_options.js?v=860e384e"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/plugins';</script>
     <script>
         DOCUMENTATION_OPTIONS.theme_version = '0.15.2';
@@ -446,8 +448,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="plugins/side_by_side_layers.html">SideBySideLayers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins/tag_filter_button.html">TagFilterButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins/terminator.html">Terminator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/timeline.html">Timeline and TimelineSlider</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins/timeslider_choropleth.html">TimeSliderChoropleth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins/timestamped_geojson.html">TimestampedGeoJson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugins/treelayercontrol.html">TreeLayerControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins/vector_tiles.html">Vector tiles using VectorGridProtobuf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugins/WmsTimeDimension.html">TimestampedWmsTileLayers</a></li>
 </ul>
@@ -605,11 +609,17 @@ document.write(`
 <tr class="row-even"><td><p><a class="reference internal" href="plugins/terminator.html"><span class="doc">Terminator</span></a></p></td>
 <td><p>Overlay day and night regions on a map.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="plugins/timeslider_choropleth.html"><span class="doc">Timeslider Choropleth</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="plugins/timeline.html"><span class="doc">Timeline</span></a></p></td>
+<td><p>Create a timeline with a time slider for geojson data with start and end times.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="plugins/timeslider_choropleth.html"><span class="doc">Timeslider Choropleth</span></a></p></td>
 <td><p>Create a choropleth with a timeslider for timestamped data.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="plugins/timestamped_geojson.html"><span class="doc">Timestamped GeoJSON</span></a></p></td>
-<td><p>Add time-aware GeoJSON into the map.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="plugins/timestamped_geojson.html"><span class="doc">Timestamped GeoJSON</span></a></p></td>
+<td><p>Add GeoJSON data with timestamps to a map.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="plugins/treelayercontrol.html"><span class="doc">TreeLayerControl</span></a></p></td>
+<td><p>Add a control for a tree of layers with checkboxes for visibility control.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="plugins/vector_tiles.html"><span class="doc">Vector Tiles using VectorGridProtobuf</span></a></p></td>
 <td><p>Display gridded vector data (GeoJSON or TopoJSON sliced with geojson-vt, or protobuf vector tiles).</p></td>
@@ -690,13 +700,13 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g290252f</div>
+Folium version 0.5.1.dev875+g570f293</div>
       
         <div class="footer-item">
 
   <p class="copyright">
     
-      © Copyright 2013, Rob Story.
+      © Copyright 2013-2024, Rob Story.
       <br/>
     
   </p>
@@ -705,7 +715,7 @@ Folium version 0.1.dev1.dev+g290252f</div>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>

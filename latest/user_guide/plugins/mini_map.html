@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MiniMap &#8212; Folium 0.1.dev1+g290252f documentation</title>
+    <title>MiniMap &#8212; Folium 0.5.1.dev875+g570f293 documentation</title>
   
   
   
@@ -37,8 +37,8 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../_static/documentation_options.js?v=eb5ad6ef"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/documentation_options.js?v=860e384e"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
@@ -449,8 +449,10 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="side_by_side_layers.html">SideBySideLayers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tag_filter_button.html">TagFilterButton</a></li>
 <li class="toctree-l2"><a class="reference internal" href="terminator.html">Terminator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">Timeline and TimelineSlider</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timeslider_choropleth.html">TimeSliderChoropleth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="timestamped_geojson.html">TimestampedGeoJson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="treelayercontrol.html">TreeLayerControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="vector_tiles.html">Vector tiles using VectorGridProtobuf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="WmsTimeDimension.html">TimestampedWmsTileLayers</a></li>
 </ul>
@@ -564,7 +566,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_181d14984b124534b1b7a435be28884f {
+                #map_a6b0af0b4fae8203166ff66abb1963e9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -580,14 +582,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_181d14984b124534b1b7a435be28884f&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_a6b0af0b4fae8203166ff66abb1963e9&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_181d14984b124534b1b7a435be28884f = L.map(
-                &quot;map_181d14984b124534b1b7a435be28884f&quot;,
+            var map_a6b0af0b4fae8203166ff66abb1963e9 = L.map(
+                &quot;map_a6b0af0b4fae8203166ff66abb1963e9&quot;,
                 {
                     center: [30.0, 20.0],
                     crs: L.CRS.EPSG3857,
@@ -601,24 +603,24 @@ document.write(`
 
 
 
-            var tile_layer_d1195fbb059951573d70fb59ceec0a9c = L.tileLayer(
+            var tile_layer_67a1f256ccf4882a78bbdc5a2cbde55d = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_d1195fbb059951573d70fb59ceec0a9c.addTo(map_181d14984b124534b1b7a435be28884f);
+            tile_layer_67a1f256ccf4882a78bbdc5a2cbde55d.addTo(map_a6b0af0b4fae8203166ff66abb1963e9);
 
 
-            var tile_layer_6d3702f92da29ea752d918270e921213 = L.tileLayer(
+            var tile_layer_ad48c2fdd91da67f18509aea3d8a8ccb = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
-            var mini_map_e631976dbe054709ac3594c032c7c0e9 = new L.Control.MiniMap(
-                tile_layer_6d3702f92da29ea752d918270e921213,
+            var mini_map_1555aaf6e7969c37f2c9d48579cf7cdb = new L.Control.MiniMap(
+                tile_layer_ad48c2fdd91da67f18509aea3d8a8ccb,
                 {&quot;autoToggleDisplay&quot;: false, &quot;centerFixed&quot;: false, &quot;collapsedHeight&quot;: 25, &quot;collapsedWidth&quot;: 25, &quot;height&quot;: 150, &quot;minimized&quot;: false, &quot;position&quot;: &quot;bottomright&quot;, &quot;toggleDisplay&quot;: false, &quot;width&quot;: 150, &quot;zoomAnimation&quot;: false, &quot;zoomLevelOffset&quot;: -5}
             );
-            map_181d14984b124534b1b7a435be28884f.addControl(mini_map_e631976dbe054709ac3594c032c7c0e9);
+            map_a6b0af0b4fae8203166ff66abb1963e9.addControl(mini_map_1555aaf6e7969c37f2c9d48579cf7cdb);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -667,7 +669,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_ce81f6de8e80f17344150cee46c9c2fb {
+                #map_f804b528f89c6211d575177105bdf1e2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -683,14 +685,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_ce81f6de8e80f17344150cee46c9c2fb&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_f804b528f89c6211d575177105bdf1e2&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_ce81f6de8e80f17344150cee46c9c2fb = L.map(
-                &quot;map_ce81f6de8e80f17344150cee46c9c2fb&quot;,
+            var map_f804b528f89c6211d575177105bdf1e2 = L.map(
+                &quot;map_f804b528f89c6211d575177105bdf1e2&quot;,
                 {
                     center: [30.0, 20.0],
                     crs: L.CRS.EPSG3857,
@@ -704,24 +706,24 @@ document.write(`
 
 
 
-            var tile_layer_b8d8505a3dbc9bfb7322abee237ebdf1 = L.tileLayer(
+            var tile_layer_f2381e271150c2e51315f37a080197c0 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_b8d8505a3dbc9bfb7322abee237ebdf1.addTo(map_ce81f6de8e80f17344150cee46c9c2fb);
+            tile_layer_f2381e271150c2e51315f37a080197c0.addTo(map_f804b528f89c6211d575177105bdf1e2);
 
 
-            var tile_layer_0cdae9bb083b65ad7e0da7615297abf8 = L.tileLayer(
+            var tile_layer_59b6a58d42438fac8e87789072ee01e7 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
-            var mini_map_f452a366dbbc499e4f407abf43cce107 = new L.Control.MiniMap(
-                tile_layer_0cdae9bb083b65ad7e0da7615297abf8,
+            var mini_map_13932d4b3d8e803f3398193c442d11dd = new L.Control.MiniMap(
+                tile_layer_59b6a58d42438fac8e87789072ee01e7,
                 {&quot;autoToggleDisplay&quot;: false, &quot;centerFixed&quot;: false, &quot;collapsedHeight&quot;: 25, &quot;collapsedWidth&quot;: 25, &quot;height&quot;: 150, &quot;minimized&quot;: false, &quot;position&quot;: &quot;bottomright&quot;, &quot;toggleDisplay&quot;: true, &quot;width&quot;: 150, &quot;zoomAnimation&quot;: false, &quot;zoomLevelOffset&quot;: -5}
             );
-            map_ce81f6de8e80f17344150cee46c9c2fb.addControl(mini_map_f452a366dbbc499e4f407abf43cce107);
+            map_f804b528f89c6211d575177105bdf1e2.addControl(mini_map_13932d4b3d8e803f3398193c442d11dd);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -771,7 +773,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_36ef1f37c3a73804ff2fcdde6e909a47 {
+                #map_1f90f945b0ce76361563347130c36ff3 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -787,14 +789,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_36ef1f37c3a73804ff2fcdde6e909a47&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_1f90f945b0ce76361563347130c36ff3&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_36ef1f37c3a73804ff2fcdde6e909a47 = L.map(
-                &quot;map_36ef1f37c3a73804ff2fcdde6e909a47&quot;,
+            var map_1f90f945b0ce76361563347130c36ff3 = L.map(
+                &quot;map_1f90f945b0ce76361563347130c36ff3&quot;,
                 {
                     center: [30.0, 20.0],
                     crs: L.CRS.EPSG3857,
@@ -808,24 +810,24 @@ document.write(`
 
 
 
-            var tile_layer_bb5a434c62fc4aa73480303883eb0e7e = L.tileLayer(
+            var tile_layer_d19e5d87c0d92ed672a72ef3151cdd8d = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_bb5a434c62fc4aa73480303883eb0e7e.addTo(map_36ef1f37c3a73804ff2fcdde6e909a47);
+            tile_layer_d19e5d87c0d92ed672a72ef3151cdd8d.addTo(map_1f90f945b0ce76361563347130c36ff3);
 
 
-            var tile_layer_f7f263812aada1b093a4ac2d997619bb = L.tileLayer(
+            var tile_layer_7ecae9958e588f40a85f0ace1ad7eeab = L.tileLayer(
                 &quot;https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\&quot;https://carto.com/attributions\&quot;\u003eCARTO\u003c/a\u003e&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 20, &quot;maxZoom&quot;: 20, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abcd&quot;, &quot;tms&quot;: false}
             );
-            var mini_map_5983333b23b6bb785e17fe14d55fd2a3 = new L.Control.MiniMap(
-                tile_layer_f7f263812aada1b093a4ac2d997619bb,
+            var mini_map_1b9fcf9ab2d40f5337a58298a8621cbc = new L.Control.MiniMap(
+                tile_layer_7ecae9958e588f40a85f0ace1ad7eeab,
                 {&quot;autoToggleDisplay&quot;: false, &quot;centerFixed&quot;: false, &quot;collapsedHeight&quot;: 25, &quot;collapsedWidth&quot;: 25, &quot;height&quot;: 150, &quot;minimized&quot;: false, &quot;position&quot;: &quot;bottomright&quot;, &quot;toggleDisplay&quot;: false, &quot;width&quot;: 150, &quot;zoomAnimation&quot;: false, &quot;zoomLevelOffset&quot;: -5}
             );
-            map_36ef1f37c3a73804ff2fcdde6e909a47.addControl(mini_map_5983333b23b6bb785e17fe14d55fd2a3);
+            map_1f90f945b0ce76361563347130c36ff3.addControl(mini_map_1b9fcf9ab2d40f5337a58298a8621cbc);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -875,7 +877,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_7d716c2a303e97781f1da12ed9d2c33b {
+                #map_6601a1fea466ac982bcdffe45a815cf2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -891,14 +893,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_7d716c2a303e97781f1da12ed9d2c33b&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_6601a1fea466ac982bcdffe45a815cf2&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_7d716c2a303e97781f1da12ed9d2c33b = L.map(
-                &quot;map_7d716c2a303e97781f1da12ed9d2c33b&quot;,
+            var map_6601a1fea466ac982bcdffe45a815cf2 = L.map(
+                &quot;map_6601a1fea466ac982bcdffe45a815cf2&quot;,
                 {
                     center: [30.0, 20.0],
                     crs: L.CRS.EPSG3857,
@@ -912,24 +914,24 @@ document.write(`
 
 
 
-            var tile_layer_4ee2379df2bb16da3c330097a5ea0e6f = L.tileLayer(
+            var tile_layer_581233c515ab11475b1513e933aea3cd = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_4ee2379df2bb16da3c330097a5ea0e6f.addTo(map_7d716c2a303e97781f1da12ed9d2c33b);
+            tile_layer_581233c515ab11475b1513e933aea3cd.addTo(map_6601a1fea466ac982bcdffe45a815cf2);
 
 
-            var tile_layer_94c43c0668e59bf1ff1c064523aa23ee = L.tileLayer(
+            var tile_layer_50529b18a2a1485bc02958955a53e2c3 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
-            var mini_map_a42676f66cc7176733238922dcc336ba = new L.Control.MiniMap(
-                tile_layer_94c43c0668e59bf1ff1c064523aa23ee,
+            var mini_map_7a5b3d35468146d308eb65cf35e8afe9 = new L.Control.MiniMap(
+                tile_layer_50529b18a2a1485bc02958955a53e2c3,
                 {&quot;autoToggleDisplay&quot;: false, &quot;centerFixed&quot;: false, &quot;collapsedHeight&quot;: 25, &quot;collapsedWidth&quot;: 25, &quot;height&quot;: 150, &quot;minimized&quot;: false, &quot;position&quot;: &quot;topleft&quot;, &quot;toggleDisplay&quot;: false, &quot;width&quot;: 150, &quot;zoomAnimation&quot;: false, &quot;zoomLevelOffset&quot;: -5}
             );
-            map_7d716c2a303e97781f1da12ed9d2c33b.addControl(mini_map_a42676f66cc7176733238922dcc336ba);
+            map_6601a1fea466ac982bcdffe45a815cf2.addControl(mini_map_7a5b3d35468146d308eb65cf35e8afe9);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -979,7 +981,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_ba4505c4a580df1a6b510d9d594b76ef {
+                #map_008a7ee1ba749168458c4c822ee323cf {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -995,14 +997,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_ba4505c4a580df1a6b510d9d594b76ef&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_008a7ee1ba749168458c4c822ee323cf&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_ba4505c4a580df1a6b510d9d594b76ef = L.map(
-                &quot;map_ba4505c4a580df1a6b510d9d594b76ef&quot;,
+            var map_008a7ee1ba749168458c4c822ee323cf = L.map(
+                &quot;map_008a7ee1ba749168458c4c822ee323cf&quot;,
                 {
                     center: [30.0, 20.0],
                     crs: L.CRS.EPSG3857,
@@ -1016,24 +1018,24 @@ document.write(`
 
 
 
-            var tile_layer_0fda6e81e66b5456e10da71ed5b9fa8c = L.tileLayer(
+            var tile_layer_8b4f052b3a37ae76fd49c86f66ea69b9 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_0fda6e81e66b5456e10da71ed5b9fa8c.addTo(map_ba4505c4a580df1a6b510d9d594b76ef);
+            tile_layer_8b4f052b3a37ae76fd49c86f66ea69b9.addTo(map_008a7ee1ba749168458c4c822ee323cf);
 
 
-            var tile_layer_0f61985d88cd37761e4d00d66f06de6f = L.tileLayer(
+            var tile_layer_14b20519cf1f3a0ec6f22199b54413b6 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
-            var mini_map_d1793acaf81abdae63d1a9dd8ccf8968 = new L.Control.MiniMap(
-                tile_layer_0f61985d88cd37761e4d00d66f06de6f,
+            var mini_map_72ce868173717ce61a568b68bd7dbae3 = new L.Control.MiniMap(
+                tile_layer_14b20519cf1f3a0ec6f22199b54413b6,
                 {&quot;autoToggleDisplay&quot;: false, &quot;centerFixed&quot;: false, &quot;collapsedHeight&quot;: 25, &quot;collapsedWidth&quot;: 25, &quot;height&quot;: 100, &quot;minimized&quot;: false, &quot;position&quot;: &quot;bottomright&quot;, &quot;toggleDisplay&quot;: false, &quot;width&quot;: 400, &quot;zoomAnimation&quot;: false, &quot;zoomLevelOffset&quot;: -5}
             );
-            map_ba4505c4a580df1a6b510d9d594b76ef.addControl(mini_map_d1793acaf81abdae63d1a9dd8ccf8968);
+            map_008a7ee1ba749168458c4c822ee323cf.addControl(mini_map_72ce868173717ce61a568b68bd7dbae3);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -1083,7 +1085,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_14129e9d0e220e5a6b1b0cf2a484c980 {
+                #map_9977e8815cd6f27c05e124a34e36d0e5 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -1099,14 +1101,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_14129e9d0e220e5a6b1b0cf2a484c980&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_9977e8815cd6f27c05e124a34e36d0e5&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_14129e9d0e220e5a6b1b0cf2a484c980 = L.map(
-                &quot;map_14129e9d0e220e5a6b1b0cf2a484c980&quot;,
+            var map_9977e8815cd6f27c05e124a34e36d0e5 = L.map(
+                &quot;map_9977e8815cd6f27c05e124a34e36d0e5&quot;,
                 {
                     center: [30.0, 20.0],
                     crs: L.CRS.EPSG3857,
@@ -1120,24 +1122,24 @@ document.write(`
 
 
 
-            var tile_layer_1560821b983d80749049377c4a527f3c = L.tileLayer(
+            var tile_layer_112d82b43b55e26816aa1b65a711943b = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_1560821b983d80749049377c4a527f3c.addTo(map_14129e9d0e220e5a6b1b0cf2a484c980);
+            tile_layer_112d82b43b55e26816aa1b65a711943b.addTo(map_9977e8815cd6f27c05e124a34e36d0e5);
 
 
-            var tile_layer_4bceedc78fab65a4acdf5ebb1e8b120d = L.tileLayer(
+            var tile_layer_7ad7a1534bde5c5b8cae57a266c7c21a = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
-            var mini_map_fda469f956f56f454ce997afa92d3b9a = new L.Control.MiniMap(
-                tile_layer_4bceedc78fab65a4acdf5ebb1e8b120d,
+            var mini_map_fd94897f8693c0ed5afac8433e90dfbd = new L.Control.MiniMap(
+                tile_layer_7ad7a1534bde5c5b8cae57a266c7c21a,
                 {&quot;autoToggleDisplay&quot;: false, &quot;centerFixed&quot;: false, &quot;collapsedHeight&quot;: 25, &quot;collapsedWidth&quot;: 25, &quot;height&quot;: 150, &quot;minimized&quot;: false, &quot;position&quot;: &quot;bottomright&quot;, &quot;toggleDisplay&quot;: false, &quot;width&quot;: 150, &quot;zoomAnimation&quot;: false, &quot;zoomLevelOffset&quot;: -8}
             );
-            map_14129e9d0e220e5a6b1b0cf2a484c980.addControl(mini_map_fda469f956f56f454ce997afa92d3b9a);
+            map_9977e8815cd6f27c05e124a34e36d0e5.addControl(mini_map_fd94897f8693c0ed5afac8433e90dfbd);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -1230,13 +1232,13 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.1.dev1.dev+g290252f</div>
+Folium version 0.5.1.dev875+g570f293</div>
       
         <div class="footer-item">
 
   <p class="copyright">
     
-      © Copyright 2013, Rob Story.
+      © Copyright 2013-2024, Rob Story.
       <br/>
     
   </p>
@@ -1245,7 +1247,7 @@ Folium version 0.1.dev1.dev+g290252f</div>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.2.6.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 7.3.7.
     <br/>
   </p>
 </div>
