@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>FloatImage &#8212; Folium 0.5.1.dev885+g55a758a documentation</title>
+    <title>FloatImage &#8212; Folium 0.5.1.dev886+g5086929 documentation</title>
   
   
   
@@ -37,7 +37,7 @@
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
   <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
-    <script src="../../_static/documentation_options.js?v=aa897e77"></script>
+    <script src="../../_static/documentation_options.js?v=e938dbcf"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -440,6 +440,8 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="measure_control.html">MeasureControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mouse_position.html">MousePosition</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pattern.html">Pattern plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polygon_encoded.html">PolygonFromEncoded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polyline_encoded.html">PolyLineFromEncoded</a></li>
 <li class="toctree-l2"><a class="reference internal" href="polyline_offset.html">PolylineOffset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="polyline_textpath.html">PolyLineTextPath</a></li>
 <li class="toctree-l2"><a class="reference internal" href="realtime.html">Realtime</a></li>
@@ -572,7 +574,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_ce40f9271c64107f32932fcb8b89aee4 {
+                #map_fed39637941bef66ce452b4302db6973 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -584,7 +586,7 @@ document.write(`
 
 
                 &lt;style&gt;
-                    #float_image_9d6ecfb57e572c9918393c5e674687e3 {
+                    #float_image_986389aaec06e8ae1a579b46d2fdfabb {
                         position: absolute;
                         bottom: 40%;
                         left: 65%;
@@ -595,10 +597,10 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_ce40f9271c64107f32932fcb8b89aee4&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_fed39637941bef66ce452b4302db6973&quot; &gt;&lt;/div&gt;
 
 
-            &lt;img id=&quot;float_image_9d6ecfb57e572c9918393c5e674687e3&quot; alt=&quot;float_image&quot;
+            &lt;img id=&quot;float_image_986389aaec06e8ae1a579b46d2fdfabb&quot; alt=&quot;float_image&quot;
                  src=&quot;https://raw.githubusercontent.com/ocefpaf/secoora_assets_map/a250729bbcf2ddd12f46912d36c33f7539131bec/secoora_icons/rose.png&quot;
                  style=&quot;z-index: 999999&quot;&gt;
             &lt;/img&gt;
@@ -607,8 +609,8 @@ document.write(`
 &lt;script&gt;
 
 
-            var map_ce40f9271c64107f32932fcb8b89aee4 = L.map(
-                &quot;map_ce40f9271c64107f32932fcb8b89aee4&quot;,
+            var map_fed39637941bef66ce452b4302db6973 = L.map(
+                &quot;map_fed39637941bef66ce452b4302db6973&quot;,
                 {
                     center: [-13.0, -38.15],
                     crs: L.CRS.EPSG3857,
@@ -622,13 +624,13 @@ document.write(`
 
 
 
-            var tile_layer_7e7bcc940a601014c5bffe6bffc0415d = L.tileLayer(
+            var tile_layer_77c92e00fb3603eb07690701be7946b6 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_7e7bcc940a601014c5bffe6bffc0415d.addTo(map_ce40f9271c64107f32932fcb8b89aee4);
+            tile_layer_77c92e00fb3603eb07690701be7946b6.addTo(map_fed39637941bef66ce452b4302db6973);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -704,7 +706,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.5.1.dev885+g55a758a</div>
+Folium version 0.5.1.dev886+g5086929</div>
       
         <div class="footer-item">
 
