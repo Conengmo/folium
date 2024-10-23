@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Heatmap &#8212; Folium 0.5.1.dev933+g0369da1 documentation</title>
+    <title>Heatmap &#8212; Folium 0.5.1.dev935+g8c2f753 documentation</title>
   
   
   
@@ -16,28 +16,31 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-
-  
-  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
     <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=924e9346" />
   
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
-  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../_static/documentation_options.js?v=86c0da09"></script>
+    <script src="../../_static/documentation_options.js?v=afbb8416"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -45,7 +48,7 @@
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/plugins/heatmap';</script>
     <script>
-        DOCUMENTATION_OPTIONS.theme_version = '0.15.4';
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
         DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://python-visualization.github.io/folium/dev/_static/switcher.json';
         DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
         DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
@@ -56,6 +59,7 @@
     <link rel="prev" title="GroupedLayerControl" href="grouped_layer_control.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.5.1.dev935+g8c2f753" />
   </head>
   
   
@@ -71,19 +75,8 @@
     <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-primary-sidebar-checkbox"/>
-  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
-  
-  <input type="checkbox"
-          class="sidebar-toggle"
-          id="pst-secondary-sidebar-checkbox"/>
-  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
-  
-  <div class="search-button__wrapper">
-    <div class="search-button__overlay"></div>
-    <div class="search-button__search-container">
+  <dialog id="pst-search-dialog">
+    
 <form class="bd-search d-flex align-items-center"
       action="../../search.html"
       method="get">
@@ -91,7 +84,6 @@
   <input type="search"
          class="form-control"
          name="q"
-         id="search-input"
          placeholder="Search the docs ..."
          aria-label="Search the docs ..."
          autocomplete="off"
@@ -99,8 +91,8 @@
          autocapitalize="off"
          spellcheck="false"/>
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form></div>
-  </div>
+</form>
+  </dialog>
 
   <div class="pst-async-banner-revealer d-none">
   <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
@@ -134,7 +126,7 @@
     
     
     <img src="../../_static/folium_logo.png" class="logo__image only-light" alt=""/>
-    <script>document.write(`<img src="../../_static/folium_logo.png" class="logo__image only-dark" alt=""/>`);</script>
+    <img src="../../_static/folium_logo.png" class="logo__image only-dark pst-js-only" alt=""/>
   
   
     <p class="title logo__title">Folium</p>
@@ -142,28 +134,24 @@
 </a></div>
     
       <div class="navbar-item">
-<script>
-document.write(`
-  <div class="version-switcher__container dropdown">
-    <button id="pst-version-switcher-button-2"
-      type="button"
-      class="version-switcher__button btn btn-sm dropdown-toggle"
-      data-bs-toggle="dropdown"
-      aria-haspopup="listbox"
-      aria-controls="pst-version-switcher-list-2"
-      aria-label="Version switcher list"
-    >
-      Choose version  <!-- this text may get changed later by javascript -->
-      <span class="caret"></span>
-    </button>
-    <div id="pst-version-switcher-list-2"
-      class="version-switcher__menu dropdown-menu list-group-flush py-0"
-      role="listbox" aria-labelledby="pst-version-switcher-button-2">
-      <!-- dropdown will be populated by javascript on page load -->
-    </div>
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
   </div>
-`);
-</script></div>
+</div></div>
     
   </div>
   
@@ -220,29 +208,21 @@ document.write(`
         <div class="navbar-item navbar-persistent--container">
           
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
         </div>
       
       
         <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
       
         <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -267,15 +247,11 @@ document.write(`
   
     <div class="navbar-persistent--mobile">
 
- <script>
- document.write(`
-   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
-    <span class="search-button__default-text">Search</span>
-    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
-   </button>
- `);
- </script>
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
     </div>
   
 
@@ -294,7 +270,8 @@ document.write(`
       
       
       
-      <div class="bd-sidebar-primary bd-sidebar">
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
         
 
   
@@ -355,15 +332,11 @@ document.write(`
         
           <div class="navbar-item">
 
-<script>
-document.write(`
-  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
-    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
-    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
-  </button>
-`);
-</script></div>
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
         
           <div class="navbar-item"><ul class="navbar-icon-links"
     aria-label="Icon Links">
@@ -492,8 +465,6 @@ document.write(`
       
         <div class="header-article-item">
 
-
-
 <nav aria-label="Breadcrumb" class="d-print-none">
   <ul class="bd-breadcrumbs">
     
@@ -508,7 +479,7 @@ document.write(`
     
     <li class="breadcrumb-item"><a href="../plugins.html" class="nav-link">Plugins</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page">Heatmap</li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Heatmap</span></li>
   </ul>
 </nav>
 </div>
@@ -586,7 +557,7 @@ document.write(`
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_14ed522e47dd561339dcb830377061ff {
+                #map_89804e84b03589c04a96525b52e79401 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -601,14 +572,14 @@ document.write(`
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_14ed522e47dd561339dcb830377061ff&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_89804e84b03589c04a96525b52e79401&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_14ed522e47dd561339dcb830377061ff = L.map(
-                &quot;map_14ed522e47dd561339dcb830377061ff&quot;,
+            var map_89804e84b03589c04a96525b52e79401 = L.map(
+                &quot;map_89804e84b03589c04a96525b52e79401&quot;,
                 {
                     center: [48.0, 5.0],
                     crs: L.CRS.EPSG3857,
@@ -622,22 +593,22 @@ document.write(`
 
 
 
-            var tile_layer_2881b955561d9bb4a01cf5ede202e32e = L.tileLayer(
+            var tile_layer_20c360df747fa57266a9738965d7b4ff = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
             );
 
 
-            tile_layer_2881b955561d9bb4a01cf5ede202e32e.addTo(map_14ed522e47dd561339dcb830377061ff);
+            tile_layer_20c360df747fa57266a9738965d7b4ff.addTo(map_89804e84b03589c04a96525b52e79401);
 
 
-            var heat_map_7170ad6d7646384308274aa58937a470 = L.heatLayer(
-                [[49.42212485462742, 4.22315666247436, 1.0396777382695725], [47.00037067449318, 6.260611265359589, 0.5111382664212156], [47.68924298219087, 4.745799793245448, 1.4075182931377888], [49.29782659332438, 6.243671224170692, 1.9531825568460817], [48.77958422857669, 4.791444242831957, 1.3958359902207351], [47.552286259753615, 6.052266274109412, 1.9670575720635313], [49.03613889647693, 6.053463222521023, 0.4634905483220203], [47.442601288995334, 6.532239870947949, 1.421107728101687], [45.709172312163965, 5.4349809643468046, 2.3330267596648437], [47.60360990288185, 3.9596859672685243, 1.6437677990605752], [48.16334351244105, 5.24443875695006, 0.5383319920453982], [46.39138840018125, 6.069141474587145, 0.925920583329823], [47.52124510723379, 3.7364195717619344, 0.8794055539679613], [47.81310773168702, 5.111925953041652, -0.1306717941554969], [48.54679572657878, 3.5632965615974146, 1.872725402069954], [48.959551271120084, 5.039447644099683, -0.17087807001316535], [49.20612082008395, 4.5405640370114995, 0.17484304356192226], [48.50026171718473, 5.3509490755800595, 2.3040343908666467], [48.08863279822556, 5.465120710252361, 1.3135792841928575], [49.13452901699251, 5.136862812569434, 2.444398650345831], [48.17975461298227, 4.837670038202661, 0.5276651570912225], [47.84210072580484, 4.505929018130188, 2.875583131114852], [48.40915295701139, 3.456259633614704, 0.6138224605456135], [46.95322554904103, 3.8430156572913585, 0.64632368064269], [49.417585316222414, 2.8031964879100393, 1.3681331456677777], [48.85041849801083, 7.167741115998256, 2.121275400401295], [48.20781309313078, 4.6911330942995955, 0.04409606065840588], [47.175254284419815, 5.996129687645693, 1.1654571548670982], [47.77749324383139, 3.803707864035877, -0.09230310884097381], [48.258000353990475, 6.1970788194037585, 2.1164410031480676], [47.17590388275815, 3.5349493565100802, 1.1021810088984267], [48.137584108060956, 4.912865019468595, -1.117297657255091], [48.371808846971774, 5.354797735767656, 0.3509668135114996], [47.04877035527654, 4.317852283946248, 1.88864976488567], [48.16609788251723, 4.875634752426034, -0.36183248264846934], [49.645732229581334, 5.402748773811802, 2.4754363050674018], [47.45883042215956, 5.675611559509507, 0.06118843501425064], [47.06245593776939, 4.830191244849508, 0.5970344364294063], [48.625866165572134, 6.783611647872791, 3.9883249263039966], [49.15429554458026, 3.2941657032539524, 0.6259864771451238], [45.58905278779112, 4.78854735045354, 0.11269275254149336], [48.72116112106761, 3.816441946306685, 2.560195624676931], [47.113183729478294, 4.284583753603613, 1.5458200596602418], [47.172044081299894, 5.021584205251674, 1.7373051190527042], [48.4447629247462, 6.4486728716915085, -0.13500718658143818], [47.592992114295086, 2.8671782832705595, -0.4715565858188484], [49.192057941587485, 5.4082678309518215, 1.292820002849859], [48.785574184783385, 4.5158713276393385, 0.4663168900455831], [46.5305670531567, 6.459559739709602, 0.19944898752402518], [45.604995836248264, 3.8976510002364053, 0.1038055286150652], [46.59624909651655, 5.183726639257493, -0.19291561550919734], [47.694327768726744, 4.407809117407155, 2.5784100377555386], [49.638708711910844, 5.855805255976783, 0.2008661746810192], [49.34567549317735, 3.790357802073821, 1.1706616536489303], [47.462223917299916, 4.685134845989657, 1.8179678675085005], [47.47956558024201, 2.631874002661919, -0.6879908808508288], [47.47261004203712, 5.1879026069644105, 2.341157680427272], [46.39930826813961, 2.896762107358049, -0.08924528571239754], [49.38506231302764, 4.716625792846686, 1.567896786662231], [48.22531015678319, 4.336214968404175, 1.3537123939717626], [48.24143122699374, 4.78155372851622, 1.3321057893802404], [44.886720998716854, 3.735427339677928, 1.3435194842654294], [48.412310478275415, 4.208697531558366, 1.3554797771670368], [48.32569744828396, 4.740934805033503, -0.037405446785443], [48.829803493114795, 4.746816716802084, 1.7592354831382868], [48.8475505933808, 5.24081083453349, 0.9228384500182086], [49.34508752845192, 5.847882214488764, 2.63788227480921], [48.28354395210195, 4.974192076596035, -0.29789048344444335], [48.25667374496857, 5.628813382530415, 2.3910698395579395], [48.215588800045445, 5.930814284023665, -1.664460589535055], [48.54974993958388, 5.038916136136611, 0.8673058777517627], [47.627558568690965, 5.302011104172462, 2.336920826263934], [48.64974081975024, 5.737611500775811, 0.7522105174312919], [46.77113987155433, 6.520986871745797, 2.6668883983207046], [46.76006602375674, 5.44390276388155, 0.696203018568264], [47.081648042245064, 7.115124334059965, 0.7863443610900065], [47.40446615311653, 4.5593856524880545, -0.4038579472598931], [46.934999835008504, 5.9136062941974945, 1.2923206683982784], [47.15603036538345, 6.597261857306702, -0.7283226898985233], [46.110021333394265, 5.243677464538191, 0.9536398859948285], [46.918796926778676, 3.5544981842085326, 0.39992410692997626], [48.959680630440566, 5.2123806603650875, 0.6966335588997413], [48.285515226941186, 6.025594683493784, 1.6460545244371017], [48.962030087335826, 4.178133518152661, 0.10076460899437478], [49.194017082904004, 5.902430515104035, 0.7793573750760183], [47.398161941124634, 5.027949539810564, -1.9683137212569761], [49.23394791676429, 4.81596109732405, 0.49832005311217875], [48.276656444909406, 4.540565648588903, 1.5929295396302119], [47.2485033063871, 3.516160866049418, 2.61142229839251], [47.25242644754266, 4.704379978831589, 1.3329803218797056], [48.941110675752, 6.179911438709988, -0.46193581188676447], [47.65358982707081, 5.309566019996409, 1.0483429746513255], [46.612681275179966, 5.629257258869051, 0.7253486481327178], [49.456045752647896, 5.149134819016122, -0.8061756159966891], [46.77541019362742, 4.211709238166027, 0.9968785549207002], [47.70144942760532, 4.776629982601994, 2.525215543017172], [48.06841907518915, 4.849234899229059, 1.1308423854745246], [48.410706628910084, 5.416150256480209, 1.071473448596779], [49.53955008351693, 5.215509579638064, 0.5635895621150584], [47.4358179321763, 4.190138641552848, 2.132490217711382]],
+            var heat_map_144b2a26e8ce001c9f4ec8ffe6933c78 = L.heatLayer(
+                [[47.71577211194295, 5.983996998410759, 0.8976329258092097], [48.488276911441304, 4.740085091187131, 0.8378203153599866], [49.32618402841236, 5.368958397196467, 0.8773898294474791], [48.810391376066804, 4.615545397942246, 0.24575977725400988], [47.99156302556155, 7.150016266728162, -1.0359984964931694], [49.30111477958455, 3.498897166183319, 0.30019168493979387], [47.97355681168395, 5.899934299879054, 0.9445988244720297], [47.91802065676659, 5.1281098494240025, 0.779061803799264], [47.855328963013235, 4.286539648342925, 0.8537240797806618], [47.22485001140642, 5.6967750468732525, 1.1012797004036257], [48.54504650931786, 4.0905919751637, -0.42126118140517055], [46.5465177998446, 5.895668967235831, 0.5417613262179065], [49.10481064606299, 6.950951431909571, 0.9394654730234795], [47.01160601002777, 5.477759873056972, 1.5194828184231581], [47.95739942162158, 5.3755922935574905, 1.1514995260069298], [47.862177167155764, 4.9848127328456355, 1.7780324002333827], [49.54762945560709, 5.874589510776489, 0.10567228308133236], [47.33459229120062, 5.410122618832671, 1.5722821590195064], [48.59703240097546, 3.7491530454623474, 1.0498296451573592], [48.4633081022491, 5.574327765581807, 1.9976182933562354], [47.75027147990904, 3.9677909428795513, 0.4512905019452408], [46.95201168831679, 4.975160561263776, 3.1929407739660434], [48.178526947393294, 5.612339937166712, 0.5663225371538416], [48.769968536681574, 4.497440729925041, 0.6327482403474374], [47.51359230039326, 5.072825349240216, 1.033258285409093], [47.61537734028746, 6.289971028964324, 2.2938078480586235], [48.8841386966451, 5.9094184623252985, 1.0378135412305782], [49.103361815412825, 7.368112593245124, 1.6939790270417607], [49.058335639483204, 4.583470851808252, 0.6406637276574683], [47.941909661630355, 3.0328556750034634, 0.916599545603241], [49.077000388445455, 5.10923073645201, 1.5406510078011506], [47.72668342363404, 5.84231541968942, 1.5862678952761617], [47.19311578593331, 5.482916311413191, 0.3128833878244651], [46.75317184416736, 4.792760027828672, 1.1228037893413065], [46.80138043519872, 4.9779308990784115, 3.91373615932015], [48.6268264586837, 3.205785636725357, 0.1853636296290747], [47.803840691814166, 4.986785773598276, 0.6470915296433051], [48.7072946031974, 4.207417205509465, 0.8621528487113024], [47.84537221874945, 3.8269084926231445, 0.4730861755851983], [48.10589007819134, 4.847631076708412, 1.7603395695631423], [46.54649783214802, 5.482841006681851, 0.6193952298764931], [47.71217200114788, 3.944501402801883, 0.1301185902638875], [46.151083956447636, 4.308703520863066, -0.2691594040172176], [45.91835056750299, 5.058946946095563, 1.0993436486193506], [47.31384947814727, 4.424586348117919, 1.6967876206765027], [48.62981365346697, 5.935903504015763, 0.6527623562907375], [48.09909846716572, 5.881114202632217, 0.7810300659132431], [49.231011207341794, 3.5338862481198596, 0.41722364495450504], [48.71646463762357, 3.5334919213366076, -0.30495577195381296], [47.28919614275243, 5.20294965262748, 0.5920147519815377], [48.37500552621363, 4.885968364303318, 1.4408888583329946], [48.7919069963727, 4.798099708953936, 2.0726515496320266], [48.56925654138007, 5.373594068892791, 0.21042471580718647], [48.381973448503025, 4.051139548179236, 1.6968205033592887], [48.014325959373615, 7.248565962768733, 1.8709320684282769], [48.441840836220344, 3.996635717481989, 1.7671153889642197], [48.01275975246139, 4.014829336060722, 1.6096260201061652], [46.282829149808244, 4.996595047512506, 1.722748225524093], [48.358926943635645, 5.410241558673888, 0.059419530547831556], [49.773195272314474, 4.479364677138168, 0.6102203259287308], [47.418609590790666, 4.164339397554117, 1.2087158921540955], [47.97044935239733, 5.328809797132215, -0.20708561054392027], [47.91939921456655, 5.355490334974813, 2.9633989117320088], [49.000042850212296, 5.8301830261607215, -0.4913158088266585], [47.29115837566823, 6.097322865743362, -0.3000203429443833], [47.85418558989933, 4.897877489421227, 1.515254849102093], [48.13256331555718, 4.633339845791402, -0.09753054893881208], [47.23304084030005, 5.645857857475798, 1.0981596975329357], [48.52394237410147, 4.581614019158812, 0.7003683664261968], [48.31108501426584, 4.873897852845737, 2.247010864728338], [47.95120074842698, 4.506553611047375, 1.5094698601722771], [47.77708171074184, 3.8160055551031267, 2.260746007634568], [48.72377128054627, 6.155301152817895, 0.7522344239984984], [46.56700495790582, 5.377593569974753, 1.287593266621958], [47.18919103980324, 4.924794656375948, -0.26465760348423784], [47.551390485520216, 6.503775573293141, 1.2518827246957913], [48.021214129206264, 5.719787385891712, 3.239863593446039], [49.4389166068542, 5.34590724622962, 1.340210420752837], [48.48999472243996, 5.299370889844499, 0.682468751293072], [47.95154116488265, 5.121443261031665, 1.2083733621201524], [48.313468404795024, 4.463466010573187, 0.9456051723026676], [49.42373913804595, 4.098453829047087, 1.754843718715343], [47.33369753020624, 5.750447305012527, 1.1532742977938941], [48.55984151634021, 4.592834029084698, 1.9752983222289893], [48.08084300877216, 5.571250472155957, 1.5422391331573566], [47.70959944958203, 6.983217380880456, 0.805322352663438], [48.775635545642174, 3.671970568280825, 1.997685712351437], [48.38984628382827, 5.1099487123691345, 1.6200431629471084], [46.792831771029775, 3.4525434321646262, 0.5311434061529761], [48.228312318484186, 5.0899935785765305, 0.21758410001858308], [47.19272361140432, 4.993992870352972, 2.1663242184655442], [47.5860574160357, 5.477994896675056, 2.121570408342885], [49.09566136677114, 5.388463494262738, -1.1688057373683947], [47.8397106198547, 4.134224478260429, 1.9611057643325354], [48.72363404795299, 4.070256189610093, 1.226205870913072], [46.21202276050107, 5.767459948088361, -0.5296647026134023], [49.867345054877255, 5.523766201353407, 0.5733239944693209], [47.60966308998257, 5.327061980806954, 2.245927845284065], [46.72551781619266, 6.755172007507206, 0.7089682970591356], [47.0297453535766, 5.569203517329689, 3.316663568745457]],
                 {&quot;blur&quot;: 15, &quot;maxZoom&quot;: 18, &quot;minOpacity&quot;: 0.5, &quot;radius&quot;: 25}
             );
 
 
-            heat_map_7170ad6d7646384308274aa58937a470.addTo(map_14ed522e47dd561339dcb830377061ff);
+            heat_map_144b2a26e8ce001c9f4ec8ffe6933c78.addTo(map_89804e84b03589c04a96525b52e79401);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -679,7 +650,8 @@ document.write(`
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
 
   <div class="sidebar-secondary-item">
@@ -704,8 +676,8 @@ document.write(`
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
@@ -713,7 +685,7 @@ document.write(`
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.5.1.dev933+g0369da1</div>
+Folium version 0.5.1.dev935+g8c2f753</div>
       
         <div class="footer-item">
 
@@ -735,7 +707,7 @@ Folium version 0.5.1.dev933+g0369da1</div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>
@@ -746,7 +718,7 @@ Folium version 0.5.1.dev933+g0369da1</div>
       
         <div class="footer-item">
 <p class="theme-version">
-  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.15.4.
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
 </p></div>
       
     </div>
