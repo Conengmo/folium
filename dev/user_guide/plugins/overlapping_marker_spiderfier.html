@@ -1,0 +1,2587 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>OverlappingMarkerSpiderfier &#8212; Folium 0.5.1.dev949+g5205be8 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=924e9346" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../../_static/documentation_options.js?v=467b36be"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'user_guide/plugins/overlapping_marker_spiderfier';</script>
+    <script>
+        DOCUMENTATION_OPTIONS.theme_version = '0.16.0';
+        DOCUMENTATION_OPTIONS.theme_switcher_json_url = 'https://python-visualization.github.io/folium/dev/_static/switcher.json';
+        DOCUMENTATION_OPTIONS.theme_switcher_version_match = 'dev';
+        DOCUMENTATION_OPTIONS.show_version_warning_banner = false;
+        </script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Pattern plugins" href="pattern.html" />
+    <link rel="prev" title="MousePosition" href="mouse_position.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.5.1.dev949+g5205be8" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-3 navbar-header-items__start">
+    
+      <div class="navbar-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/folium_logo.png" class="logo__image only-light" alt=""/>
+    <img src="../../_static/folium_logo.png" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">Folium</p>
+  
+</a></div>
+    
+      <div class="navbar-item">
+<div class="version-switcher__container dropdown pst-js-only">
+  <button id="pst-version-switcher-button-2"
+    type="button"
+    class="version-switcher__button btn btn-sm dropdown-toggle"
+    data-bs-toggle="dropdown"
+    aria-haspopup="listbox"
+    aria-controls="pst-version-switcher-list-2"
+    aria-label="Version switcher list"
+  >
+    Choose version  <!-- this text may get changed later by javascript -->
+    <span class="caret"></span>
+  </button>
+  <div id="pst-version-switcher-list-2"
+    class="version-switcher__menu dropdown-menu list-group-flush py-0"
+    role="listbox" aria-labelledby="pst-version-switcher-button-2">
+    <!-- dropdown will be populated by javascript on page load -->
+  </div>
+</div></div>
+    
+  </div>
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../user_guide.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../advanced_guide.html">
+    Advanced guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+        <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/python-visualization/folium" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          
+          
+            <div class="navbar-item">
+<nav>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../index.html">
+    Home
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../getting_started.html">
+    Getting started
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="../../user_guide.html">
+    User guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../advanced_guide.html">
+    Advanced guide
+  </a>
+</li>
+
+
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../../reference.html">
+    API reference
+  </a>
+</li>
+
+  </ul>
+</nav></div>
+          
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/python-visualization/folium" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-square-github fa-lg" aria-hidden="true"></i>
+            <span class="sr-only">GitHub</span></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<nav class="bd-docs-nav bd-links"
+     aria-label="Section Navigation">
+  <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
+  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../map.html">Map</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../ui_elements.html">UI elements</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../ui_elements/layer_control.html">LayerControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ui_elements/popups.html">Popups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ui_elements/icons.html">Icons</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../raster_layers.html">Raster layers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../raster_layers/tiles.html">Tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raster_layers/image_overlay.html">ImageOverlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raster_layers/video_overlay.html">VideoOverlay</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../raster_layers/wms_tile_layer.html">WmsTileLayer</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../vector_layers.html">Vector layers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../vector_layers/circle_and_circle_marker.html">Circle and CircleMarker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector_layers/polyline.html">PolyLine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector_layers/rectangle.html">Rectangle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector_layers/polygon.html">Polygon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../vector_layers/colorline.html">ColorLine</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../geojson.html">GeoJSON and choropleth</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../geojson/geojson.html">Using <code class="docutils literal notranslate"><span class="pre">GeoJson</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geojson/choropleth.html">Using <code class="docutils literal notranslate"><span class="pre">Choropleth</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geojson/geojson_marker.html">GeoJSON point features with markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geojson/geojson_popup_and_tooltip.html">GeoJSON popup and tooltip</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geojson/geopandas_and_geo_interface.html">Using GeoPandas.GeoDataFrame in folium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geojson/smoothing.html">Smoothing</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../features.html">Features</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../features/fit_overlays.html">FitOverlays</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../features/click_related_classes.html">Click-related classes</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../plugins.html">Plugins</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="antpath.html">Antpath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boat_marker.html">BoatMarker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautify_icon.html">BeautifyIcon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="draw.html">Draw</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dual_map.html">DualMap plugin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="featuregroup_subgroup.html">FeatureGroupSubGroup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="float_image.html">FloatImage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fullscreen.html">Fullscreen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geocoder.html">Geocoder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="grouped_layer_control.html">GroupedLayerControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heatmap.html">Heatmap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="heatmap_with_time.html">HeatMapWithTime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="locate_control.html">LocateControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="marker_cluster.html">MarkerCluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mini_map.html">MiniMap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="measure_control.html">MeasureControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mouse_position.html">MousePosition</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">OverlappingMarkerSpiderfier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pattern.html">Pattern plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polygon_encoded.html">PolygonFromEncoded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polyline_encoded.html">PolyLineFromEncoded</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polyline_offset.html">PolylineOffset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polyline_textpath.html">PolyLineTextPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="realtime.html">Realtime</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scroll_zoom_toggler.html">ScrollZoomToggler</a></li>
+<li class="toctree-l2"><a class="reference internal" href="search.html">Search</a></li>
+<li class="toctree-l2"><a class="reference internal" href="semi_circle.html">SemiCircle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="side_by_side_layers.html">SideBySideLayers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tag_filter_button.html">TagFilterButton</a></li>
+<li class="toctree-l2"><a class="reference internal" href="terminator.html">Terminator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">Timeline and TimelineSlider</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeslider_choropleth.html">TimeSliderChoropleth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timestamped_geojson.html">TimestampedGeoJson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="treelayercontrol.html">TreeLayerControl</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vector_tiles.html">Vector tiles using VectorGridProtobuf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="WmsTimeDimension.html">TimestampedWmsTileLayers</a></li>
+</ul>
+</details></li>
+</ul>
+</div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item">
+
+<nav aria-label="Breadcrumb" class="d-print-none">
+  <ul class="bd-breadcrumbs">
+    
+    <li class="breadcrumb-item breadcrumb-home">
+      <a href="../../index.html" class="nav-link" aria-label="Home">
+        <i class="fa-solid fa-home"></i>
+      </a>
+    </li>
+    
+    <li class="breadcrumb-item"><a href="../../user_guide.html" class="nav-link">User guide</a></li>
+    
+    
+    <li class="breadcrumb-item"><a href="../plugins.html" class="nav-link">Plugins</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">OverlappingMarkerSpiderfier</span></li>
+  </ul>
+</nav>
+</div>
+      
+    </div>
+  
+  
+</div>
+</div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="OverlappingMarkerSpiderfier">
+<h1>OverlappingMarkerSpiderfier<a class="headerlink" href="#OverlappingMarkerSpiderfier" title="Link to this heading">#</a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">OverlappingMarkerSpiderfier</span></code> is a plugin for Folium that helps manage overlapping markers by “spiderfying” them when clicked, making it easier to select individual markers.</p>
+<section id="Using-with-Markers">
+<h2>Using with Markers<a class="headerlink" href="#Using-with-Markers" title="Link to this heading">#</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+<span class="kn">from</span> <span class="nn">folium.plugins</span> <span class="kn">import</span> <span class="n">OverlappingMarkerSpiderfier</span>
+
+<span class="c1"># Create a map</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.05</span><span class="p">,</span> <span class="mf">3.05</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+
+<span class="c1"># Add markers to the map</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.05</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">3.05</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">],</span>
+        <span class="n">popup</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Marker </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Add the OverlappingMarkerSpiderfier plugin</span>
+<span class="n">oms</span> <span class="o">=</span> <span class="n">OverlappingMarkerSpiderfier</span><span class="p">(</span>
+    <span class="n">keep_spiderfied</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>  <span class="c1"># Markers remain spiderfied after clicking</span>
+    <span class="n">nearby_distance</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span>  <span class="c1"># Distance for clustering markers in pixel</span>
+    <span class="n">circle_spiral_switchover</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>  <span class="c1"># Threshold for switching between circle and spiral</span>
+    <span class="n">leg_weight</span><span class="o">=</span><span class="mf">2.0</span>  <span class="c1"># Line thickness for spider legs</span>
+    <span class="p">)</span>
+<span class="n">oms</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_3a2f6cf52c0910c398f6975b24bcdf04 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_3a2f6cf52c0910c398f6975b24bcdf04&quot; &gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;script&gt;
+
+
+            var map_3a2f6cf52c0910c398f6975b24bcdf04 = L.map(
+                &quot;map_3a2f6cf52c0910c398f6975b24bcdf04&quot;,
+                {
+                    center: [45.05, 3.05],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;maxBounds&quot;: null,
+  &quot;zoom&quot;: 13,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+
+
+
+
+            var tile_layer_d0d36ff78499b72c93fd32a4c2cd9a74 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+
+
+            tile_layer_d0d36ff78499b72c93fd32a4c2cd9a74.addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+            var marker_ad56796ea21a93bf48f37c077c362646 = L.marker(
+                [45.05, 3.05],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_fcd78ad77742d4200707a69ed90c8208 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_6460c04cf21c3eaf7dedc399972e0718 = $(`&lt;div id=&quot;html_6460c04cf21c3eaf7dedc399972e0718&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 0&lt;/div&gt;`)[0];
+                popup_fcd78ad77742d4200707a69ed90c8208.setContent(html_6460c04cf21c3eaf7dedc399972e0718);
+
+
+
+        marker_ad56796ea21a93bf48f37c077c362646.bindPopup(popup_fcd78ad77742d4200707a69ed90c8208)
+        ;
+
+
+
+
+            var marker_927d9fd1da9bb86d64ede90867662900 = L.marker(
+                [45.0501, 3.0501],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_078de8087f336f889bd9227ecf8ec0ca = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_6cb0b7bc110e454a4ef0cbc83d66b458 = $(`&lt;div id=&quot;html_6cb0b7bc110e454a4ef0cbc83d66b458&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 1&lt;/div&gt;`)[0];
+                popup_078de8087f336f889bd9227ecf8ec0ca.setContent(html_6cb0b7bc110e454a4ef0cbc83d66b458);
+
+
+
+        marker_927d9fd1da9bb86d64ede90867662900.bindPopup(popup_078de8087f336f889bd9227ecf8ec0ca)
+        ;
+
+
+
+
+            var marker_b4a3d262ff30b019f14765f0c2484e42 = L.marker(
+                [45.0502, 3.0502],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_96c55dd0997e131deea05f7e531754a3 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_2a7ddb3dac8609843a4b8a695f0d03f2 = $(`&lt;div id=&quot;html_2a7ddb3dac8609843a4b8a695f0d03f2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 2&lt;/div&gt;`)[0];
+                popup_96c55dd0997e131deea05f7e531754a3.setContent(html_2a7ddb3dac8609843a4b8a695f0d03f2);
+
+
+
+        marker_b4a3d262ff30b019f14765f0c2484e42.bindPopup(popup_96c55dd0997e131deea05f7e531754a3)
+        ;
+
+
+
+
+            var marker_1c9900f6641fae965408e860a2550789 = L.marker(
+                [45.0503, 3.0503],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_93a5b1758fad604686be374ebacfa134 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_ed836ad5d5c5922091a508bd1780c27c = $(`&lt;div id=&quot;html_ed836ad5d5c5922091a508bd1780c27c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 3&lt;/div&gt;`)[0];
+                popup_93a5b1758fad604686be374ebacfa134.setContent(html_ed836ad5d5c5922091a508bd1780c27c);
+
+
+
+        marker_1c9900f6641fae965408e860a2550789.bindPopup(popup_93a5b1758fad604686be374ebacfa134)
+        ;
+
+
+
+
+            var marker_05526f8c9a87098bbb52e07c9f448eb6 = L.marker(
+                [45.050399999999996, 3.0504],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_befaf1777936ac70a1f03c9cd18e32f0 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_f1aa1bb85df836c79094eda28e46595e = $(`&lt;div id=&quot;html_f1aa1bb85df836c79094eda28e46595e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 4&lt;/div&gt;`)[0];
+                popup_befaf1777936ac70a1f03c9cd18e32f0.setContent(html_f1aa1bb85df836c79094eda28e46595e);
+
+
+
+        marker_05526f8c9a87098bbb52e07c9f448eb6.bindPopup(popup_befaf1777936ac70a1f03c9cd18e32f0)
+        ;
+
+
+
+
+            var marker_9f40cd8b34cb442159ec4829a13a8603 = L.marker(
+                [45.0505, 3.0505],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_70ca362db797b0c2581258389b093564 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_f5418641eec90dce6bb721e5cdef6417 = $(`&lt;div id=&quot;html_f5418641eec90dce6bb721e5cdef6417&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 5&lt;/div&gt;`)[0];
+                popup_70ca362db797b0c2581258389b093564.setContent(html_f5418641eec90dce6bb721e5cdef6417);
+
+
+
+        marker_9f40cd8b34cb442159ec4829a13a8603.bindPopup(popup_70ca362db797b0c2581258389b093564)
+        ;
+
+
+
+
+            var marker_e126bda0b3dd85a03d60ee5a6ad1abbf = L.marker(
+                [45.050599999999996, 3.0505999999999998],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_71627071c16e8c68c436ffed33eaa27b = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_4d18889e7871d035bdd0ef1b7e657e8a = $(`&lt;div id=&quot;html_4d18889e7871d035bdd0ef1b7e657e8a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 6&lt;/div&gt;`)[0];
+                popup_71627071c16e8c68c436ffed33eaa27b.setContent(html_4d18889e7871d035bdd0ef1b7e657e8a);
+
+
+
+        marker_e126bda0b3dd85a03d60ee5a6ad1abbf.bindPopup(popup_71627071c16e8c68c436ffed33eaa27b)
+        ;
+
+
+
+
+            var marker_165172bc06c3029cc68e4b33366186fe = L.marker(
+                [45.0507, 3.0507],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_e00ebfa1decc78a7d4f13de2c403d124 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_f07204bab4f35ab57e1c091250896c7d = $(`&lt;div id=&quot;html_f07204bab4f35ab57e1c091250896c7d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 7&lt;/div&gt;`)[0];
+                popup_e00ebfa1decc78a7d4f13de2c403d124.setContent(html_f07204bab4f35ab57e1c091250896c7d);
+
+
+
+        marker_165172bc06c3029cc68e4b33366186fe.bindPopup(popup_e00ebfa1decc78a7d4f13de2c403d124)
+        ;
+
+
+
+
+            var marker_947d63da488da34c304735557fab594a = L.marker(
+                [45.050799999999995, 3.0507999999999997],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_ed0c3cf8f8b0a888bc85c0d3b3c8b51c = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_f29fc21571d7c6e94b9f5f5ad0c58875 = $(`&lt;div id=&quot;html_f29fc21571d7c6e94b9f5f5ad0c58875&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 8&lt;/div&gt;`)[0];
+                popup_ed0c3cf8f8b0a888bc85c0d3b3c8b51c.setContent(html_f29fc21571d7c6e94b9f5f5ad0c58875);
+
+
+
+        marker_947d63da488da34c304735557fab594a.bindPopup(popup_ed0c3cf8f8b0a888bc85c0d3b3c8b51c)
+        ;
+
+
+
+
+            var marker_3e2b83024463cf0c2f7dc4f89d8b5690 = L.marker(
+                [45.0509, 3.0509],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_243f3cc4955e6a0edd48644dadf198ce = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_fa080a97df5878aa942a7434ea0eccc9 = $(`&lt;div id=&quot;html_fa080a97df5878aa942a7434ea0eccc9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 9&lt;/div&gt;`)[0];
+                popup_243f3cc4955e6a0edd48644dadf198ce.setContent(html_fa080a97df5878aa942a7434ea0eccc9);
+
+
+
+        marker_3e2b83024463cf0c2f7dc4f89d8b5690.bindPopup(popup_243f3cc4955e6a0edd48644dadf198ce)
+        ;
+
+
+
+
+            var marker_79508e3d0217c4eb4a38d51a85628e52 = L.marker(
+                [45.050999999999995, 3.0509999999999997],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_ab83f4a7551d21faedeee630a1c47fde = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_b9cf954131b5c8eb9b868450cc5b0e97 = $(`&lt;div id=&quot;html_b9cf954131b5c8eb9b868450cc5b0e97&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 10&lt;/div&gt;`)[0];
+                popup_ab83f4a7551d21faedeee630a1c47fde.setContent(html_b9cf954131b5c8eb9b868450cc5b0e97);
+
+
+
+        marker_79508e3d0217c4eb4a38d51a85628e52.bindPopup(popup_ab83f4a7551d21faedeee630a1c47fde)
+        ;
+
+
+
+
+            var marker_cd6f47326830c7b5c4c0279734dcef27 = L.marker(
+                [45.0511, 3.0511],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_6d7e7dc2ec355e766a51f6fc3fabdcbf = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_ea623da8cb32cae80e53417619b5b958 = $(`&lt;div id=&quot;html_ea623da8cb32cae80e53417619b5b958&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 11&lt;/div&gt;`)[0];
+                popup_6d7e7dc2ec355e766a51f6fc3fabdcbf.setContent(html_ea623da8cb32cae80e53417619b5b958);
+
+
+
+        marker_cd6f47326830c7b5c4c0279734dcef27.bindPopup(popup_6d7e7dc2ec355e766a51f6fc3fabdcbf)
+        ;
+
+
+
+
+            var marker_8ada0bc2948def84aab59ea762e32ed6 = L.marker(
+                [45.051199999999994, 3.0511999999999997],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_0b241ddf2af49b0ce03128960e7f84de = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_9aad43d3782effb3c874e9af413ee4ff = $(`&lt;div id=&quot;html_9aad43d3782effb3c874e9af413ee4ff&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 12&lt;/div&gt;`)[0];
+                popup_0b241ddf2af49b0ce03128960e7f84de.setContent(html_9aad43d3782effb3c874e9af413ee4ff);
+
+
+
+        marker_8ada0bc2948def84aab59ea762e32ed6.bindPopup(popup_0b241ddf2af49b0ce03128960e7f84de)
+        ;
+
+
+
+
+            var marker_05b3409691685e7d1ed350a701873297 = L.marker(
+                [45.0513, 3.0513],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_a00b63b14f8933b5f2ffa2e9141fe100 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_d5b5eea81111acacca2a058491625f9c = $(`&lt;div id=&quot;html_d5b5eea81111acacca2a058491625f9c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 13&lt;/div&gt;`)[0];
+                popup_a00b63b14f8933b5f2ffa2e9141fe100.setContent(html_d5b5eea81111acacca2a058491625f9c);
+
+
+
+        marker_05b3409691685e7d1ed350a701873297.bindPopup(popup_a00b63b14f8933b5f2ffa2e9141fe100)
+        ;
+
+
+
+
+            var marker_6d2a1e488f03d2af47a3803833dc5141 = L.marker(
+                [45.051399999999994, 3.0513999999999997],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_ffd2dee0bd8f1a38c8b7fc018fa010dc = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_8e0118fabe7d205fa2eecfd95cf788bc = $(`&lt;div id=&quot;html_8e0118fabe7d205fa2eecfd95cf788bc&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 14&lt;/div&gt;`)[0];
+                popup_ffd2dee0bd8f1a38c8b7fc018fa010dc.setContent(html_8e0118fabe7d205fa2eecfd95cf788bc);
+
+
+
+        marker_6d2a1e488f03d2af47a3803833dc5141.bindPopup(popup_ffd2dee0bd8f1a38c8b7fc018fa010dc)
+        ;
+
+
+
+
+            var marker_2c001fb0cb4c7a0362b41a65129c27ff = L.marker(
+                [45.0515, 3.0515],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_5149832759f0e2b091b02d3b9faf3dfe = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_012e16b66ae92fa1ce733633d17580a5 = $(`&lt;div id=&quot;html_012e16b66ae92fa1ce733633d17580a5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 15&lt;/div&gt;`)[0];
+                popup_5149832759f0e2b091b02d3b9faf3dfe.setContent(html_012e16b66ae92fa1ce733633d17580a5);
+
+
+
+        marker_2c001fb0cb4c7a0362b41a65129c27ff.bindPopup(popup_5149832759f0e2b091b02d3b9faf3dfe)
+        ;
+
+
+
+
+            var marker_e0f59a908f0a72f77d3a58b6c6722bb6 = L.marker(
+                [45.0516, 3.0515999999999996],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_049966b1f5b0235f87f1e8efd780e63b = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_69b7678e888c580b9d7af4dd2b2fae90 = $(`&lt;div id=&quot;html_69b7678e888c580b9d7af4dd2b2fae90&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 16&lt;/div&gt;`)[0];
+                popup_049966b1f5b0235f87f1e8efd780e63b.setContent(html_69b7678e888c580b9d7af4dd2b2fae90);
+
+
+
+        marker_e0f59a908f0a72f77d3a58b6c6722bb6.bindPopup(popup_049966b1f5b0235f87f1e8efd780e63b)
+        ;
+
+
+
+
+            var marker_0c2ed26acd36856c278c0ae0eac03403 = L.marker(
+                [45.0517, 3.0517],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_ffd45c491785eb168f496a013ec3bd6a = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_c28b8dd2961006f4f5dc87935189e1de = $(`&lt;div id=&quot;html_c28b8dd2961006f4f5dc87935189e1de&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 17&lt;/div&gt;`)[0];
+                popup_ffd45c491785eb168f496a013ec3bd6a.setContent(html_c28b8dd2961006f4f5dc87935189e1de);
+
+
+
+        marker_0c2ed26acd36856c278c0ae0eac03403.bindPopup(popup_ffd45c491785eb168f496a013ec3bd6a)
+        ;
+
+
+
+
+            var marker_0ae9ef1948b6a4b0b5a53e290f87acf2 = L.marker(
+                [45.0518, 3.0517999999999996],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_4d79663cb9de5c6f27b0f6bacb7437a8 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_96588d7f774cf1545077b4f5003ea195 = $(`&lt;div id=&quot;html_96588d7f774cf1545077b4f5003ea195&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 18&lt;/div&gt;`)[0];
+                popup_4d79663cb9de5c6f27b0f6bacb7437a8.setContent(html_96588d7f774cf1545077b4f5003ea195);
+
+
+
+        marker_0ae9ef1948b6a4b0b5a53e290f87acf2.bindPopup(popup_4d79663cb9de5c6f27b0f6bacb7437a8)
+        ;
+
+
+
+
+            var marker_ffa92ddba10bf17d4b8bfe2cfa74ff18 = L.marker(
+                [45.051899999999996, 3.0519],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(map_3a2f6cf52c0910c398f6975b24bcdf04);
+
+
+        var popup_f65aff7dc86b5ef4bb2ffd8470140be6 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_0f1d25aac37c4ed5482d6de979afbb63 = $(`&lt;div id=&quot;html_0f1d25aac37c4ed5482d6de979afbb63&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Marker 19&lt;/div&gt;`)[0];
+                popup_f65aff7dc86b5ef4bb2ffd8470140be6.setContent(html_0f1d25aac37c4ed5482d6de979afbb63);
+
+
+
+        marker_ffa92ddba10bf17d4b8bfe2cfa74ff18.bindPopup(popup_f65aff7dc86b5ef4bb2ffd8470140be6)
+        ;
+
+
+
+
+        (function () {
+            try {
+                var oms = new OverlappingMarkerSpiderfier(
+                    map_3a2f6cf52c0910c398f6975b24bcdf04,
+                    {&quot;circleSpiralSwitchover&quot;: 10, &quot;keepSpiderfied&quot;: true, &quot;legWeight&quot;: 2.0, &quot;nearbyDistance&quot;: 20}
+                );
+
+                oms.addListener(&#x27;spiderfy&#x27;, function() {
+                    map_3a2f6cf52c0910c398f6975b24bcdf04.closePopup();
+                });
+                    oms.addMarker(marker_ad56796ea21a93bf48f37c077c362646);
+                    oms.addMarker(marker_927d9fd1da9bb86d64ede90867662900);
+                    oms.addMarker(marker_b4a3d262ff30b019f14765f0c2484e42);
+                    oms.addMarker(marker_1c9900f6641fae965408e860a2550789);
+                    oms.addMarker(marker_05526f8c9a87098bbb52e07c9f448eb6);
+                    oms.addMarker(marker_9f40cd8b34cb442159ec4829a13a8603);
+                    oms.addMarker(marker_e126bda0b3dd85a03d60ee5a6ad1abbf);
+                    oms.addMarker(marker_165172bc06c3029cc68e4b33366186fe);
+                    oms.addMarker(marker_947d63da488da34c304735557fab594a);
+                    oms.addMarker(marker_3e2b83024463cf0c2f7dc4f89d8b5690);
+                    oms.addMarker(marker_79508e3d0217c4eb4a38d51a85628e52);
+                    oms.addMarker(marker_cd6f47326830c7b5c4c0279734dcef27);
+                    oms.addMarker(marker_8ada0bc2948def84aab59ea762e32ed6);
+                    oms.addMarker(marker_05b3409691685e7d1ed350a701873297);
+                    oms.addMarker(marker_6d2a1e488f03d2af47a3803833dc5141);
+                    oms.addMarker(marker_2c001fb0cb4c7a0362b41a65129c27ff);
+                    oms.addMarker(marker_e0f59a908f0a72f77d3a58b6c6722bb6);
+                    oms.addMarker(marker_0c2ed26acd36856c278c0ae0eac03403);
+                    oms.addMarker(marker_0ae9ef1948b6a4b0b5a53e290f87acf2);
+                    oms.addMarker(marker_ffa92ddba10bf17d4b8bfe2cfa74ff18);
+            } catch (error) {
+                console.error(&#x27;Error initializing OverlappingMarkerSpiderfier:&#x27;, error);
+            }
+        })();
+
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+</div>
+</section>
+<section id="Using-with-FeatureGroups">
+<h2>Using with FeatureGroups<a class="headerlink" href="#Using-with-FeatureGroups" title="Link to this heading">#</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+<span class="kn">from</span> <span class="nn">folium.plugins</span> <span class="kn">import</span> <span class="n">OverlappingMarkerSpiderfier</span>
+
+<span class="c1"># Create a map</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.05</span><span class="p">,</span> <span class="mf">3.05</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+
+<span class="c1"># Create a FeatureGroup</span>
+<span class="n">feature_group</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">FeatureGroup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Feature Group&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add markers to the FeatureGroup</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.05</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">3.05</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">],</span>
+        <span class="n">popup</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Feature Group Marker </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">feature_group</span><span class="p">)</span>
+
+<span class="c1"># Add the FeatureGroup to the map</span>
+<span class="n">feature_group</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Initialize OverlappingMarkerSpiderfier</span>
+<span class="n">oms</span> <span class="o">=</span> <span class="n">OverlappingMarkerSpiderfier</span><span class="p">()</span>
+<span class="n">oms</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_e51a7794d9013d7fddc034824e6659ae {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_e51a7794d9013d7fddc034824e6659ae&quot; &gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;script&gt;
+
+
+            var map_e51a7794d9013d7fddc034824e6659ae = L.map(
+                &quot;map_e51a7794d9013d7fddc034824e6659ae&quot;,
+                {
+                    center: [45.05, 3.05],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;maxBounds&quot;: null,
+  &quot;zoom&quot;: 13,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+
+
+
+
+            var tile_layer_af0673aeb904b24711256f43a0a6fea7 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+
+
+            tile_layer_af0673aeb904b24711256f43a0a6fea7.addTo(map_e51a7794d9013d7fddc034824e6659ae);
+
+
+            var feature_group_6b2ecba50f2bc4f5b4649412460f6d81 = L.featureGroup(
+                {
+}
+            );
+
+
+            var marker_45a1837833c0ba435b61de5581cf57a9 = L.marker(
+                [45.05, 3.05],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_3efab024f5d5cdef02899f1cc4b7fc0f = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_f836d8684bc2a8e2d605328c0756cde6 = $(`&lt;div id=&quot;html_f836d8684bc2a8e2d605328c0756cde6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 0&lt;/div&gt;`)[0];
+                popup_3efab024f5d5cdef02899f1cc4b7fc0f.setContent(html_f836d8684bc2a8e2d605328c0756cde6);
+
+
+
+        marker_45a1837833c0ba435b61de5581cf57a9.bindPopup(popup_3efab024f5d5cdef02899f1cc4b7fc0f)
+        ;
+
+
+
+
+            var marker_3f907deb6e12577d4d4cf9f846eb789f = L.marker(
+                [45.0501, 3.0501],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_55fce3b5687ce230ffff351759aa453e = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_024cf6a10c1f1eb928c74bf35e962ea2 = $(`&lt;div id=&quot;html_024cf6a10c1f1eb928c74bf35e962ea2&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 1&lt;/div&gt;`)[0];
+                popup_55fce3b5687ce230ffff351759aa453e.setContent(html_024cf6a10c1f1eb928c74bf35e962ea2);
+
+
+
+        marker_3f907deb6e12577d4d4cf9f846eb789f.bindPopup(popup_55fce3b5687ce230ffff351759aa453e)
+        ;
+
+
+
+
+            var marker_a1fa3c5ed42e16340e9e0a8ffb80d6b6 = L.marker(
+                [45.0502, 3.0502],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_169565e5e7962c65bf90f39fef2dd2dd = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_3e01d3554e34cb3a974d0ca27badb7f9 = $(`&lt;div id=&quot;html_3e01d3554e34cb3a974d0ca27badb7f9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 2&lt;/div&gt;`)[0];
+                popup_169565e5e7962c65bf90f39fef2dd2dd.setContent(html_3e01d3554e34cb3a974d0ca27badb7f9);
+
+
+
+        marker_a1fa3c5ed42e16340e9e0a8ffb80d6b6.bindPopup(popup_169565e5e7962c65bf90f39fef2dd2dd)
+        ;
+
+
+
+
+            var marker_de54d580a85816c1daa8cc507a8a4527 = L.marker(
+                [45.0503, 3.0503],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_4b8e7a8425ad4b2eb46326168962c8f6 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_3a5e4d36f4cf8046e00593c23dda4dca = $(`&lt;div id=&quot;html_3a5e4d36f4cf8046e00593c23dda4dca&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 3&lt;/div&gt;`)[0];
+                popup_4b8e7a8425ad4b2eb46326168962c8f6.setContent(html_3a5e4d36f4cf8046e00593c23dda4dca);
+
+
+
+        marker_de54d580a85816c1daa8cc507a8a4527.bindPopup(popup_4b8e7a8425ad4b2eb46326168962c8f6)
+        ;
+
+
+
+
+            var marker_7e9e14a084b4a65759fb8119e274e60e = L.marker(
+                [45.050399999999996, 3.0504],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_800d650b309312b2376f565b81e618dd = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_d6a6f5cee3f4687299e48ab968c9dc52 = $(`&lt;div id=&quot;html_d6a6f5cee3f4687299e48ab968c9dc52&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 4&lt;/div&gt;`)[0];
+                popup_800d650b309312b2376f565b81e618dd.setContent(html_d6a6f5cee3f4687299e48ab968c9dc52);
+
+
+
+        marker_7e9e14a084b4a65759fb8119e274e60e.bindPopup(popup_800d650b309312b2376f565b81e618dd)
+        ;
+
+
+
+
+            var marker_49d05d008018e012ed2be6a6985c7d27 = L.marker(
+                [45.0505, 3.0505],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_929feb99abe838fca5b1b907a8aad057 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_465b8074e3b9aaf5404dabb83485e5ce = $(`&lt;div id=&quot;html_465b8074e3b9aaf5404dabb83485e5ce&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 5&lt;/div&gt;`)[0];
+                popup_929feb99abe838fca5b1b907a8aad057.setContent(html_465b8074e3b9aaf5404dabb83485e5ce);
+
+
+
+        marker_49d05d008018e012ed2be6a6985c7d27.bindPopup(popup_929feb99abe838fca5b1b907a8aad057)
+        ;
+
+
+
+
+            var marker_1ad4339f4d65f41d875c03610b24e1a3 = L.marker(
+                [45.050599999999996, 3.0505999999999998],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_ecf9db6fed64647800085881c2164d61 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_a06ac127c055c7c6d71129ff9eba2773 = $(`&lt;div id=&quot;html_a06ac127c055c7c6d71129ff9eba2773&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 6&lt;/div&gt;`)[0];
+                popup_ecf9db6fed64647800085881c2164d61.setContent(html_a06ac127c055c7c6d71129ff9eba2773);
+
+
+
+        marker_1ad4339f4d65f41d875c03610b24e1a3.bindPopup(popup_ecf9db6fed64647800085881c2164d61)
+        ;
+
+
+
+
+            var marker_af03c0eb1b6533bf23f5c73743dc086e = L.marker(
+                [45.0507, 3.0507],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_e204a5c82fe1a4503966198c27d058ab = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_915ae99de7c15a7573af43e35ee4933b = $(`&lt;div id=&quot;html_915ae99de7c15a7573af43e35ee4933b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 7&lt;/div&gt;`)[0];
+                popup_e204a5c82fe1a4503966198c27d058ab.setContent(html_915ae99de7c15a7573af43e35ee4933b);
+
+
+
+        marker_af03c0eb1b6533bf23f5c73743dc086e.bindPopup(popup_e204a5c82fe1a4503966198c27d058ab)
+        ;
+
+
+
+
+            var marker_3414b8d4a824b0a95e1d4957e210d6bb = L.marker(
+                [45.050799999999995, 3.0507999999999997],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_a2bd3114a88ffa8b873b6c5563e78d7e = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_05a6e3f90f49992a4ce7a1235371ef35 = $(`&lt;div id=&quot;html_05a6e3f90f49992a4ce7a1235371ef35&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 8&lt;/div&gt;`)[0];
+                popup_a2bd3114a88ffa8b873b6c5563e78d7e.setContent(html_05a6e3f90f49992a4ce7a1235371ef35);
+
+
+
+        marker_3414b8d4a824b0a95e1d4957e210d6bb.bindPopup(popup_a2bd3114a88ffa8b873b6c5563e78d7e)
+        ;
+
+
+
+
+            var marker_c7c378fb2561ca7e91920e24bf6ffb1e = L.marker(
+                [45.0509, 3.0509],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_6b2ecba50f2bc4f5b4649412460f6d81);
+
+
+        var popup_8f354773b34202dbb982bb31207be5da = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_8a28497fae503a72e96624e98c84e15a = $(`&lt;div id=&quot;html_8a28497fae503a72e96624e98c84e15a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Feature Group Marker 9&lt;/div&gt;`)[0];
+                popup_8f354773b34202dbb982bb31207be5da.setContent(html_8a28497fae503a72e96624e98c84e15a);
+
+
+
+        marker_c7c378fb2561ca7e91920e24bf6ffb1e.bindPopup(popup_8f354773b34202dbb982bb31207be5da)
+        ;
+
+
+
+
+            feature_group_6b2ecba50f2bc4f5b4649412460f6d81.addTo(map_e51a7794d9013d7fddc034824e6659ae);
+
+
+        (function () {
+            try {
+                var oms = new OverlappingMarkerSpiderfier(
+                    map_e51a7794d9013d7fddc034824e6659ae,
+                    {&quot;circleSpiralSwitchover&quot;: 9, &quot;keepSpiderfied&quot;: true, &quot;legWeight&quot;: 1.5, &quot;nearbyDistance&quot;: 20}
+                );
+
+                oms.addListener(&#x27;spiderfy&#x27;, function() {
+                    map_e51a7794d9013d7fddc034824e6659ae.closePopup();
+                });
+                    oms.addMarker(marker_45a1837833c0ba435b61de5581cf57a9);
+                    oms.addMarker(marker_3f907deb6e12577d4d4cf9f846eb789f);
+                    oms.addMarker(marker_a1fa3c5ed42e16340e9e0a8ffb80d6b6);
+                    oms.addMarker(marker_de54d580a85816c1daa8cc507a8a4527);
+                    oms.addMarker(marker_7e9e14a084b4a65759fb8119e274e60e);
+                    oms.addMarker(marker_49d05d008018e012ed2be6a6985c7d27);
+                    oms.addMarker(marker_1ad4339f4d65f41d875c03610b24e1a3);
+                    oms.addMarker(marker_af03c0eb1b6533bf23f5c73743dc086e);
+                    oms.addMarker(marker_3414b8d4a824b0a95e1d4957e210d6bb);
+                    oms.addMarker(marker_c7c378fb2561ca7e91920e24bf6ffb1e);
+            } catch (error) {
+                console.error(&#x27;Error initializing OverlappingMarkerSpiderfier:&#x27;, error);
+            }
+        })();
+
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+</div>
+</section>
+<section id="Using-with-FeatureGroupSubGroups">
+<h2>Using with FeatureGroupSubGroups<a class="headerlink" href="#Using-with-FeatureGroupSubGroups" title="Link to this heading">#</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">folium</span>
+<span class="kn">from</span> <span class="nn">folium.plugins</span> <span class="kn">import</span> <span class="n">OverlappingMarkerSpiderfier</span><span class="p">,</span> <span class="n">FeatureGroupSubGroup</span>
+
+<span class="c1"># Create a map</span>
+<span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.05</span><span class="p">,</span> <span class="mf">3.05</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+
+<span class="c1"># Create a main FeatureGroup</span>
+<span class="n">main_group</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">FeatureGroup</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;Main Group&#39;</span><span class="p">)</span>
+
+<span class="c1"># Create sub-groups</span>
+<span class="n">sub_group1</span> <span class="o">=</span> <span class="n">FeatureGroupSubGroup</span><span class="p">(</span><span class="n">main_group</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Sub Group 1&#39;</span><span class="p">)</span>
+<span class="n">sub_group2</span> <span class="o">=</span> <span class="n">FeatureGroupSubGroup</span><span class="p">(</span><span class="n">main_group</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Sub Group 2&#39;</span><span class="p">)</span>
+
+<span class="c1"># Add markers to the first sub-group</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.05</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">3.05</span> <span class="o">+</span> <span class="n">i</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">],</span>
+        <span class="n">popup</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Sub Group 1 Marker </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">sub_group1</span><span class="p">)</span>
+
+<span class="c1"># Add markers to the second sub-group</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">):</span>
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">45.06</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">,</span> <span class="mf">3.06</span> <span class="o">+</span> <span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">10</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.0001</span><span class="p">],</span>
+        <span class="n">popup</span><span class="o">=</span><span class="sa">f</span><span class="s2">&quot;Sub Group 2 Marker </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">&quot;</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">sub_group2</span><span class="p">)</span>
+
+<span class="c1"># Add the main group to the map</span>
+<span class="n">main_group</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Add sub-groups to the map</span>
+<span class="n">sub_group1</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+<span class="n">sub_group2</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Initialize OverlappingMarkerSpiderfier</span>
+<span class="n">oms</span> <span class="o">=</span> <span class="n">OverlappingMarkerSpiderfier</span><span class="p">()</span>
+<span class="n">oms</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># Add the LayerControl plugin</span>
+<span class="n">folium</span><span class="o">.</span><span class="n">LayerControl</span><span class="p">()</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_7baf3c466ead9960d9b1394f8a7a077e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+    &lt;script src=&quot;https://unpkg.com/leaflet.featuregroup.subgroup@1.0.2/dist/leaflet.featuregroup.subgroup.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/OverlappingMarkerSpiderfier-Leaflet/0.2.6/oms.min.js&quot;&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_7baf3c466ead9960d9b1394f8a7a077e&quot; &gt;&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;script&gt;
+
+
+            var map_7baf3c466ead9960d9b1394f8a7a077e = L.map(
+                &quot;map_7baf3c466ead9960d9b1394f8a7a077e&quot;,
+                {
+                    center: [45.05, 3.05],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;maxBounds&quot;: null,
+  &quot;zoom&quot;: 13,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
+
+                }
+            );
+
+
+
+
+
+            var tile_layer_9c7b0463ce4c8ba8ae22aa486447d44f = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+
+
+            tile_layer_9c7b0463ce4c8ba8ae22aa486447d44f.addTo(map_7baf3c466ead9960d9b1394f8a7a077e);
+
+
+            var feature_group_9904725ff31588c0906eaecb3f1137f5 = L.featureGroup(
+                {
+}
+            );
+
+
+            feature_group_9904725ff31588c0906eaecb3f1137f5.addTo(map_7baf3c466ead9960d9b1394f8a7a077e);
+
+
+            var feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5 = L.featureGroup.subGroup(
+                feature_group_9904725ff31588c0906eaecb3f1137f5
+            );
+
+
+            var marker_faf7a3e17496acb69fd6b2a8492fd8f2 = L.marker(
+                [45.05, 3.05],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_f54eb80fd5ff893f42c4be85890898a8 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_afe8449d636997be6af49ea5487d762f = $(`&lt;div id=&quot;html_afe8449d636997be6af49ea5487d762f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 0&lt;/div&gt;`)[0];
+                popup_f54eb80fd5ff893f42c4be85890898a8.setContent(html_afe8449d636997be6af49ea5487d762f);
+
+
+
+        marker_faf7a3e17496acb69fd6b2a8492fd8f2.bindPopup(popup_f54eb80fd5ff893f42c4be85890898a8)
+        ;
+
+
+
+
+            var marker_1f2b438025f2f2ae7dbb0335bfd126c2 = L.marker(
+                [45.0501, 3.0501],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_781b3a47af2100ef878e3c4120261b83 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_8dfac1d222d802803607297d7b5f5260 = $(`&lt;div id=&quot;html_8dfac1d222d802803607297d7b5f5260&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 1&lt;/div&gt;`)[0];
+                popup_781b3a47af2100ef878e3c4120261b83.setContent(html_8dfac1d222d802803607297d7b5f5260);
+
+
+
+        marker_1f2b438025f2f2ae7dbb0335bfd126c2.bindPopup(popup_781b3a47af2100ef878e3c4120261b83)
+        ;
+
+
+
+
+            var marker_6910e92c0f042ce250745a16e1e5bf28 = L.marker(
+                [45.0502, 3.0502],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_a095c61819dd45a26c7ce047df6df455 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_5368d390654528419d602f036557d10a = $(`&lt;div id=&quot;html_5368d390654528419d602f036557d10a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 2&lt;/div&gt;`)[0];
+                popup_a095c61819dd45a26c7ce047df6df455.setContent(html_5368d390654528419d602f036557d10a);
+
+
+
+        marker_6910e92c0f042ce250745a16e1e5bf28.bindPopup(popup_a095c61819dd45a26c7ce047df6df455)
+        ;
+
+
+
+
+            var marker_16822fe6cd7d81844133ea61def7c69f = L.marker(
+                [45.0503, 3.0503],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_cc60d8f4293028c7e78fc6ad77fd40c1 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_620b9934b38cf60dcb0909836e3a1a01 = $(`&lt;div id=&quot;html_620b9934b38cf60dcb0909836e3a1a01&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 3&lt;/div&gt;`)[0];
+                popup_cc60d8f4293028c7e78fc6ad77fd40c1.setContent(html_620b9934b38cf60dcb0909836e3a1a01);
+
+
+
+        marker_16822fe6cd7d81844133ea61def7c69f.bindPopup(popup_cc60d8f4293028c7e78fc6ad77fd40c1)
+        ;
+
+
+
+
+            var marker_17bf107b77d4e3aee3fb7bdd18c73c7d = L.marker(
+                [45.050399999999996, 3.0504],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_1a4eb737207217209ec882f35f00d925 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_4227a592d26a2965f0053f1979308df3 = $(`&lt;div id=&quot;html_4227a592d26a2965f0053f1979308df3&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 4&lt;/div&gt;`)[0];
+                popup_1a4eb737207217209ec882f35f00d925.setContent(html_4227a592d26a2965f0053f1979308df3);
+
+
+
+        marker_17bf107b77d4e3aee3fb7bdd18c73c7d.bindPopup(popup_1a4eb737207217209ec882f35f00d925)
+        ;
+
+
+
+
+            var marker_76dddaf75110aef09c0592e61e118686 = L.marker(
+                [45.0505, 3.0505],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_3aa3466a71f29240ba41d6928945e353 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_eb4667077b30d940b110f4d2c8b54b1f = $(`&lt;div id=&quot;html_eb4667077b30d940b110f4d2c8b54b1f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 5&lt;/div&gt;`)[0];
+                popup_3aa3466a71f29240ba41d6928945e353.setContent(html_eb4667077b30d940b110f4d2c8b54b1f);
+
+
+
+        marker_76dddaf75110aef09c0592e61e118686.bindPopup(popup_3aa3466a71f29240ba41d6928945e353)
+        ;
+
+
+
+
+            var marker_4123897a4bf3ae5fae1bc0fd2b0a10bf = L.marker(
+                [45.050599999999996, 3.0505999999999998],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_917acbdf591d876dee77e28048fe41ac = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_a502ad118d48e5e2a3d6a5aac0f0efc4 = $(`&lt;div id=&quot;html_a502ad118d48e5e2a3d6a5aac0f0efc4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 6&lt;/div&gt;`)[0];
+                popup_917acbdf591d876dee77e28048fe41ac.setContent(html_a502ad118d48e5e2a3d6a5aac0f0efc4);
+
+
+
+        marker_4123897a4bf3ae5fae1bc0fd2b0a10bf.bindPopup(popup_917acbdf591d876dee77e28048fe41ac)
+        ;
+
+
+
+
+            var marker_877db1e7369447f5b090ab3f6b880e94 = L.marker(
+                [45.0507, 3.0507],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_dbbb855222d3f3fb1ec1fa493b887835 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_ff0ab5aeb578817bc818267fe5c79299 = $(`&lt;div id=&quot;html_ff0ab5aeb578817bc818267fe5c79299&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 7&lt;/div&gt;`)[0];
+                popup_dbbb855222d3f3fb1ec1fa493b887835.setContent(html_ff0ab5aeb578817bc818267fe5c79299);
+
+
+
+        marker_877db1e7369447f5b090ab3f6b880e94.bindPopup(popup_dbbb855222d3f3fb1ec1fa493b887835)
+        ;
+
+
+
+
+            var marker_fa1fba1f805cb7561a622728b950bc87 = L.marker(
+                [45.050799999999995, 3.0507999999999997],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_349f3318f66e84da337c83a46e030e1f = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_5fc12ddc7419b41aa52000f3147d571c = $(`&lt;div id=&quot;html_5fc12ddc7419b41aa52000f3147d571c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 8&lt;/div&gt;`)[0];
+                popup_349f3318f66e84da337c83a46e030e1f.setContent(html_5fc12ddc7419b41aa52000f3147d571c);
+
+
+
+        marker_fa1fba1f805cb7561a622728b950bc87.bindPopup(popup_349f3318f66e84da337c83a46e030e1f)
+        ;
+
+
+
+
+            var marker_5447cef4df106621d80df5c642f2b060 = L.marker(
+                [45.0509, 3.0509],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5);
+
+
+        var popup_16ceb83f7c627017caffcd14a350c409 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_7fa707edf27a24513cc7e25b275c5d4a = $(`&lt;div id=&quot;html_7fa707edf27a24513cc7e25b275c5d4a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 1 Marker 9&lt;/div&gt;`)[0];
+                popup_16ceb83f7c627017caffcd14a350c409.setContent(html_7fa707edf27a24513cc7e25b275c5d4a);
+
+
+
+        marker_5447cef4df106621d80df5c642f2b060.bindPopup(popup_16ceb83f7c627017caffcd14a350c409)
+        ;
+
+
+
+
+            feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5.addTo(map_7baf3c466ead9960d9b1394f8a7a077e);
+
+
+            var feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18 = L.featureGroup.subGroup(
+                feature_group_9904725ff31588c0906eaecb3f1137f5
+            );
+
+
+            var marker_4929261dcdb0ca453eef80602cbf9625 = L.marker(
+                [45.06, 3.06],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_af2b7732e181453d97c47a4e0aa3bd6d = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_63df4185d30c80bde85ad212f757a18e = $(`&lt;div id=&quot;html_63df4185d30c80bde85ad212f757a18e&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 10&lt;/div&gt;`)[0];
+                popup_af2b7732e181453d97c47a4e0aa3bd6d.setContent(html_63df4185d30c80bde85ad212f757a18e);
+
+
+
+        marker_4929261dcdb0ca453eef80602cbf9625.bindPopup(popup_af2b7732e181453d97c47a4e0aa3bd6d)
+        ;
+
+
+
+
+            var marker_5d9c9e8d8c486de09ffe569422799c3a = L.marker(
+                [45.060100000000006, 3.0601000000000003],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_18c7c9967d9e0c82b1f7b9dfa7612d87 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_1899a7ae637efa6509ce36241c7e9808 = $(`&lt;div id=&quot;html_1899a7ae637efa6509ce36241c7e9808&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 11&lt;/div&gt;`)[0];
+                popup_18c7c9967d9e0c82b1f7b9dfa7612d87.setContent(html_1899a7ae637efa6509ce36241c7e9808);
+
+
+
+        marker_5d9c9e8d8c486de09ffe569422799c3a.bindPopup(popup_18c7c9967d9e0c82b1f7b9dfa7612d87)
+        ;
+
+
+
+
+            var marker_fe5b51d2ad6f1a81fdec455bfba18588 = L.marker(
+                [45.0602, 3.0602],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_78f693deaffa3a7951bdd54ce6ab1e1f = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_ddbeb549634e6d4b5dfd02650991b806 = $(`&lt;div id=&quot;html_ddbeb549634e6d4b5dfd02650991b806&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 12&lt;/div&gt;`)[0];
+                popup_78f693deaffa3a7951bdd54ce6ab1e1f.setContent(html_ddbeb549634e6d4b5dfd02650991b806);
+
+
+
+        marker_fe5b51d2ad6f1a81fdec455bfba18588.bindPopup(popup_78f693deaffa3a7951bdd54ce6ab1e1f)
+        ;
+
+
+
+
+            var marker_b97441533c54da94e94a2f04e9144a78 = L.marker(
+                [45.060300000000005, 3.0603000000000002],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_2496ed490edb7d92eb948a19c9fc2c0b = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_650e0de658d102a05be37443018d5b3c = $(`&lt;div id=&quot;html_650e0de658d102a05be37443018d5b3c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 13&lt;/div&gt;`)[0];
+                popup_2496ed490edb7d92eb948a19c9fc2c0b.setContent(html_650e0de658d102a05be37443018d5b3c);
+
+
+
+        marker_b97441533c54da94e94a2f04e9144a78.bindPopup(popup_2496ed490edb7d92eb948a19c9fc2c0b)
+        ;
+
+
+
+
+            var marker_e1b66297232558fc3727a9bded71bd1a = L.marker(
+                [45.0604, 3.0604],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_c91df567ee40ce63b7d1879a3ca2712a = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_0b411d06f793053e287fb32e06a65ac7 = $(`&lt;div id=&quot;html_0b411d06f793053e287fb32e06a65ac7&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 14&lt;/div&gt;`)[0];
+                popup_c91df567ee40ce63b7d1879a3ca2712a.setContent(html_0b411d06f793053e287fb32e06a65ac7);
+
+
+
+        marker_e1b66297232558fc3727a9bded71bd1a.bindPopup(popup_c91df567ee40ce63b7d1879a3ca2712a)
+        ;
+
+
+
+
+            var marker_99110ee3662b8bf8f919442b8607a366 = L.marker(
+                [45.060500000000005, 3.0605],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_4be887ae1651eb2fd622782efc2f87a7 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_5fe1d5d32ede475ae9fdfdca3d832425 = $(`&lt;div id=&quot;html_5fe1d5d32ede475ae9fdfdca3d832425&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 15&lt;/div&gt;`)[0];
+                popup_4be887ae1651eb2fd622782efc2f87a7.setContent(html_5fe1d5d32ede475ae9fdfdca3d832425);
+
+
+
+        marker_99110ee3662b8bf8f919442b8607a366.bindPopup(popup_4be887ae1651eb2fd622782efc2f87a7)
+        ;
+
+
+
+
+            var marker_cef7cc9f4a6cb1c6af2793b759c5df9c = L.marker(
+                [45.0606, 3.0606],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_f0aec921af20c12993968bb3e4b0dc9f = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_e1ec87e844487056631424b2088f61e4 = $(`&lt;div id=&quot;html_e1ec87e844487056631424b2088f61e4&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 16&lt;/div&gt;`)[0];
+                popup_f0aec921af20c12993968bb3e4b0dc9f.setContent(html_e1ec87e844487056631424b2088f61e4);
+
+
+
+        marker_cef7cc9f4a6cb1c6af2793b759c5df9c.bindPopup(popup_f0aec921af20c12993968bb3e4b0dc9f)
+        ;
+
+
+
+
+            var marker_8ea23599f443ad1602789cfe5a9f366a = L.marker(
+                [45.060700000000004, 3.0607],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_2368f4cf033a2230e1fee26c4652b21c = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_985492ef050da24d6c335e97c7e94081 = $(`&lt;div id=&quot;html_985492ef050da24d6c335e97c7e94081&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 17&lt;/div&gt;`)[0];
+                popup_2368f4cf033a2230e1fee26c4652b21c.setContent(html_985492ef050da24d6c335e97c7e94081);
+
+
+
+        marker_8ea23599f443ad1602789cfe5a9f366a.bindPopup(popup_2368f4cf033a2230e1fee26c4652b21c)
+        ;
+
+
+
+
+            var marker_d34f429af6e8f3c5a12bc2a042126431 = L.marker(
+                [45.0608, 3.0608],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_45da310d3604113ab75f5bcd7154cdaa = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_62955434dd8f44e6dfb3b85bdb630427 = $(`&lt;div id=&quot;html_62955434dd8f44e6dfb3b85bdb630427&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 18&lt;/div&gt;`)[0];
+                popup_45da310d3604113ab75f5bcd7154cdaa.setContent(html_62955434dd8f44e6dfb3b85bdb630427);
+
+
+
+        marker_d34f429af6e8f3c5a12bc2a042126431.bindPopup(popup_45da310d3604113ab75f5bcd7154cdaa)
+        ;
+
+
+
+
+            var marker_3024080b4506b9d9c8bb2d3f88135373 = L.marker(
+                [45.060900000000004, 3.0609],
+                {
+  &quot;draggable&quot;: null,
+  &quot;autoPan&quot;: null,
+}
+            ).addTo(feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18);
+
+
+        var popup_4cc52be4e1d3ac4782d1d2b9a5c842c0 = L.popup({
+  &quot;maxWidth&quot;: &quot;100%&quot;,
+  &quot;autoClose&quot;: null,
+  &quot;closeOnClick&quot;: null,
+});
+
+
+
+                var html_869e5391002a92722811201c4da8e584 = $(`&lt;div id=&quot;html_869e5391002a92722811201c4da8e584&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Sub Group 2 Marker 19&lt;/div&gt;`)[0];
+                popup_4cc52be4e1d3ac4782d1d2b9a5c842c0.setContent(html_869e5391002a92722811201c4da8e584);
+
+
+
+        marker_3024080b4506b9d9c8bb2d3f88135373.bindPopup(popup_4cc52be4e1d3ac4782d1d2b9a5c842c0)
+        ;
+
+
+
+
+            feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18.addTo(map_7baf3c466ead9960d9b1394f8a7a077e);
+
+
+        (function () {
+            try {
+                var oms = new OverlappingMarkerSpiderfier(
+                    map_7baf3c466ead9960d9b1394f8a7a077e,
+                    {&quot;circleSpiralSwitchover&quot;: 9, &quot;keepSpiderfied&quot;: true, &quot;legWeight&quot;: 1.5, &quot;nearbyDistance&quot;: 20}
+                );
+
+                oms.addListener(&#x27;spiderfy&#x27;, function() {
+                    map_7baf3c466ead9960d9b1394f8a7a077e.closePopup();
+                });
+                    oms.addMarker(marker_faf7a3e17496acb69fd6b2a8492fd8f2);
+                    oms.addMarker(marker_1f2b438025f2f2ae7dbb0335bfd126c2);
+                    oms.addMarker(marker_6910e92c0f042ce250745a16e1e5bf28);
+                    oms.addMarker(marker_16822fe6cd7d81844133ea61def7c69f);
+                    oms.addMarker(marker_17bf107b77d4e3aee3fb7bdd18c73c7d);
+                    oms.addMarker(marker_76dddaf75110aef09c0592e61e118686);
+                    oms.addMarker(marker_4123897a4bf3ae5fae1bc0fd2b0a10bf);
+                    oms.addMarker(marker_877db1e7369447f5b090ab3f6b880e94);
+                    oms.addMarker(marker_fa1fba1f805cb7561a622728b950bc87);
+                    oms.addMarker(marker_5447cef4df106621d80df5c642f2b060);
+                    oms.addMarker(marker_4929261dcdb0ca453eef80602cbf9625);
+                    oms.addMarker(marker_5d9c9e8d8c486de09ffe569422799c3a);
+                    oms.addMarker(marker_fe5b51d2ad6f1a81fdec455bfba18588);
+                    oms.addMarker(marker_b97441533c54da94e94a2f04e9144a78);
+                    oms.addMarker(marker_e1b66297232558fc3727a9bded71bd1a);
+                    oms.addMarker(marker_99110ee3662b8bf8f919442b8607a366);
+                    oms.addMarker(marker_cef7cc9f4a6cb1c6af2793b759c5df9c);
+                    oms.addMarker(marker_8ea23599f443ad1602789cfe5a9f366a);
+                    oms.addMarker(marker_d34f429af6e8f3c5a12bc2a042126431);
+                    oms.addMarker(marker_3024080b4506b9d9c8bb2d3f88135373);
+            } catch (error) {
+                console.error(&#x27;Error initializing OverlappingMarkerSpiderfier:&#x27;, error);
+            }
+        })();
+
+
+            var layer_control_de9b3aa0cfcb40b6569f72e89f5a425f_layers = {
+                base_layers : {
+                    &quot;openstreetmap&quot; : tile_layer_9c7b0463ce4c8ba8ae22aa486447d44f,
+                },
+                overlays :  {
+                    &quot;Main Group&quot; : feature_group_9904725ff31588c0906eaecb3f1137f5,
+                    &quot;Sub Group 1&quot; : feature_group_sub_group_6bc015de9aeedacd80cbe2d82f5649f5,
+                    &quot;Sub Group 2&quot; : feature_group_sub_group_cc9110ecbc3a96c33cc5e8a3dca9ac18,
+                },
+            };
+            let layer_control_de9b3aa0cfcb40b6569f72e89f5a425f = L.control.layers(
+                layer_control_de9b3aa0cfcb40b6569f72e89f5a425f_layers.base_layers,
+                layer_control_de9b3aa0cfcb40b6569f72e89f5a425f_layers.overlays,
+                {
+  &quot;position&quot;: &quot;topright&quot;,
+  &quot;collapsed&quot;: true,
+  &quot;autoZIndex&quot;: true,
+}
+            ).addTo(map_7baf3c466ead9960d9b1394f8a7a077e);
+
+
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="mouse_position.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">MousePosition</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="pattern.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pattern plugins</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+<div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> On this page
+  </div>
+  <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Using-with-Markers">Using with Markers</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Using-with-FeatureGroups">Using with FeatureGroups</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Using-with-FeatureGroupSubGroups">Using with FeatureGroupSubGroups</a></li>
+</ul>
+  </nav></div>
+
+  <div class="sidebar-secondary-item">
+
+  <div class="tocsection sourcelink">
+    <a href="../../_sources/user_guide/plugins/overlapping_marker_spiderfier.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item"><!-- This will display the version of the docs -->
+Folium version 0.5.1.dev949+g5205be8</div>
+      
+        <div class="footer-item">
+
+  <p class="copyright">
+    
+      © Copyright 2013-2024, Rob Story.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+
+  <p class="sphinx-version">
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.1.3.
+    <br/>
+  </p>
+</div>
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item">
+<p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.16.0.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>

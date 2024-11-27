@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>MousePosition &#8212; Folium 0.5.1.dev947+g1f2d67b documentation</title>
+    <title>MousePosition &#8212; Folium 0.5.1.dev949+g5205be8 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../_static/documentation_options.js?v=0186a9d0"></script>
+    <script src="../../_static/documentation_options.js?v=467b36be"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -55,11 +55,11 @@
         </script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Pattern plugins" href="pattern.html" />
+    <link rel="next" title="OverlappingMarkerSpiderfier" href="overlapping_marker_spiderfier.html" />
     <link rel="prev" title="MeasureControl" href="measure_control.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.5.1.dev947+g1f2d67b" />
+  <meta name="docsearch:version" content="0.5.1.dev949+g5205be8" />
   </head>
   
   
@@ -418,6 +418,7 @@
 <li class="toctree-l2"><a class="reference internal" href="mini_map.html">MiniMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="measure_control.html">MeasureControl</a></li>
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">MousePosition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlapping_marker_spiderfier.html">OverlappingMarkerSpiderfier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pattern.html">Pattern plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="polygon_encoded.html">PolygonFromEncoded</a></li>
 <li class="toctree-l2"><a class="reference internal" href="polyline_encoded.html">PolyLineFromEncoded</a></li>
@@ -547,7 +548,7 @@
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_ee7c329a75215ab3819d5286945db44f {
+                #map_2309124bff6b661eaa428de652a3ca69 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -563,14 +564,14 @@
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_ee7c329a75215ab3819d5286945db44f&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_2309124bff6b661eaa428de652a3ca69&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_ee7c329a75215ab3819d5286945db44f = L.map(
-                &quot;map_ee7c329a75215ab3819d5286945db44f&quot;,
+            var map_2309124bff6b661eaa428de652a3ca69 = L.map(
+                &quot;map_2309124bff6b661eaa428de652a3ca69&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -588,7 +589,7 @@
 
 
 
-            var tile_layer_f72b0e12fcf6e0e3bd93329fa98c77bf = L.tileLayer(
+            var tile_layer_f2f426422086e2f903cc33b1e3fc11f3 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -605,10 +606,10 @@
             );
 
 
-            tile_layer_f72b0e12fcf6e0e3bd93329fa98c77bf.addTo(map_ee7c329a75215ab3819d5286945db44f);
+            tile_layer_f2f426422086e2f903cc33b1e3fc11f3.addTo(map_2309124bff6b661eaa428de652a3ca69);
 
 
-            var mouse_position_becd9ee475c2d86300f8048b972a02f7 = new L.Control.MousePosition(
+            var mouse_position_7576d83473ae2a6c665f469d0f744e3e = new L.Control.MousePosition(
                 {
   &quot;position&quot;: &quot;bottomright&quot;,
   &quot;separator&quot;: &quot; : &quot;,
@@ -618,11 +619,11 @@
   &quot;prefix&quot;: &quot;&quot;,
 }
             );
-            mouse_position_becd9ee475c2d86300f8048b972a02f7.options[&quot;latFormatter&quot;] =
+            mouse_position_7576d83473ae2a6c665f469d0f744e3e.options[&quot;latFormatter&quot;] =
                 undefined;
-            mouse_position_becd9ee475c2d86300f8048b972a02f7.options[&quot;lngFormatter&quot;] =
+            mouse_position_7576d83473ae2a6c665f469d0f744e3e.options[&quot;lngFormatter&quot;] =
                 undefined;
-            map_ee7c329a75215ab3819d5286945db44f.addControl(mouse_position_becd9ee475c2d86300f8048b972a02f7);
+            map_2309124bff6b661eaa428de652a3ca69.addControl(mouse_position_7576d83473ae2a6c665f469d0f744e3e);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -684,7 +685,7 @@
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_ea3c5d634b8210f3d8628977e98d3f44 {
+                #map_a18e55c3844e7d2e11c797f3e1488d89 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -700,14 +701,14 @@
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_ea3c5d634b8210f3d8628977e98d3f44&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_a18e55c3844e7d2e11c797f3e1488d89&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_ea3c5d634b8210f3d8628977e98d3f44 = L.map(
-                &quot;map_ea3c5d634b8210f3d8628977e98d3f44&quot;,
+            var map_a18e55c3844e7d2e11c797f3e1488d89 = L.map(
+                &quot;map_a18e55c3844e7d2e11c797f3e1488d89&quot;,
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -725,7 +726,7 @@
 
 
 
-            var tile_layer_ef5fa5945a9a0da18c41679b0af6a69a = L.tileLayer(
+            var tile_layer_af434b466de4af1e8758bba38fd1c5d6 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -742,10 +743,10 @@
             );
 
 
-            tile_layer_ef5fa5945a9a0da18c41679b0af6a69a.addTo(map_ea3c5d634b8210f3d8628977e98d3f44);
+            tile_layer_af434b466de4af1e8758bba38fd1c5d6.addTo(map_a18e55c3844e7d2e11c797f3e1488d89);
 
 
-            var mouse_position_97d37b9b21727503d65921d29251f096 = new L.Control.MousePosition(
+            var mouse_position_fe5148eeb49ec17e3a3a58e807cc1aff = new L.Control.MousePosition(
                 {
   &quot;position&quot;: &quot;topright&quot;,
   &quot;separator&quot;: &quot; | &quot;,
@@ -755,11 +756,11 @@
   &quot;prefix&quot;: &quot;Coordinates:&quot;,
 }
             );
-            mouse_position_97d37b9b21727503d65921d29251f096.options[&quot;latFormatter&quot;] =
+            mouse_position_fe5148eeb49ec17e3a3a58e807cc1aff.options[&quot;latFormatter&quot;] =
                 function(num) {return L.Util.formatNum(num, 3) + &#x27; &amp;deg; &#x27;;};;
-            mouse_position_97d37b9b21727503d65921d29251f096.options[&quot;lngFormatter&quot;] =
+            mouse_position_fe5148eeb49ec17e3a3a58e807cc1aff.options[&quot;lngFormatter&quot;] =
                 function(num) {return L.Util.formatNum(num, 3) + &#x27; &amp;deg; &#x27;;};;
-            map_ea3c5d634b8210f3d8628977e98d3f44.addControl(mouse_position_97d37b9b21727503d65921d29251f096);
+            map_a18e55c3844e7d2e11c797f3e1488d89.addControl(mouse_position_fe5148eeb49ec17e3a3a58e807cc1aff);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -787,11 +788,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="pattern.html"
+       href="overlapping_marker_spiderfier.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Pattern plugins</p>
+        <p class="prev-next-title">OverlappingMarkerSpiderfier</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -849,7 +850,7 @@
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.5.1.dev947+g1f2d67b</div>
+Folium version 0.5.1.dev949+g5205be8</div>
       
         <div class="footer-item">
 

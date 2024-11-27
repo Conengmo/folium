@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>VideoOverlay &#8212; Folium 0.5.1.dev947+g1f2d67b documentation</title>
+    <title>VideoOverlay &#8212; Folium 0.5.1.dev949+g5205be8 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../_static/documentation_options.js?v=0186a9d0"></script>
+    <script src="../../_static/documentation_options.js?v=467b36be"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -59,7 +59,7 @@
     <link rel="prev" title="ImageOverlay" href="image_overlay.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.5.1.dev947+g1f2d67b" />
+  <meta name="docsearch:version" content="0.5.1.dev949+g5205be8" />
   </head>
   
   
@@ -418,6 +418,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../plugins/mini_map.html">MiniMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/measure_control.html">MeasureControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/mouse_position.html">MousePosition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/overlapping_marker_spiderfier.html">OverlappingMarkerSpiderfier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/pattern.html">Pattern plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/polygon_encoded.html">PolygonFromEncoded</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/polyline_encoded.html">PolyLineFromEncoded</a></li>
@@ -554,7 +555,7 @@
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_6087b140febceeddc67656213b1fa7f2 {
+                #map_a49610120a98df028076a40ea69692ee {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -568,14 +569,14 @@
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_6087b140febceeddc67656213b1fa7f2&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_a49610120a98df028076a40ea69692ee&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_6087b140febceeddc67656213b1fa7f2 = L.map(
-                &quot;map_6087b140febceeddc67656213b1fa7f2&quot;,
+            var map_a49610120a98df028076a40ea69692ee = L.map(
+                &quot;map_a49610120a98df028076a40ea69692ee&quot;,
                 {
                     center: [22.5, -115.0],
                     crs: L.CRS.EPSG3857,
@@ -593,7 +594,7 @@
 
 
 
-            var tile_layer_67b21630166ea99f5f05c0e44231394b = L.tileLayer(
+            var tile_layer_0f05b779ee66d4bb130f354e68eba07d = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -610,10 +611,10 @@
             );
 
 
-            tile_layer_67b21630166ea99f5f05c0e44231394b.addTo(map_6087b140febceeddc67656213b1fa7f2);
+            tile_layer_0f05b779ee66d4bb130f354e68eba07d.addTo(map_a49610120a98df028076a40ea69692ee);
 
 
-            var video_overlay_6360e5500c62f08155ffb3b9a16cebc9 = L.videoOverlay(
+            var video_overlay_907f8b07bde7e3d5da695fad781aaf7d = L.videoOverlay(
                 &quot;https://www.mapbox.com/bites/00188/patricia_nasa.webm&quot;,
                 [[32, -130], [13, -100]],
                 {
@@ -625,7 +626,7 @@
             );
 
 
-            video_overlay_6360e5500c62f08155ffb3b9a16cebc9.addTo(map_6087b140febceeddc67656213b1fa7f2);
+            video_overlay_907f8b07bde7e3d5da695fad781aaf7d.addTo(map_a49610120a98df028076a40ea69692ee);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -702,7 +703,7 @@
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.5.1.dev947+g1f2d67b</div>
+Folium version 0.5.1.dev949+g5205be8</div>
       
         <div class="footer-item">
 

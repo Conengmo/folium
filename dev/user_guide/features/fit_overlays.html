@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>FitOverlays &#8212; Folium 0.5.1.dev947+g1f2d67b documentation</title>
+    <title>FitOverlays &#8212; Folium 0.5.1.dev949+g5205be8 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../_static/documentation_options.js?v=0186a9d0"></script>
+    <script src="../../_static/documentation_options.js?v=467b36be"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -59,7 +59,7 @@
     <link rel="prev" title="Features" href="../features.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.5.1.dev947+g1f2d67b" />
+  <meta name="docsearch:version" content="0.5.1.dev949+g5205be8" />
   </head>
   
   
@@ -418,6 +418,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../plugins/mini_map.html">MiniMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/measure_control.html">MeasureControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/mouse_position.html">MousePosition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugins/overlapping_marker_spiderfier.html">OverlappingMarkerSpiderfier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/pattern.html">Pattern plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/polygon_encoded.html">PolygonFromEncoded</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugins/polyline_encoded.html">PolyLineFromEncoded</a></li>
@@ -553,7 +554,7 @@
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_35ce9812281df82ab2e25561b518ad73 {
+                #map_48e4a63e3ecebb2bd71f4e4a299800d5 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -567,14 +568,14 @@
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_35ce9812281df82ab2e25561b518ad73&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_48e4a63e3ecebb2bd71f4e4a299800d5&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_35ce9812281df82ab2e25561b518ad73 = L.map(
-                &quot;map_35ce9812281df82ab2e25561b518ad73&quot;,
+            var map_48e4a63e3ecebb2bd71f4e4a299800d5 = L.map(
+                &quot;map_48e4a63e3ecebb2bd71f4e4a299800d5&quot;,
                 {
                     center: [52.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -592,7 +593,7 @@
 
 
 
-            var tile_layer_c48c5eee97a97dee47b20a71f399f3e9 = L.tileLayer(
+            var tile_layer_271600c347f4f1f50acc328204101e0c = L.tileLayer(
                 &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -609,78 +610,78 @@
             );
 
 
-            tile_layer_c48c5eee97a97dee47b20a71f399f3e9.addTo(map_35ce9812281df82ab2e25561b518ad73);
+            tile_layer_271600c347f4f1f50acc328204101e0c.addTo(map_48e4a63e3ecebb2bd71f4e4a299800d5);
 
 
-            var feature_group_c746d13afca099e9f3ea06496b010125 = L.featureGroup(
+            var feature_group_8c1df3164ae445d04bc3f567feb9fc41 = L.featureGroup(
                 {
 }
             );
 
 
-            var marker_9001be55e9db4df0408be60fa2cbb578 = L.marker(
+            var marker_675405cb9da731effbb737beaa21d1c8 = L.marker(
                 [52.0, 5.0],
                 {
   &quot;draggable&quot;: null,
   &quot;autoPan&quot;: null,
 }
-            ).addTo(feature_group_c746d13afca099e9f3ea06496b010125);
+            ).addTo(feature_group_8c1df3164ae445d04bc3f567feb9fc41);
 
 
-            feature_group_c746d13afca099e9f3ea06496b010125.addTo(map_35ce9812281df82ab2e25561b518ad73);
+            feature_group_8c1df3164ae445d04bc3f567feb9fc41.addTo(map_48e4a63e3ecebb2bd71f4e4a299800d5);
 
 
-            var feature_group_c77fcf9ded154b4ae3ff0afa6d69688a = L.featureGroup(
+            var feature_group_28f90ff54d65ae8185d6d5ef2fdd1924 = L.featureGroup(
                 {
 }
             );
 
 
-            var marker_7e956f34d2cb627ef1bd56818baee67f = L.marker(
+            var marker_e45feee6df041bd914e61027c758c58e = L.marker(
                 [52.0, 5.1],
                 {
   &quot;draggable&quot;: null,
   &quot;autoPan&quot;: null,
 }
-            ).addTo(feature_group_c77fcf9ded154b4ae3ff0afa6d69688a);
+            ).addTo(feature_group_28f90ff54d65ae8185d6d5ef2fdd1924);
 
 
         function customFlyToBounds() {
             let bounds = L.latLngBounds([]);
-            map_35ce9812281df82ab2e25561b518ad73.eachLayer(function(layer) {
+            map_48e4a63e3ecebb2bd71f4e4a299800d5.eachLayer(function(layer) {
                 if (typeof layer.getBounds === &#x27;function&#x27;) {
                     bounds.extend(layer.getBounds());
                 }
             });
             if (bounds.isValid()) {
-                map_35ce9812281df82ab2e25561b518ad73.fitBounds(bounds, {
+                map_48e4a63e3ecebb2bd71f4e4a299800d5.fitBounds(bounds, {
   &quot;padding&quot;: [0, 0],
   &quot;maxZoom&quot;: null,
 });
             }
         }
-        map_35ce9812281df82ab2e25561b518ad73.on(&#x27;overlayadd&#x27;, customFlyToBounds);
+        map_48e4a63e3ecebb2bd71f4e4a299800d5.on(&#x27;overlayadd&#x27;, customFlyToBounds);
         customFlyToBounds();
 
 
-            var layer_control_5b4f4c8707017f35fff632472b7cead5_layers = {
+            var layer_control_049b0ad814332e10f0ee83da0db1b9b2_layers = {
                 base_layers : {
-                    &quot;cartodbpositron&quot; : tile_layer_c48c5eee97a97dee47b20a71f399f3e9,
+                    &quot;cartodbpositron&quot; : tile_layer_271600c347f4f1f50acc328204101e0c,
                 },
                 overlays :  {
-                    &quot;macro_element_c746d13afca099e9f3ea06496b010125&quot; : feature_group_c746d13afca099e9f3ea06496b010125,
-                    &quot;macro_element_c77fcf9ded154b4ae3ff0afa6d69688a&quot; : feature_group_c77fcf9ded154b4ae3ff0afa6d69688a,
+                    &quot;macro_element_8c1df3164ae445d04bc3f567feb9fc41&quot; : feature_group_8c1df3164ae445d04bc3f567feb9fc41,
+                    &quot;macro_element_28f90ff54d65ae8185d6d5ef2fdd1924&quot; : feature_group_28f90ff54d65ae8185d6d5ef2fdd1924,
                 },
             };
-            let layer_control_5b4f4c8707017f35fff632472b7cead5 = L.control.layers(
-                layer_control_5b4f4c8707017f35fff632472b7cead5_layers.base_layers,
-                layer_control_5b4f4c8707017f35fff632472b7cead5_layers.overlays,
+            let layer_control_049b0ad814332e10f0ee83da0db1b9b2 = L.control.layers(
+                layer_control_049b0ad814332e10f0ee83da0db1b9b2_layers.base_layers,
+                layer_control_049b0ad814332e10f0ee83da0db1b9b2_layers.overlays,
                 {
   &quot;position&quot;: &quot;topright&quot;,
   &quot;collapsed&quot;: true,
   &quot;autoZIndex&quot;: true,
 }
-            ).addTo(map_35ce9812281df82ab2e25561b518ad73);
+            ).addTo(map_48e4a63e3ecebb2bd71f4e4a299800d5);
 
 
 &lt;/script&gt;
@@ -766,7 +767,7 @@
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.5.1.dev947+g1f2d67b</div>
+Folium version 0.5.1.dev949+g5205be8</div>
       
         <div class="footer-item">
 

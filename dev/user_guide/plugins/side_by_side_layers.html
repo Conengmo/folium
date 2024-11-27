@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SideBySideLayers &#8212; Folium 0.5.1.dev947+g1f2d67b documentation</title>
+    <title>SideBySideLayers &#8212; Folium 0.5.1.dev949+g5205be8 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
 
-    <script src="../../_static/documentation_options.js?v=0186a9d0"></script>
+    <script src="../../_static/documentation_options.js?v=467b36be"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
@@ -59,7 +59,7 @@
     <link rel="prev" title="SemiCircle" href="semi_circle.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="0.5.1.dev947+g1f2d67b" />
+  <meta name="docsearch:version" content="0.5.1.dev949+g5205be8" />
   </head>
   
   
@@ -418,6 +418,7 @@
 <li class="toctree-l2"><a class="reference internal" href="mini_map.html">MiniMap</a></li>
 <li class="toctree-l2"><a class="reference internal" href="measure_control.html">MeasureControl</a></li>
 <li class="toctree-l2"><a class="reference internal" href="mouse_position.html">MousePosition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlapping_marker_spiderfier.html">OverlappingMarkerSpiderfier</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pattern.html">Pattern plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="polygon_encoded.html">PolygonFromEncoded</a></li>
 <li class="toctree-l2"><a class="reference internal" href="polyline_encoded.html">PolyLineFromEncoded</a></li>
@@ -552,7 +553,7 @@
             &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
             &lt;style&gt;
-                #map_9c659d22f82051527a427af566008cfb {
+                #map_473136c63bdf309ee68da90208ee3aae {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -567,14 +568,14 @@
 &lt;body&gt;
 
 
-            &lt;div class=&quot;folium-map&quot; id=&quot;map_9c659d22f82051527a427af566008cfb&quot; &gt;&lt;/div&gt;
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_473136c63bdf309ee68da90208ee3aae&quot; &gt;&lt;/div&gt;
 
 &lt;/body&gt;
 &lt;script&gt;
 
 
-            var map_9c659d22f82051527a427af566008cfb = L.map(
-                &quot;map_9c659d22f82051527a427af566008cfb&quot;,
+            var map_473136c63bdf309ee68da90208ee3aae = L.map(
+                &quot;map_473136c63bdf309ee68da90208ee3aae&quot;,
                 {
                     center: [30.0, 20.0],
                     crs: L.CRS.EPSG3857,
@@ -592,7 +593,7 @@
 
 
 
-            var tile_layer_97ddfd1772187587813fe369c2e643d3 = L.tileLayer(
+            var tile_layer_47c5ed0bc9bde86807e9bc68b91be11c = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -609,10 +610,10 @@
             );
 
 
-            tile_layer_97ddfd1772187587813fe369c2e643d3.addTo(map_9c659d22f82051527a427af566008cfb);
+            tile_layer_47c5ed0bc9bde86807e9bc68b91be11c.addTo(map_473136c63bdf309ee68da90208ee3aae);
 
 
-            var tile_layer_83520d314c1800a7cb58857e0ead8186 = L.tileLayer(
+            var tile_layer_9ad107a6ab88279dc8e94338bf84912c = L.tileLayer(
                 &quot;https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -629,10 +630,10 @@
             );
 
 
-            tile_layer_83520d314c1800a7cb58857e0ead8186.addTo(map_9c659d22f82051527a427af566008cfb);
+            tile_layer_9ad107a6ab88279dc8e94338bf84912c.addTo(map_473136c63bdf309ee68da90208ee3aae);
 
 
-            var tile_layer_070ec547f60a05080e10f03e0774ff4a = L.tileLayer(
+            var tile_layer_2471792a5e1cb0016d1debecf3954933 = L.tileLayer(
                 &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
                 {
   &quot;minZoom&quot;: 0,
@@ -649,12 +650,12 @@
             );
 
 
-            tile_layer_070ec547f60a05080e10f03e0774ff4a.addTo(map_9c659d22f82051527a427af566008cfb);
+            tile_layer_2471792a5e1cb0016d1debecf3954933.addTo(map_473136c63bdf309ee68da90208ee3aae);
 
 
-            var side_by_side_layers_3f9f78ffb1485d8a27746a7ea8dfb8ca = L.control.sideBySide(
-                tile_layer_83520d314c1800a7cb58857e0ead8186, tile_layer_070ec547f60a05080e10f03e0774ff4a
-            ).addTo(map_9c659d22f82051527a427af566008cfb);
+            var side_by_side_layers_43e166b99db79263f87e4c9ac6a299ac = L.control.sideBySide(
+                tile_layer_9ad107a6ab88279dc8e94338bf84912c, tile_layer_2471792a5e1cb0016d1debecf3954933
+            ).addTo(map_473136c63bdf309ee68da90208ee3aae);
 
 &lt;/script&gt;
 &lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div>
@@ -731,7 +732,7 @@
     <div class="footer-items__start">
       
         <div class="footer-item"><!-- This will display the version of the docs -->
-Folium version 0.5.1.dev947+g1f2d67b</div>
+Folium version 0.5.1.dev949+g5205be8</div>
       
         <div class="footer-item">
 
